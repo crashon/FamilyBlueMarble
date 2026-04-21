@@ -15,6 +15,9 @@ const navItems = [
 
 export const BottomNavBar = () => {
   const pathname = usePathname();
+  const { panelState, togglePanel, setPanelState } = useUiStore();
+  const touchStartYRef = React.useRef<number | null>(null);
+  const panelTranslateY = panelState === 'full' ? '0%' : panelState === 'minimized' ? '80%' : '100%';
   const {
     bottomPanelMode,
     isBottomPanelVisible,
@@ -39,6 +42,12 @@ export const BottomNavBar = () => {
     const deltaY = endY - touchStartYRef.current;
     touchStartYRef.current = null;
     if (deltaY > 40) {
+      setPanelState('minimized');
+      return;
+    }
+    if (deltaY < -40) {
+      setPanelState('full');
+    }
       minimizeBottomPanel();
       return;
     }
@@ -61,6 +70,12 @@ export const BottomNavBar = () => {
       <nav
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
+        className="fixed bottom-0 left-0 w-full z-[100] flex justify-around items-center px-6 bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl rounded-t-[3rem] shadow-[0_-10px_40px_rgba(0,0,0,0.06)] border-none transition-transform duration-300 ease-out will-change-transform"
+        style={{
+          height: 'clamp(140px, 20vh, 220px)',
+          transform: `translateY(${panelTranslateY})`,
+          paddingTop: 16,
+          paddingBottom: 'max(24px, env(safe-area-inset-bottom))',
         onClick={handleTap}
         className="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl rounded-t-[3rem] shadow-[0_-10px_40px_rgba(0,0,0,0.06)] border-none transition-transform duration-300 ease-out will-change-transform"
         style={{
@@ -78,6 +93,7 @@ export const BottomNavBar = () => {
               href={item.href}
               className={cn(
                 "flex items-center justify-center rounded-full transition-all group active:scale-90 duration-200 ease-out min-w-20 min-h-20",
+                panelState === 'full' ? "flex-col px-4 py-2" : "px-4 py-1",
                 bottomPanelMode === 'full' ? "flex-col px-4 py-2" : "px-4 py-1",
                 isActive
                   ? "bg-primary text-white shadow-[0_4px_15px_rgba(0,91,193,0.3)]"
@@ -90,6 +106,7 @@ export const BottomNavBar = () => {
               )}>
                 {item.icon}
               </span>
+              {panelState === 'full' && (
               {bottomPanelMode === 'full' && (
                 <span className="font-headline text-[14px] font-extrabold uppercase mt-1">
                   {item.label}
@@ -102,6 +119,13 @@ export const BottomNavBar = () => {
 
       <button
         type="button"
+        onClick={togglePanel}
+        className="fixed right-4 bottom-4 z-[110] min-w-20 min-h-20 rounded-full bg-primary text-white shadow-[0_10px_24px_rgba(0,91,193,0.35)] flex items-center justify-center active:scale-95 transition-transform"
+        aria-label="Toggle bottom panel"
+        style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
+      >
+        <span className="material-symbols-outlined text-4xl">
+          {panelState === 'full' ? 'keyboard_arrow_down' : panelState === 'minimized' ? 'keyboard_arrow_up' : 'keyboard_double_arrow_up'}
         onClick={toggleBottomPanel}
         className="fixed right-4 bottom-4 z-[60] min-w-20 min-h-20 rounded-full bg-primary text-white shadow-[0_10px_24px_rgba(0,91,193,0.35)] flex items-center justify-center active:scale-95 transition-transform"
         aria-label="Toggle bottom panel"

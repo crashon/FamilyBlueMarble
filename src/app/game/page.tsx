@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { TopAppBar } from '@/components/layout/TopAppBar';
 import { BottomNavBar } from '@/components/layout/BottomNavBar';
@@ -27,6 +27,9 @@ import { useUiStore } from '@/store/useUiStore';
 
 export default function GamePage() {
   const { players, currentPlayerIndex, propertyOwners, propertyLevels, isSpaceTourActive, landingPulse } = useGameStore();
+  const { rotateX, rotateY } = useMouseTilt(5);
+  const { startBgm } = useAudioStore();
+  const [viewportWidth, setViewportWidth] = useState(0);
   const { bottomPanelMode } = useUiStore();
   const { rotateX, rotateY } = useMouseTilt(5);
   const { startBgm } = useAudioStore();
@@ -113,6 +116,7 @@ export default function GamePage() {
     <div className="bg-background text-on-background font-body overflow-hidden h-screen w-screen selection:bg-primary-container selection:text-on-primary-container">
       <TopAppBar title="The Tactile Toybox" subtitle="Economy Prototype" />
       
+      <main className="relative h-screen pt-24 px-12 flex items-center justify-center bg-surface-container-low overflow-hidden">
       <main
         className="relative h-screen pt-24 px-12 flex items-center justify-center bg-surface-container-low overflow-hidden transition-all duration-300 ease-out"
         style={{ paddingBottom: bottomPanelHeight + 20 }}
@@ -220,6 +224,10 @@ export default function GamePage() {
 
         {/* Board Tiles Layout */}
         <motion.div 
+          style={{ rotateX, rotateY, perspective: 1200, transformStyle: "preserve-3d" }}
+          animate={{ scale: focusedTileId !== null ? 1.03 : 1, x: focusOffset.x, y: focusOffset.y }}
+          transition={{ duration: 0.3, ease: 'easeOut' }}
+          className="relative bg-surface-container-highest p-4 rounded-[2.5rem] shadow-[0_40px_80px_rgba(25,28,30,0.2)] max-w-[800px] w-full aspect-square border-8 border-surface-variant z-[1]"
           style={{ rotateX, rotateY, perspective: 1200, transformStyle: "preserve-3d", maxHeight: `calc(100vh - 160px - ${bottomPanelHeight}px)` }}
           animate={{ scale: focusedTileId !== null ? boardScale + 0.03 : boardScale, x: focusOffset.x, y: focusOffset.y }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
