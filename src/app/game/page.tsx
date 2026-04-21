@@ -39,7 +39,21 @@ export default function GamePage() {
 
   useEffect(() => {
     startBgm('bgm_main');
-  }, [startBgm]);
+    setPanelState('hidden');
+  }, [setPanelState, startBgm]);
+
+  useEffect(() => {
+    const syncViewport = () => {
+      setViewportWidth(window.innerWidth);
+    };
+    syncViewport();
+    window.addEventListener('resize', syncViewport);
+    return () => window.removeEventListener('resize', syncViewport);
+  }, []);
+
+  const isTablet = viewportWidth >= 1024;
+  const cityFontSize = isTablet ? 20 : 14;
+  const metaFontSize = isTablet ? 16 : 14;
 
   useEffect(() => {
     const syncViewport = () => {
@@ -148,7 +162,7 @@ export default function GamePage() {
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-16 h-16 rounded-full flex items-center justify-center overflow-hidden border-4 border-primary-container relative" style={{ backgroundColor: player.color }}>
-                    <Image src={player.avatar} alt={player.name} fill className="object-cover" />
+                    <Image src={player.avatar} alt={player.name} fill sizes="64px" className="object-cover" />
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
@@ -194,7 +208,7 @@ export default function GamePage() {
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-16 h-16 rounded-full flex items-center justify-center overflow-hidden border-4 border-primary-container relative" style={{ backgroundColor: player.color }}>
-                    <Image src={player.avatar} alt={player.name} fill className="object-cover" />
+                    <Image src={player.avatar} alt={player.name} fill sizes="64px" className="object-cover" />
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
@@ -323,7 +337,7 @@ export default function GamePage() {
             {/* Center Area */}
             <div className="col-start-2 col-end-11 row-start-2 row-end-11 bg-surface-container-low relative flex flex-col items-center justify-center">
               <div className="absolute inset-0 opacity-10 pointer-events-none overflow-hidden">
-                <Image src={asset_5} alt="Pattern" fill className="object-cover" />
+                <Image src={asset_5} alt="Pattern" fill sizes="(max-width: 1024px) 80vw, 640px" className="object-cover" />
               </div>
               <Dice />
             </div>
