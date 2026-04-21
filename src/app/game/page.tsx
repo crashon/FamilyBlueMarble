@@ -23,12 +23,18 @@ import { useMouseTilt } from '@/hooks/useMouseTilt';
 import { Building3D } from '@/components/game/Building3D';
 import { asset_5 } from '@/assets';
 import { cn } from '@/lib/utils';
+import { useUiStore } from '@/store/useUiStore';
 
 export default function GamePage() {
   const { players, currentPlayerIndex, propertyOwners, propertyLevels, isSpaceTourActive, landingPulse } = useGameStore();
   const { rotateX, rotateY } = useMouseTilt(5);
   const { startBgm } = useAudioStore();
   const [viewportWidth, setViewportWidth] = useState(0);
+  const { bottomPanelMode } = useUiStore();
+  const { rotateX, rotateY } = useMouseTilt(5);
+  const { startBgm } = useAudioStore();
+  const [viewportWidth, setViewportWidth] = useState(0);
+  const [viewportHeight, setViewportHeight] = useState(0);
   const [selectedTileId, setSelectedTileId] = useState<number | null>(null);
 
   useEffect(() => {
@@ -38,6 +44,7 @@ export default function GamePage() {
   useEffect(() => {
     const syncViewport = () => {
       setViewportWidth(window.innerWidth);
+      setViewportHeight(window.innerHeight);
     };
     syncViewport();
     window.addEventListener('resize', syncViewport);
@@ -47,6 +54,13 @@ export default function GamePage() {
   const isTablet = viewportWidth >= 1024;
   const cityFontSize = isTablet ? 20 : 14;
   const metaFontSize = isTablet ? 16 : 14;
+  const bottomPanelHeight = useMemo(() => {
+    if (!viewportHeight) return 180;
+    if (bottomPanelMode === 'hidden') return 0;
+    if (bottomPanelMode === 'minimized') return 40;
+    return Math.max(140, Math.min(220, Math.round(viewportHeight * 0.2)));
+  }, [bottomPanelMode, viewportHeight]);
+  const boardScale = bottomPanelMode === 'full' ? 1 : 1.05;
 
   const renderBuildingStatus = (tileId: number, color: string) => {
     const level = propertyLevels[tileId] || 0;
@@ -103,6 +117,10 @@ export default function GamePage() {
       <TopAppBar title="The Tactile Toybox" subtitle="Economy Prototype" />
       
       <main className="relative h-screen pt-24 px-12 flex items-center justify-center bg-surface-container-low overflow-hidden">
+      <main
+        className="relative h-screen pt-24 px-12 flex items-center justify-center bg-surface-container-low overflow-hidden transition-all duration-300 ease-out"
+        style={{ paddingBottom: bottomPanelHeight + 20 }}
+      >
         <PropertyModal />
         <ChanceModal />
         <DesertModal />
@@ -210,6 +228,10 @@ export default function GamePage() {
           animate={{ scale: focusedTileId !== null ? 1.03 : 1, x: focusOffset.x, y: focusOffset.y }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
           className="relative bg-surface-container-highest p-4 rounded-[2.5rem] shadow-[0_40px_80px_rgba(25,28,30,0.2)] max-w-[800px] w-full aspect-square border-8 border-surface-variant z-[1]"
+          style={{ rotateX, rotateY, perspective: 1200, transformStyle: "preserve-3d", maxHeight: `calc(100vh - 160px - ${bottomPanelHeight}px)` }}
+          animate={{ scale: focusedTileId !== null ? boardScale + 0.03 : boardScale, x: focusOffset.x, y: focusOffset.y }}
+          transition={{ duration: 0.3, ease: 'easeOut' }}
+          className="relative bg-surface-container-highest p-4 rounded-[2.5rem] shadow-[0_40px_80px_rgba(25,28,30,0.2)] max-w-[800px] w-full aspect-square border-8 border-surface-variant z-0"
         >
           <div className="grid grid-cols-11 grid-rows-11 w-full h-full bg-white rounded-[2rem] overflow-hidden relative shadow-inner">
             
