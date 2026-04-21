@@ -38,6 +38,7 @@ interface GameState {
   winner: Player | null;
   gameLogs: string[];
   isSpaceTourActive: boolean;
+  landingPulse: { tileId: number; playerId: number; pulseKey: number } | null;
 
   // Actions
   rollDice: () => void;
@@ -56,16 +57,17 @@ interface GameState {
   triggerActiveSkill: (playerId: number) => void;
   handleDesertEscape: (playerId: number, method: 'pay' | 'roll') => void;
   performSpaceTourWarp: (tileId: number) => void;
+  triggerLandingPulse: (playerId: number, tileId: number) => void;
   closeModal: () => void;
   checkGameOver: () => void;
   resetGame: () => void;
 }
 
 const INITIAL_PLAYERS: Player[] = [
-  { id: 0, name: 'Jungki', position: 0, balance: 2500000, avatar: asset_1, color: '#005bc1', isBankrupt: false, level: 1, isSkillUsed: false, trappedTurns: 0 },
-  { id: 1, name: 'Jang', position: 0, balance: 1840000, avatar: asset_2, color: '#705d00', isBankrupt: false, level: 1, isSkillUsed: false, trappedTurns: 0 },
-  { id: 2, name: 'Pream', position: 0, balance: 3120000, avatar: asset_3, color: '#006e1c', isBankrupt: false, level: 1, isSkillUsed: false, trappedTurns: 0 },
-  { id: 3, name: 'Tee', position: 0, balance: 950000, avatar: asset_4, color: '#ba1a1a', isBankrupt: false, level: 1, isSkillUsed: false, trappedTurns: 0 },
+  { id: 0, name: 'Jungki', position: 0, balance: 2500000, avatar: asset_1, color: '#FF6B6B', isBankrupt: false, level: 1, isSkillUsed: false, trappedTurns: 0 },
+  { id: 1, name: 'Jang', position: 0, balance: 1840000, avatar: asset_2, color: '#4ECDC4', isBankrupt: false, level: 1, isSkillUsed: false, trappedTurns: 0 },
+  { id: 2, name: 'Pream', position: 0, balance: 3120000, avatar: asset_3, color: '#FFD93D', isBankrupt: false, level: 1, isSkillUsed: false, trappedTurns: 0 },
+  { id: 3, name: 'Tee', position: 0, balance: 950000, avatar: asset_4, color: '#A29BFE', isBankrupt: false, level: 1, isSkillUsed: false, trappedTurns: 0 },
 ];
 
 export const useGameStore = create<GameState>()(
@@ -84,6 +86,7 @@ export const useGameStore = create<GameState>()(
       winner: null,
       gameLogs: ["Game Started. Welcome to Cosmic Carnival!"],
       isSpaceTourActive: false,
+      landingPulse: null,
 
       resetGame: () => set({
         players: INITIAL_PLAYERS,
@@ -99,7 +102,17 @@ export const useGameStore = create<GameState>()(
         winner: null,
         gameLogs: ["Game Reset. Good luck!"],
         isSpaceTourActive: false,
+        landingPulse: null,
       }),
+
+      triggerLandingPulse: (playerId, tileId) => {
+        const pulseKey = Date.now();
+        set({ landingPulse: { playerId, tileId, pulseKey } });
+        setTimeout(() => {
+          const latestPulse = get().landingPulse;
+          if (latestPulse?.pulseKey === pulseKey) set({ landingPulse: null });
+        }, 1800);
+      },
 
       addLog: (message) => set((state) => ({ gameLogs: [message, ...state.gameLogs].slice(0, 50) })),
 
@@ -245,6 +258,7 @@ export const useGameStore = create<GameState>()(
           }));
         }
         get().updatePlayerPosition(playerId, tileId);
+        get().triggerLandingPulse(playerId, tileId);
         setTimeout(() => { get().handleTileAction(playerId, tileId); }, 800);
       },
 

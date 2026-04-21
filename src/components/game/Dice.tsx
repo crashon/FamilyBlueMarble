@@ -7,7 +7,7 @@ import { useAudioStore } from '@/store/useAudioStore';
 import { Button } from '@/components/ui/Button';
 
 export const Dice = () => {
-  const { isRolling, rollDice, setDiceResult, currentPlayerIndex, players, updatePlayerPosition, setIsMoving, isMoving, nextTurn } = useGameStore();
+  const { isRolling, rollDice, setDiceResult, currentPlayerIndex, players, updatePlayerPosition, setIsMoving, isMoving, triggerLandingPulse } = useGameStore();
   const [localFaces, setLocalFaces] = useState<[number, number]>([1, 1]);
   const controls = useAnimation();
 
@@ -58,6 +58,7 @@ export const Dice = () => {
     }
     
     setIsMoving(false);
+    triggerLandingPulse(currentPlayer.id, currentPos);
     
     // Trigger tile action (Purchase, Rent, Event)
     setTimeout(() => {
