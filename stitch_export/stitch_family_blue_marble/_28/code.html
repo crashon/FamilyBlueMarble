@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dice Roll - Tactile Toybox</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .dice-shadow {
+            filter: drop-shadow(0 10px 20px rgba(0, 91, 193, 0.2));
+        }
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        /* Custom bounce for the pointer */
+        @keyframes custom-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .animate-bounce-short {
+            animation: custom-bounce 1s infinite ease-in-out;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed-dim": "#78dc77",
+                      "on-tertiary-container": "#005313",
+                      "tertiary": "#006e1c",
+                      "on-primary": "#ffffff",
+                      "primary": "#005bc1",
+                      "on-error": "#ffffff",
+                      "secondary-container": "#ffe170",
+                      "primary-fixed-dim": "#adc6ff",
+                      "background": "#f7f9fb",
+                      "tertiary-fixed": "#94f990",
+                      "surface-container-lowest": "#ffffff",
+                      "outline-variant": "#b7c9d9",
+                      "surface-tint": "#005bc1",
+                      "on-primary-container": "#004493",
+                      "surface-container-high": "#e6e8ea",
+                      "inverse-on-surface": "#eff1f3",
+                      "secondary-fixed-dim": "#e9c400",
+                      "surface-container": "#eceef0",
+                      "outline": "#687988",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#005313",
+                      "on-surface": "#191c1e",
+                      "surface-container-highest": "#e0e3e5",
+                      "on-secondary-fixed": "#221b00",
+                      "surface-variant": "#e0e3e5",
+                      "surface-bright": "#f7f9fb",
+                      "on-secondary-container": "#544600",
+                      "on-primary-fixed": "#001a41",
+                      "tertiary-container": "#94f990",
+                      "on-error-container": "#93000a",
+                      "primary-container": "#d8e2ff",
+                      "on-secondary-fixed-variant": "#544600",
+                      "inverse-surface": "#2d3133",
+                      "surface-container-low": "#f2f4f6",
+                      "on-primary-fixed-variant": "#004493",
+                      "error": "#ba1a1a",
+                      "secondary": "#705d00",
+                      "on-surface-variant": "#384956",
+                      "on-background": "#191c1e",
+                      "primary-fixed": "#d8e2ff",
+                      "surface": "#f7f9fb",
+                      "error-container": "#ffdad6",
+                      "surface-dim": "#d8dadc",
+                      "on-tertiary-fixed": "#002204",
+                      "on-tertiary": "#ffffff",
+                      "secondary-fixed": "#ffe170",
+                      "inverse-primary": "#adc6ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Plus Jakarta Sans"],
+                      "body": ["Be Vietnam Pro"],
+                      "label": ["Plus Jakarta Sans"]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background font-body text-on-surface min-h-screen overflow-hidden">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 left-0 right-0 z-50 px-8 py-6 flex justify-between items-center w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl no-border shadow-[0_10px_30px_rgba(0,0,0,0.04)] rounded-b-[3rem]">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-black text-blue-700 dark:text-blue-300 italic font-headline">Tactile Toybox</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-headline font-bold text-lg tracking-tight text-blue-700 dark:text-blue-300 hover:scale-105 transition-transform" href="#">Board</a>
+<a class="font-headline font-bold text-lg tracking-tight text-slate-400 dark:text-slate-500 hover:scale-105 transition-transform" href="#">Assets</a>
+<a class="font-headline font-bold text-lg tracking-tight text-slate-400 dark:text-slate-500 hover:scale-105 transition-transform" href="#">Market</a>
+<a class="font-headline font-bold text-lg tracking-tight text-slate-400 dark:text-slate-500 hover:scale-105 transition-transform" href="#">Club</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary p-2 hover:scale-105 transition-transform" data-icon="account_balance_wallet">account_balance_wallet</button>
+<button class="material-symbols-outlined text-primary p-2 hover:scale-105 transition-transform" data-icon="settings">settings</button>
+<div class="w-12 h-12 rounded-full overflow-hidden border-4 border-primary-container">
+<img alt="Player Profile Avatar" data-alt="vibrant 3D avatar of a playful character with colorful accessories against a soft blue background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCujRlbbCjZbWnGBQbCAWyQ-13B9snsPhN0ua0Rz21xcQjDNTCF-JvWep8-StPR3JnSVBFX8ZxUUSRc5BayezpSiHfkVupgTmiQ-Ld7EOSmS2wTbieS9TC_7TANFDFoW0j5L45t2o08HebD8IYzTl0LXe3ig2J75-b7O1AfMo8_-V8xQd3UBhNVndDLQa96jUs0N-jEEv86zpgZDRx1MiDCF5UTzdY_2dUIHIL6uLvvsAzJdjSiBUkAsaY45271vb_8N3w88JKNhct8"/>
+</div>
+</div>
+</header>
+<!-- Main Game Canvas -->
+<main class="relative w-full h-screen bg-surface-container-low flex items-center justify-center pt-24 pb-32">
+<!-- Game Board (Conceptual Representation) -->
+<div class="relative w-[1200px] h-[700px] grid grid-cols-8 grid-rows-5 gap-4 p-8 bg-surface-container-high rounded-xl rotate-1 shadow-2xl">
+<!-- Dimmed Background Overlay for Focus -->
+<div class="absolute inset-0 bg-on-surface/10 backdrop-blur-[2px] rounded-xl z-10 pointer-events-none"></div>
+<!-- Board Tiles (Selection) -->
+<!-- Player Start Position (Space 0) -->
+<div class="col-start-1 row-start-5 bg-primary rounded-lg shadow-lg z-0 flex flex-col items-center justify-center text-white font-headline font-bold">
+<span class="material-symbols-outlined text-4xl" data-icon="rocket_launch">rocket_launch</span>
+<span class="text-xs mt-1">START</span>
+</div>
+<!-- Intermediate Tiles -->
+<div class="col-start-2 row-start-5 bg-tertiary-container rounded-lg z-0 opacity-60"></div>
+<div class="col-start-3 row-start-5 bg-secondary-container rounded-lg z-0 opacity-60"></div>
+<div class="col-start-4 row-start-5 bg-primary-container rounded-lg z-0 opacity-60"></div>
+<div class="col-start-5 row-start-5 bg-tertiary-container rounded-lg z-0 opacity-60"></div>
+<div class="col-start-6 row-start-5 bg-secondary-container rounded-lg z-0 opacity-60"></div>
+<!-- TARGET SPACE (Space 6) -->
+<div class="col-start-7 row-start-5 bg-white rounded-lg z-20 relative ring-[6px] ring-secondary shadow-[0_0_40px_rgba(233,196,0,0.6)] flex flex-col items-center justify-center p-2 transform scale-105">
+<div class="absolute -top-16 left-1/2 -translate-x-1/2 animate-bounce-short">
+<span class="material-symbols-outlined text-secondary text-6xl" data-icon="south" style="font-variation-settings: 'FILL' 1;">south</span>
+</div>
+<div class="w-full h-1/2 bg-tertiary rounded-t-md mb-2"></div>
+<span class="font-headline font-extrabold text-primary">PLANET X</span>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mt-1">Collect Bonus</span>
+</div>
+<!-- Center Area - Dice Result Visual -->
+<div class="col-start-3 col-end-7 row-start-2 row-end-4 z-30 flex flex-col items-center justify-center gap-8 glass-panel bg-white/40 rounded-xl shadow-inner">
+<div class="flex gap-12">
+<!-- Die 1: Result 4 -->
+<div class="w-24 h-24 bg-white rounded-2xl shadow-xl flex items-center justify-center dice-shadow rotate-[-6deg]">
+<div class="grid grid-cols-2 grid-rows-2 gap-4">
+<div class="w-4 h-4 bg-primary rounded-full"></div>
+<div class="w-4 h-4 bg-primary rounded-full"></div>
+<div class="w-4 h-4 bg-primary rounded-full"></div>
+<div class="w-4 h-4 bg-primary rounded-full"></div>
+</div>
+</div>
+<!-- Die 2: Result 2 -->
+<div class="w-24 h-24 bg-white rounded-2xl shadow-xl flex items-center justify-center dice-shadow rotate-[8deg]">
+<div class="grid grid-cols-2 grid-rows-1 gap-8">
+<div class="w-4 h-4 bg-primary rounded-full"></div>
+<div class="w-4 h-4 bg-primary rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="text-center">
+<span class="font-headline text-6xl font-black text-primary drop-shadow-sm">TOTAL: 6</span>
+<p class="font-headline font-bold text-secondary text-xl mt-2 tracking-wide">COSMIC LEAP IN PROGRESS!</p>
+</div>
+</div>
+<!-- Cosmic Carnival Decorative Background -->
+<div class="absolute top-10 right-10 opacity-30 z-0">
+<span class="material-symbols-outlined text-8xl text-secondary rotate-12" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="absolute bottom-10 left-10 opacity-30 z-0">
+<span class="material-symbols-outlined text-[120px] text-primary -rotate-12" data-icon="star">star</span>
+</div>
+</div>
+<!-- Corner Status Cards -->
+<!-- Top Left: Player 1 (Current) -->
+<div class="absolute top-28 left-8 z-40 bg-white p-4 rounded-xl shadow-lg flex items-center gap-4 border-b-4 border-primary transform -rotate-2">
+<div class="w-14 h-14 bg-primary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="face_6">face_6</span>
+</div>
+<div>
+<div class="text-[10px] font-bold text-primary uppercase tracking-widest">Active Player</div>
+<div class="font-headline font-extrabold text-on-surface">Space Cadet</div>
+<div class="font-bold text-tertiary">⌬ 4,500</div>
+</div>
+</div>
+<!-- Top Right: Player 2 -->
+<div class="absolute top-28 right-8 z-40 bg-white/90 p-4 rounded-xl shadow-md flex items-center gap-4 opacity-80 transform rotate-1">
+<div class="w-14 h-14 bg-secondary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="face_3">face_3</span>
+</div>
+<div>
+<div class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Rival</div>
+<div class="font-headline font-extrabold text-on-surface">Neon Nomad</div>
+<div class="font-bold text-tertiary">⌬ 2,850</div>
+</div>
+</div>
+<!-- Bottom Left: Game Log -->
+<div class="absolute bottom-32 left-8 z-40 w-64 glass-panel bg-white/60 p-4 rounded-xl shadow-lg border-l-4 border-secondary">
+<h3 class="font-headline font-bold text-xs uppercase tracking-widest text-on-surface-variant mb-2">Live Broadcast</h3>
+<div class="space-y-2 text-sm font-medium">
+<p class="text-on-surface"><span class="text-primary font-bold">Cadet</span> rolled a lucky <span class="text-primary font-bold">6</span>!</p>
+<p class="text-on-surface-variant text-xs italic">Destination: Planet X (Multiplier Active)</p>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-8 left-0 right-0 mx-auto w-[92%] max-w-lg z-50 flex justify-around items-center p-2 bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg no-border shadow-2xl rounded-full">
+<!-- Board (Active) -->
+<div class="flex flex-col items-center justify-center bg-blue-600 text-white rounded-full px-6 py-3 scale-110 -translate-y-2 shadow-lg shadow-blue-500/40 animate-bounce-short">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-['Plus_Jakarta_Sans'] font-extrabold text-[12px] uppercase tracking-widest">Board</span>
+</div>
+<!-- Assets -->
+<div class="flex flex-col items-center justify-center text-slate-400 hover:text-blue-500 px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Plus_Jakarta_Sans'] font-extrabold text-[12px] uppercase tracking-widest">Assets</span>
+</div>
+<!-- Market -->
+<div class="flex flex-col items-center justify-center text-slate-400 hover:text-blue-500 px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-['Plus_Jakarta_Sans'] font-extrabold text-[12px] uppercase tracking-widest">Market</span>
+</div>
+<!-- Club -->
+<div class="flex flex-col items-center justify-center text-slate-400 hover:text-blue-500 px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-['Plus_Jakarta_Sans'] font-extrabold text-[12px] uppercase tracking-widest">Club</span>
+</div>
+</nav>
+<!-- Floating Action Button - Action Focus -->
+<button class="fixed bottom-12 right-12 z-50 w-20 h-20 bg-primary text-white rounded-full shadow-[0_20px_50px_rgba(0,91,193,0.3)] hover:scale-110 active:scale-95 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<!-- Decorative Screen Gradients -->
+<div class="fixed inset-0 pointer-events-none z-0">
+<div class="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-primary/5 blur-[120px] rounded-full"></div>
+<div class="absolute -bottom-[20%] -right-[10%] w-[50%] h-[50%] bg-secondary/10 blur-[120px] rounded-full"></div>
+</div>
+</body></html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cosmic Carnival - City Purchase</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bouncy-button {
+            transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .bouncy-button:active {
+            transform: scale(0.92);
+        }
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed-variant": "#004493",
+                      "surface-container-highest": "#e0e3e5",
+                      "secondary-fixed-dim": "#e9c400",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#78dc77",
+                      "surface-container": "#eceef0",
+                      "on-primary-container": "#004493",
+                      "surface-container-high": "#e6e8ea",
+                      "surface": "#f7f9fb",
+                      "primary-container": "#d8e2ff",
+                      "on-primary-fixed": "#001a41",
+                      "on-secondary-fixed-variant": "#544600",
+                      "on-background": "#191c1e",
+                      "on-surface": "#191c1e",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-container": "#544600",
+                      "on-secondary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "outline-variant": "#b7c9d9",
+                      "on-tertiary-container": "#005313",
+                      "on-surface-variant": "#384956",
+                      "on-error": "#ffffff",
+                      "surface-container-low": "#f2f4f6",
+                      "on-tertiary": "#ffffff",
+                      "secondary": "#705d00",
+                      "on-tertiary-fixed": "#002204",
+                      "surface-variant": "#e0e3e5",
+                      "secondary-container": "#ffe170",
+                      "on-secondary-fixed": "#221b00",
+                      "primary": "#005bc1",
+                      "inverse-surface": "#2d3133",
+                      "surface-tint": "#005bc1",
+                      "primary-fixed": "#d8e2ff",
+                      "primary-fixed-dim": "#adc6ff",
+                      "error-container": "#ffdad6",
+                      "tertiary": "#006e1c",
+                      "inverse-on-surface": "#eff1f3",
+                      "surface-dim": "#d8dadc",
+                      "outline": "#687988",
+                      "inverse-primary": "#adc6ff",
+                      "on-tertiary-fixed-variant": "#005313",
+                      "error": "#ba1a1a",
+                      "tertiary-fixed": "#94f990",
+                      "tertiary-container": "#94f990",
+                      "secondary-fixed": "#ffe170",
+                      "background": "#f7f9fb",
+                      "surface-bright": "#f7f9fb"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Plus Jakarta Sans"],
+                      "body": ["Be Vietnam Pro"],
+                      "label": ["Plus Jakarta Sans"]
+              }
+            },
+          }
+        }
+      </script>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-hidden">
+<!-- Top Navigation Anchor -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md fixed top-0 w-full z-50 shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-xl mx-auto">
+<div class="text-2xl font-black text-blue-600 dark:text-blue-400 drop-shadow-sm font-['Plus_Jakarta_Sans'] tracking-tight">Cosmic Carnival</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<div class="flex items-center bg-primary-container text-on-primary-container px-4 py-2 rounded-full gap-2 font-bold shadow-sm">
+<span class="material-symbols-outlined text-xl" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span>₩ 2,450,000</span>
+</div>
+<div class="flex items-center bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full gap-2 font-bold shadow-sm">
+<span class="material-symbols-outlined text-xl" data-icon="stars" data-weight="fill" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span>480</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary ring-2 ring-primary-container">
+<img alt="Player Avatar" data-alt="vibrant 3D character avatar of a young gamer with headphones and a cheerful expression on a bright blue background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHMU6Y_dJK9p5zsk3p6fxvYBBFECoYzz6E9NmAwyiAnz-WP0YD_LyAxJruda1C14Jv98MxflmHJgMs0DKKWen0AKXA5tGgkynvQz0tHHModWPBN1TCCuiY6Zr3SLy0cK2ycCrQbGOMnR2sXZ5szJS6oeIxjb5OlhfaiDQqxTDAVSVcNOzWL__iAMHG1Yu8y5gM27cWku-oHjF1kQyk5HZA_eKnkL74QOLaM5-1vfP8TYxlz6GPpRMh0NPbm_GcMzf-_zGC2E9LfVmh"/>
+</div>
+</div>
+</div>
+<div class="bg-slate-100 dark:bg-slate-800 h-[2px]"></div>
+</header>
+<!-- Main Game Canvas (Blurred Background) -->
+<main class="relative h-screen w-screen flex items-center justify-center p-4">
+<!-- Game Board Mock Background -->
+<div class="absolute inset-0 z-0">
+<div class="grid grid-cols-6 grid-rows-6 h-full w-full gap-2 p-2 opacity-40 blur-sm scale-105">
+<div class="bg-surface-container-high rounded-lg p-4 border-b-8 border-primary flex items-end justify-center font-bold text-primary">PARIS</div>
+<div class="bg-surface-container-high rounded-lg p-4 border-b-8 border-tertiary flex items-end justify-center font-bold text-tertiary">ROME</div>
+<div class="bg-surface-container-high rounded-lg p-4 border-b-8 border-secondary flex items-end justify-center font-bold text-secondary">CHANCE</div>
+<div class="bg-surface-container-high rounded-lg p-4 border-b-8 border-primary flex items-end justify-center font-bold text-primary">BERLIN</div>
+<div class="bg-surface-container-high rounded-lg p-4 border-b-8 border-primary flex items-end justify-center font-bold text-primary">LONDON</div>
+<div class="bg-surface-container-high rounded-lg p-4 border-b-8 border-error flex items-end justify-center font-bold text-error">GO</div>
+</div>
+</div>
+<!-- City Purchase Modal -->
+<section class="relative z-10 w-full max-w-4xl bg-surface/80 glass-panel rounded-xl shadow-[0_20px_40px_rgba(25,28,30,0.06)] overflow-hidden flex flex-col md:flex-row h-full max-h-[870px]">
+<!-- Side Image/City Card -->
+<div class="w-full md:w-1/3 bg-primary p-8 flex flex-col items-center justify-between text-white text-center">
+<div class="space-y-4">
+<div class="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto backdrop-blur-md">
+<span class="material-symbols-outlined text-6xl" data-icon="location_city">location_city</span>
+</div>
+<h1 class="font-headline text-4xl font-extrabold tracking-tight">LONDON</h1>
+<p class="font-body text-white/80">Capital of the United Kingdom</p>
+</div>
+<div class="relative w-full aspect-square rounded-lg overflow-hidden shadow-2xl rotate-[-2deg]">
+<img alt="London Landmarks" data-alt="stylized 3D rendering of Big Ben and the Palace of Westminster with fluffy clouds and a bright blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1HPsfbQEP6dm_grtvyz9XA29yEnpgDk_3N7r8rgi-GVotzjCOdBYicCJiJ1GjxI0HKeFqA7wmycLKHr1p0SLPtuOR29GApRZQqY9vZWxOSwDqAlqp8T9Fq6d01DjxTCbBOFuinxcY5_yniXq50C4vDA2Unsc0SZD2uii-hqf3rKw4GLlsPz8XS75xNTVtnwE3Xw_WStxrk-h8lTD6Bqj3F_bRHeUfPn2tg9GDfFAUUkF7OJnfNA1Zia_e8AcOLaZawadp1XDKXP0i"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+</div>
+<div class="w-full bg-white/10 rounded-lg p-4 backdrop-blur-sm">
+<p class="text-sm opacity-80 mb-1">Base Rent</p>
+<p class="text-2xl font-bold">₩ 250,000</p>
+</div>
+</div>
+<!-- Content Area -->
+<div class="w-full md:w-2/3 p-8 flex flex-col overflow-y-auto">
+<div class="mb-6 flex justify-between items-center">
+<div>
+<h2 class="font-headline text-2xl font-bold text-on-surface">Expand Your Empire</h2>
+<p class="text-on-surface-variant">Select building types to construct in London</p>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<!-- Construction Grid -->
+<div class="grid grid-cols-2 gap-4 mb-8">
+<!-- Option 1: Land -->
+<div class="group relative bg-surface-container-lowest p-6 rounded-lg shadow-sm border-2 border-transparent hover:border-primary/20 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 bg-tertiary/10 rounded-full flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-3xl" data-icon="landscape">landscape</span>
+</div>
+<input checked="" class="w-6 h-6 rounded-md border-outline text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<h3 class="font-headline font-bold text-lg mb-1">Land Only</h3>
+<p class="text-sm text-on-surface-variant mb-3">Basic ownership rights</p>
+<p class="font-bold text-tertiary">₩ 400,000</p>
+</div>
+<!-- Option 2: Villa -->
+<div class="group relative bg-surface-container-lowest p-6 rounded-lg shadow-sm border-2 border-transparent hover:border-primary/20 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl" data-icon="bungalow">bungalow</span>
+</div>
+<input class="w-6 h-6 rounded-md border-outline text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<h3 class="font-headline font-bold text-lg mb-1">Villa</h3>
+<p class="text-sm text-on-surface-variant mb-3">Luxury seasonal stays</p>
+<p class="font-bold text-secondary">₩ 650,000</p>
+</div>
+<!-- Option 3: Building -->
+<div class="group relative bg-surface-container-lowest p-6 rounded-lg shadow-sm border-2 border-transparent hover:border-primary/20 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="apartment">apartment</span>
+</div>
+<input class="w-6 h-6 rounded-md border-outline text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<h3 class="font-headline font-bold text-lg mb-1">Building</h3>
+<p class="text-sm text-on-surface-variant mb-3">Residential apartments</p>
+<p class="font-bold text-primary">₩ 1,200,000</p>
+</div>
+<!-- Option 4: Hotel -->
+<div class="group relative bg-surface-container-lowest p-6 rounded-lg shadow-sm border-2 border-transparent hover:border-primary/20 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<div class="w-12 h-12 bg-error/10 rounded-full flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-3xl" data-icon="hotel">hotel</span>
+</div>
+<input class="w-6 h-6 rounded-md border-outline text-primary focus:ring-primary" type="checkbox"/>
+</div>
+<h3 class="font-headline font-bold text-lg mb-1">Hotel</h3>
+<p class="text-sm text-on-surface-variant mb-3">5-Star world class</p>
+<p class="font-bold text-error">₩ 2,800,000</p>
+</div>
+</div>
+<!-- Financial Summary -->
+<div class="mt-auto bg-surface-container-low rounded-lg p-6 space-y-4">
+<div class="flex justify-between text-on-surface-variant">
+<span>Current Balance</span>
+<span class="font-semibold text-on-surface">₩ 2,450,000</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Total Investment</span>
+<span class="font-semibold text-error">− ₩ 400,000</span>
+</div>
+<div class="pt-4 border-t border-outline-variant flex justify-between items-center">
+<span class="font-headline font-bold text-xl">Remaining Cash</span>
+<span class="font-headline font-black text-2xl text-primary">₩ 2,050,000</span>
+</div>
+<button class="bouncy-button w-full bg-primary text-white py-5 rounded-lg font-headline font-extrabold text-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" data-icon="handyman" data-weight="fill" style="font-variation-settings: 'FILL' 1;">handyman</span>
+                        Confirm Construction
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Shell (Contextual Filtering) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-8 pt-4 bg-white/90 dark:bg-slate-950/90 backdrop-blur-2xl z-50 shadow-[0_-15px_40px_rgba(0,0,0,0.08)]">
+<a class="flex flex-col items-center justify-center text-slate-400 px-6 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="grid_view">grid_view</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px]">Board</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-600 text-white rounded-[2rem] px-6 py-2 shadow-lg shadow-blue-200" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="domain" data-weight="fill" style="font-variation-settings: 'FILL' 1;">domain</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px]">Property</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-6 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="swap_horiz">swap_horiz</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px]">Trade</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 px-6 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px]">Quests</span>
+</a>
+</nav>
+<!-- FAB Suppression Applied: Hidden on focus screens -->
+</body></html>

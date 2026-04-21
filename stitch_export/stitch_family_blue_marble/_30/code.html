@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Toybox Tycoon - Golden Key Celebration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#191c1e",
+                    "surface-variant": "#e0e3e5",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#ffe170",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#94f990",
+                    "on-secondary-fixed-variant": "#544600",
+                    "surface": "#f7f9fb",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#94f990",
+                    "on-surface-variant": "#384956",
+                    "outline": "#687988",
+                    "surface-tint": "#005bc1",
+                    "on-surface": "#191c1e",
+                    "surface-dim": "#d8dadc",
+                    "secondary-fixed-dim": "#e9c400",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-primary-fixed-variant": "#004493",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#f7f9fb",
+                    "secondary": "#705d00",
+                    "secondary-fixed": "#ffe170",
+                    "on-tertiary-fixed": "#002204",
+                    "primary-fixed": "#d8e2ff",
+                    "inverse-surface": "#2d3133",
+                    "tertiary-fixed-dim": "#78dc77",
+                    "primary-container": "#d8e2ff",
+                    "inverse-primary": "#adc6ff",
+                    "on-primary-fixed": "#001a41",
+                    "background": "#f7f9fb",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-container": "#eceef0",
+                    "primary-fixed-dim": "#adc6ff",
+                    "primary": "#005bc1",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#005313",
+                    "on-primary-container": "#004493",
+                    "outline-variant": "#b7c9d9",
+                    "tertiary": "#006e1c",
+                    "on-secondary-fixed": "#221b00",
+                    "on-secondary-container": "#544600",
+                    "surface-container-high": "#e6e8ea",
+                    "on-tertiary-container": "#005313"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .celebration-bg {
+            background: radial-gradient(circle at center, #005bc1 0%, #001a41 100%);
+        }
+        .key-glow {
+            filter: drop-shadow(0 0 30px rgba(255, 225, 112, 0.6));
+        }
+        .asymmetric-tilt {
+            transform: rotate(-2deg);
+        }
+        .bubbly-button {
+            box-shadow: 0 6px 0px #004493;
+        }
+        .bubbly-button:active {
+            box-shadow: 0 2px 0px #004493;
+            transform: translateY(4px) scale(0.98);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-xl shadow-blue-500/10 flex justify-between items-center px-6 py-4">
+<div class="text-2xl font-black text-blue-600 dark:text-blue-400 font-['Plus_Jakarta_Sans'] tracking-tight hover:scale-105 transition-transform active:scale-95 duration-200">
+            Toybox Tycoon
+        </div>
+<div class="flex items-center gap-4">
+<button class="text-blue-600 dark:text-blue-400 hover:scale-105 transition-transform active:scale-95">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+</button>
+<button class="text-blue-600 dark:text-blue-400 hover:scale-105 transition-transform active:scale-95">
+<span class="material-symbols-outlined" data-icon="stars">stars</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-primary-container overflow-hidden border-2 border-primary">
+<img alt="Player Profile" data-alt="Close up portrait of a stylized 3D avatar character with friendly expression and modern casual outfit in high quality render" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClMy1O9t1fYY2SHFl9HQ8gbrBnr9REbBLq2NAFYl7MYFBbB-Wv3-il42PyNsAWUUrA83WOwhF4a_j7js0W5kYfKVdoVhHia9zR22Open2sdaucLXdkUCSkv_jaj-JHkg-ld6BDvNoOyf1dJ1v8VPpRStVbDT1i3xkwxzsppO75aM-WRY48W6Wo5b19fGHp0HiicPZoKPDFxjDpDBdBmOg8OSHes0t0WLBKJulXbBWH15kaZOkCaoiXPxSFwLwokrGe70GFHMEfVNEh"/>
+</div>
+</div>
+</header>
+<!-- Main Celebration Canvas -->
+<main class="relative min-h-screen w-full flex flex-col items-center justify-center pt-20 pb-32 overflow-hidden bg-surface-container-low">
+<!-- Celebration Background Effects -->
+<div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+<div class="absolute inset-0 bg-primary opacity-10"></div>
+<!-- Swirling Particles Representation -->
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-secondary-container/20 blur-[100px] rounded-full"></div>
+<div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-primary-container/20 blur-[120px] rounded-full"></div>
+<!-- Fireworks Simulation via Images -->
+<div class="absolute top-20 left-10 w-48 h-48 opacity-40">
+<img class="w-full h-full object-contain" data-alt="Exploding golden fireworks display against a dark night sky with shimmering sparks and trails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8utywZUZodM_9cUTydVnEXVnX7zJuGXWqwTjLrCraVtalnNowUXnyaic5ab7dmdROQNgiLHfClg3FbByUezugOsu5HzzQkJbAXRqaR4QUuvXDiEbEXO9CbBrjbvETqM8h8g1ZfxxdgeFXEaVeSNyOXIaHNxNfCDfj6MBZrQHjLzw7zWafPzwH-hJunob0b4dfi91sfBubouXb2LhqzNy9V9AVqgoAvtDjcaZnSIMrvNHr6trB3FnBseCPBjjjCGM6yYgVw9MPg0pz"/>
+</div>
+<div class="absolute top-40 right-20 w-64 h-64 opacity-30">
+<img class="w-full h-full object-contain" data-alt="Vibrant colorful fireworks bursting in purple and blue hues with bright central light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALsdViAN60Nx4dqLUdHo3JnvN_gqD0gGBu7ZYwV45FWnHKPU1gfjwM7gNus2KEpdzTpnAissom4yUImmKeZDftbvWkcbUsg-GokyzlHUITMvL8nav7kRyxfb27C3ycVIt15luqcMIIM0P0XXqfpHhMOE1G_oL3pf277FIk83IPEaAWYgRdLYNI-zPC7QKrVdK2Cjw3BcauJ2BtOtZcclzOXgxF_-tbuOHD5DaRttlW5Tbj_PTJQSwIm2HxPDvHVh_DgW4hlmzf69uf"/>
+</div>
+</div>
+<!-- Content Container -->
+<div class="relative z-10 flex flex-col items-center text-center max-w-2xl px-6">
+<!-- Title -->
+<h1 class="font-headline font-extrabold text-4xl md:text-6xl text-primary tracking-tighter mb-8 drop-shadow-sm">
+                GOLDEN KEY DISCOVERED!
+            </h1>
+<!-- The Ornate Card -->
+<div class="relative group perspective-1000 mb-12">
+<div class="asymmetric-tilt bg-surface-container-lowest rounded-xl p-4 shadow-[0_20px_40px_rgba(25,28,30,0.15)] transition-transform duration-500 scale-100 hover:scale-105 border-4 border-secondary-container">
+<div class="bg-secondary p-8 rounded-lg flex flex-col items-center">
+<div class="w-32 h-32 bg-secondary-container rounded-full flex items-center justify-center mb-6 shadow-inner key-glow">
+<span class="material-symbols-outlined text-on-secondary-container !text-7xl" data-icon="vpn_key" style="font-variation-settings: 'FILL' 1;">vpn_key</span>
+</div>
+<h2 class="font-headline text-white text-3xl font-bold mb-2">Golden Vault</h2>
+<p class="text-secondary-container font-medium">Lvl. 99 Exclusive</p>
+</div>
+<div class="py-10 px-6 text-center">
+<div class="flex items-center justify-center gap-3 text-secondary mb-2">
+<span class="material-symbols-outlined !text-3xl" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-headline text-4xl font-black">REWARD</span>
+<span class="material-symbols-outlined !text-3xl" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<div class="bg-surface-container-low rounded-lg py-4 px-8 mt-4">
+<p class="font-headline text-primary text-5xl font-extrabold tracking-tight">
+                                $200,000
+                            </p>
+<p class="font-body text-outline font-bold uppercase tracking-widest text-sm mt-1">Cash Bonus</p>
+</div>
+</div>
+</div>
+<!-- Bursting Light Ray Elements (Visual representation) -->
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-secondary-container/40 blur-2xl rounded-full mix-blend-screen"></div>
+<div class="absolute -bottom-10 -left-10 w-32 h-32 bg-primary-container/40 blur-2xl rounded-full mix-blend-screen"></div>
+</div>
+<!-- Reward Details -->
+<div class="flex gap-6 mb-12">
+<div class="flex flex-col items-center bg-white/60 backdrop-blur-md rounded-lg p-6 shadow-lg shadow-black/5">
+<div class="w-12 h-12 bg-tertiary-container rounded-full flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="flight_takeoff">flight_takeoff</span>
+</div>
+<span class="font-label font-bold text-on-surface">FREE TRIP</span>
+</div>
+<div class="flex flex-col items-center bg-white/60 backdrop-blur-md rounded-lg p-6 shadow-lg shadow-black/5">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="celebration" style="font-variation-settings: 'FILL' 1;">celebration</span>
+</div>
+<span class="font-label font-bold text-on-surface">EPIC SPIN</span>
+</div>
+<div class="flex flex-col items-center bg-white/60 backdrop-blur-md rounded-lg p-6 shadow-lg shadow-black/5">
+<div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="shield" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<span class="font-label font-bold text-on-surface">2x RENT</span>
+</div>
+</div>
+<!-- Main CTA -->
+<button class="bubbly-button bg-primary text-white font-headline text-2xl font-black px-16 py-6 rounded-full hover:scale-105 transition-all duration-200 uppercase tracking-wider shadow-xl shadow-primary/30 flex items-center gap-4">
+                COLLECT REWARD
+                <span class="material-symbols-outlined !text-4xl" data-icon="keyboard_double_arrow_right">keyboard_double_arrow_right</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-8 pointer-events-none">
+<div class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl shadow-[0_20px_40px_rgba(0,91,193,0.15)] rounded-full w-[90%] mx-auto flex justify-around items-center py-2 px-2 pointer-events-auto">
+<button class="flex flex-col items-center justify-center text-slate-400 p-2 hover:bg-blue-50 dark:hover:bg-blue-900/30 rounded-full active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs font-bold">Board</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 p-2 hover:bg-blue-50 dark:hover:bg-blue-900/30 rounded-full active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="domain">domain</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs font-bold">Properties</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-blue-600 text-white rounded-full p-4 scale-110 -translate-y-2 shadow-lg shadow-blue-500/30 active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="vpn_key" style="font-variation-settings: 'FILL' 1;">vpn_key</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold">Events</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 p-2 hover:bg-blue-50 dark:hover:bg-blue-900/30 rounded-full active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs font-bold">Shop</span>
+</button>
+</div>
+</nav>
+</body></html>

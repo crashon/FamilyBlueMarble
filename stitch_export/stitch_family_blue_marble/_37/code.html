@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#b7c9d9",
+                    "surface-container-highest": "#e0e3e5",
+                    "primary-container": "#d8e2ff",
+                    "surface-tint": "#005bc1",
+                    "on-secondary-fixed-variant": "#544600",
+                    "inverse-on-surface": "#eff1f3",
+                    "secondary-container": "#ffe170",
+                    "on-tertiary-fixed-variant": "#005313",
+                    "primary-fixed": "#d8e2ff",
+                    "on-tertiary-container": "#005313",
+                    "tertiary": "#006e1c",
+                    "on-error": "#ffffff",
+                    "on-background": "#191c1e",
+                    "surface-dim": "#d8dadc",
+                    "outline": "#687988",
+                    "on-surface": "#191c1e",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "secondary": "#705d00",
+                    "background": "#f7f9fb",
+                    "on-tertiary-fixed": "#002204",
+                    "on-surface-variant": "#384956",
+                    "tertiary-fixed-dim": "#78dc77",
+                    "surface-container-high": "#e6e8ea",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "tertiary-container": "#94f990",
+                    "secondary-fixed-dim": "#e9c400",
+                    "tertiary-fixed": "#94f990",
+                    "on-secondary-container": "#544600",
+                    "surface-container-low": "#f2f4f6",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#221b00",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#adc6ff",
+                    "primary": "#005bc1",
+                    "on-primary-fixed-variant": "#004493",
+                    "on-primary-fixed": "#001a41",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#f7f9fb",
+                    "surface": "#f7f9fb",
+                    "inverse-primary": "#adc6ff",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#e0e3e5",
+                    "on-primary-container": "#004493",
+                    "secondary-fixed": "#ffe170",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .bounce-effect:active { transform: scale(0.9); }
+      .glass-modal {
+        background: rgba(247, 249, 251, 0.8);
+        backdrop-filter: blur(24px);
+      }
+      .cosmic-gradient {
+        background: radial-gradient(circle at top right, #d8e2ff 0%, #f7f9fb 100%);
+      }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background min-h-screen overflow-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-4 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-b-[3rem] no-border shadow-2xl shadow-blue-500/10">
+<div class="flex items-center gap-3">
+<span class="text-2xl font-black text-blue-700 dark:text-blue-400 font-['Plus_Jakarta_Sans'] tracking-tight">Tactile Toybox</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-3 rounded-full hover:scale-105 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all active:scale-95 duration-200 ease-out text-slate-500">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-3 rounded-full hover:scale-105 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all active:scale-95 duration-200 ease-out text-slate-500">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<!-- Main Canvas (Blurred Cosmic Background) -->
+<main class="relative w-full h-screen cosmic-gradient flex items-center justify-center p-6">
+<!-- Background Game Elements (Blurred) -->
+<div class="absolute inset-0 z-0 blur-sm opacity-40 overflow-hidden select-none pointer-events-none">
+<div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary-container rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary-container rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+<div class="grid grid-cols-4 gap-8 p-20 w-full h-full opacity-20 transform -rotate-12">
+<div class="bg-white aspect-square rounded-xl shadow-xl"></div>
+<div class="bg-primary aspect-square rounded-xl shadow-xl"></div>
+<div class="bg-white aspect-square rounded-xl shadow-xl"></div>
+<div class="bg-secondary aspect-square rounded-xl shadow-xl"></div>
+<div class="bg-tertiary aspect-square rounded-xl shadow-xl"></div>
+<div class="bg-white aspect-square rounded-xl shadow-xl"></div>
+<div class="bg-primary-container aspect-square rounded-xl shadow-xl"></div>
+<div class="bg-white aspect-square rounded-xl shadow-xl"></div>
+</div>
+</div>
+<!-- The Modal (Focused Journey - Shell Suppressed Logic) -->
+<div class="relative z-10 max-w-lg w-full glass-modal rounded-xl shadow-[0_20px_60px_rgba(0,91,193,0.15)] p-10 flex flex-col items-center text-center transform -rotate-1 border border-white/50">
+<!-- Character Illustration -->
+<div class="relative mb-8 group">
+<div class="absolute inset-0 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all duration-500"></div>
+<div class="relative w-48 h-48 rounded-full overflow-hidden bg-white shadow-inner flex items-center justify-center border-4 border-white">
+<img class="w-40 h-40 object-contain drop-shadow-lg" data-alt="cute small alien character with big eyes wearing a bubble space helmet looking slightly sad and disappointed floating in a small spherical spaceship" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_w9zonSaCDOmSjmtMaqOSRhCMYLjJz7SWunbZXqKXCSqJGwxgSv8G8mpwK6zDOqRzajZDW5aBYR4-EkFBlEJ_I7Nle2vphf1odKkJYVc_56A3BbHBMC2Y1Txb2qE1ezHqYRMwNiXrz3PboLpX3ZQSPRmeeT0JJArDIXlhRWInoejE6F8q03bh1K14EDPZHgQtAbsZIpBzCJ3hNwoM58YKtv5JQt_RaBRoI6TrdN6hij69w669hW68K7c2RG3q4hvu-tMkn-llBIay"/>
+</div>
+<div class="absolute -bottom-2 -right-2 bg-white p-3 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-error text-3xl" style="font-variation-settings: 'FILL' 1;">error</span>
+</div>
+</div>
+<!-- Typography Content -->
+<h1 class="font-headline font-extrabold text-4xl text-on-surface tracking-tighter mb-4 leading-none">
+                RESCUE DECLINED
+            </h1>
+<p class="font-body text-lg text-on-surface-variant font-medium mb-8 leading-relaxed max-w-sm">
+                Oh no! Looks like everyone is a bit busy right now.
+            </p>
+<p class="font-body text-sm text-outline mb-10 italic">
+                Don't lose hope, you can try again next turn or use credits for an emergency rescue.
+            </p>
+<!-- Buttons Cluster -->
+<div class="w-full flex flex-col gap-4">
+<button class="w-full py-5 px-8 rounded-xl bg-primary text-white font-headline font-bold text-lg shadow-[0_8px_0_#004493] active:shadow-none active:translate-y-1 transition-all flex items-center justify-center gap-3 group">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                    Emergency Rescue (500 Credits)
+                </button>
+<button class="w-full py-5 px-8 rounded-xl bg-surface-container text-on-surface-variant font-headline font-bold text-lg hover:bg-surface-container-high transition-colors active:scale-95 flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">schedule</span>
+                    Wait One Turn
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Filtered Visibility: Task-Focused screens often suppress, but included here as per prompt instructions) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center bg-white dark:bg-slate-900 rounded-t-[3rem] px-6 pb-8 pt-4 tonal-shift shadow-[0_-10px_40px_rgba(0,0,0,0.08)]">
+<!-- Play Tab -->
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-blue-500 px-6 py-3 hover:translate-y-[-4px] transition-transform duration-300 bounce-effect">
+<span class="material-symbols-outlined text-2xl" data-icon="videogame_asset">videogame_asset</span>
+<span class="font-['Plus_Jakarta_Sans'] font-semibold text-xs">Play</span>
+</div>
+<!-- Inventory Tab (Active Intent Mapping - Closest to gameplay resources/rescues) -->
+<div class="flex flex-col items-center justify-center bg-blue-600 text-white rounded-[2rem] px-6 py-3 shadow-lg shadow-blue-500/30 hover:translate-y-[-4px] transition-transform duration-300 bounce-effect">
+<span class="material-symbols-outlined text-2xl" data-icon="inventory_2" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<span class="font-['Plus_Jakarta_Sans'] font-semibold text-xs">Inventory</span>
+</div>
+<!-- Community Tab -->
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-blue-500 px-6 py-3 hover:translate-y-[-4px] transition-transform duration-300 bounce-effect">
+<span class="material-symbols-outlined text-2xl" data-icon="group">group</span>
+<span class="font-['Plus_Jakarta_Sans'] font-semibold text-xs">Community</span>
+</div>
+<!-- Profile Tab -->
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-blue-500 px-6 py-3 hover:translate-y-[-4px] transition-transform duration-300 bounce-effect">
+<span class="material-symbols-outlined text-2xl" data-icon="face">face</span>
+<span class="font-['Plus_Jakarta_Sans'] font-semibold text-xs">Profile</span>
+</div>
+</nav>
+</body></html>

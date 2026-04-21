@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Tactile Toybox - Property Purchase</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be_Vietnam_Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#544600",
+                    "on-surface": "#191c1e",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-low": "#f2f4f6",
+                    "secondary": "#705d00",
+                    "surface-dim": "#d8dadc",
+                    "surface": "#f7f9fb",
+                    "on-background": "#191c1e",
+                    "on-tertiary-container": "#005313",
+                    "primary-container": "#d8e2ff",
+                    "inverse-surface": "#2d3133",
+                    "surface-tint": "#005bc1",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-primary-fixed": "#001a41",
+                    "on-primary": "#ffffff",
+                    "background": "#f7f9fb",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#005313",
+                    "tertiary-container": "#94f990",
+                    "on-primary-fixed-variant": "#004493",
+                    "outline": "#687988",
+                    "tertiary-fixed-dim": "#78dc77",
+                    "secondary-fixed-dim": "#e9c400",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#544600",
+                    "primary-fixed": "#d8e2ff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-highest": "#e0e3e5",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-secondary-fixed": "#221b00",
+                    "on-primary-container": "#004493",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f7f9fb",
+                    "tertiary": "#006e1c",
+                    "primary": "#005bc1",
+                    "outline-variant": "#b7c9d9",
+                    "surface-container-high": "#e6e8ea",
+                    "on-tertiary-fixed": "#002204",
+                    "secondary-container": "#ffe170",
+                    "surface-container": "#eceef0",
+                    "on-surface-variant": "#384956",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#94f990",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#adc6ff",
+                    "secondary-fixed": "#ffe170"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-panel {
+        background: rgba(247, 249, 251, 0.8);
+        backdrop-filter: blur(20px);
+      }
+      .bubbly-button {
+        box-shadow: 0 4px 0px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s ease;
+      }
+      .bubbly-button:active {
+        transform: scale(0.95) translateY(2px);
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+      }
+      .asymmetric-tilt {
+        transform: rotate(-1.5deg);
+      }
+    </style>
+</head>
+<body class="bg-surface-container-low font-body text-on-surface overflow-hidden min-h-screen">
+<!-- Top Navigation Anchor -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(25,28,30,0.06)] fixed top-0 full-width z-40 flex justify-between items-center w-full px-12 py-6">
+<div class="text-3xl font-black text-blue-700 dark:text-blue-400 tracking-tighter font-['Plus_Jakarta_Sans']">The Tactile Toybox</div>
+<div class="flex gap-6 items-center">
+<div class="flex items-center gap-3 bg-secondary-container text-on-secondary-container px-6 py-3 rounded-full font-headline font-bold shadow-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span>$24,500</span>
+</div>
+<div class="flex gap-4">
+<div class="text-slate-500 font-medium hover:scale-105 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all active:scale-95 duration-200 cursor-pointer p-2 rounded-lg">
+<span class="material-symbols-outlined">settings</span>
+</div>
+<div class="text-slate-500 font-medium hover:scale-105 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all active:scale-95 duration-200 cursor-pointer p-2 rounded-lg">
+<span class="material-symbols-outlined">help</span>
+</div>
+<div class="text-slate-500 font-medium hover:scale-105 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all active:scale-95 duration-200 cursor-pointer p-2 rounded-lg">
+<span class="material-symbols-outlined">account_circle</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Game Board Mock Background -->
+<main class="relative w-full h-screen flex items-center justify-center p-8 pt-24 overflow-hidden">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<img alt="vibrant 3D board game tiles" class="w-full h-full object-cover" data-alt="colorful stylized 3D board game tiles on a clean white surface with soft overhead studio lighting and playful atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbuR67lfiiXPyS_TKZEeBqG4SUg4hTqEmhqVDdGnOgr5jeA_qAP3LMp_EtX-vXRVe2hM1u2E7HzJ0QeubhguxweWV8lx3foXcTUNz9a3mbzlLjVvR6SuZwIwivoSUfX9wmSwbmcGJc15h0RZOv9o3a2SexZIlQ_kj0bY7qkskNHN684QzjV6M_TaZ67ztEUO7xcy-A-rxc8RZEppMnHqFCFa7LFRahDr0MfdfE4QrugJ6azNu4oE6_oqzbrieJ7PuhRlxFa_cPxIUP"/>
+</div>
+<!-- Pop-up Overlay (Property Purchase Screen) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-on-surface/20 backdrop-blur-md p-6">
+<div class="max-w-5xl w-full flex flex-col md:flex-row gap-8 items-stretch">
+<!-- Seoul Property Deed Card -->
+<div class="flex-1 bg-surface-container-lowest rounded-xl shadow-[0_20px_40px_rgba(25,28,30,0.06)] asymmetric-tilt overflow-hidden border-[1px] border-outline-variant/15">
+<div class="h-24 bg-primary flex items-center justify-center px-8">
+<h2 class="font-headline font-extrabold text-4xl text-on-primary tracking-tight">Seoul</h2>
+</div>
+<div class="p-8 space-y-8">
+<div class="flex justify-center">
+<div class="w-48 h-48 rounded-full bg-primary-container/30 flex items-center justify-center relative">
+<span class="material-symbols-outlined text-primary text-8xl" style="font-variation-settings: 'FILL' 1;">location_city</span>
+<div class="absolute -top-2 -right-2 bg-secondary rounded-full w-12 h-12 flex items-center justify-center text-white font-bold text-xl shadow-lg">
+<span class="material-symbols-outlined">star</span>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center py-2">
+<span class="font-headline text-on-surface-variant font-semibold">Toll Fee</span>
+<span class="text-2xl font-black text-on-surface">$2,000</span>
+</div>
+<div class="h-px bg-surface-container"></div>
+<div class="grid grid-cols-2 gap-6 pt-2">
+<div class="space-y-1">
+<p class="text-xs font-label uppercase tracking-widest text-outline">Mortgage Value</p>
+<p class="font-bold text-lg">$5,000</p>
+</div>
+<div class="space-y-1">
+<p class="text-xs font-label uppercase tracking-widest text-outline">Collection City</p>
+<p class="font-bold text-lg">South Korea</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Purchase Options Control Panel -->
+<div class="flex-[1.5] glass-panel rounded-xl shadow-[0_30px_60px_rgba(0,91,193,0.15)] p-10 flex flex-col border-[1px] border-white/50">
+<div class="mb-10 flex justify-between items-start">
+<div>
+<h3 class="font-headline font-extrabold text-4xl text-on-surface mb-2">Build Properties</h3>
+<p class="text-on-surface-variant font-medium text-lg">Select what you want to add to your land.</p>
+</div>
+<div class="bg-white px-6 py-4 rounded-lg shadow-sm border border-outline-variant/10 text-right">
+<p class="text-xs uppercase tracking-widest font-bold text-outline mb-1">Your Balance</p>
+<p class="text-3xl font-black text-primary">$24,500</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 flex-grow">
+<!-- Land -->
+<div class="group bg-surface-container-lowest rounded-lg p-6 hover:bg-primary/5 transition-colors cursor-pointer border border-outline-variant/10 flex flex-col">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-container" style="font-variation-settings: 'FILL' 1;">landscape</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-lg">Land</h4>
+<p class="text-primary font-black">$2,000</p>
+</div>
+</div>
+<button class="mt-auto w-full bubbly-button bg-primary text-white font-headline font-bold py-3 rounded-full text-sm uppercase tracking-wider flex items-center justify-center gap-2">
+<span>Purchase</span>
+</button>
+</div>
+<!-- Villa -->
+<div class="group bg-surface-container-lowest rounded-lg p-6 hover:bg-primary/5 transition-colors cursor-pointer border border-outline-variant/10 flex flex-col">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">home</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-lg">Villa</h4>
+<p class="text-primary font-black">$5,000</p>
+</div>
+</div>
+<button class="mt-auto w-full bubbly-button bg-primary text-white font-headline font-bold py-3 rounded-full text-sm uppercase tracking-wider flex items-center justify-center gap-2">
+<span>Purchase</span>
+</button>
+</div>
+<!-- Building -->
+<div class="group bg-surface-container-lowest rounded-lg p-6 hover:bg-primary/5 transition-colors cursor-pointer border border-outline-variant/10 flex flex-col">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">apartment</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-lg">Building</h4>
+<p class="text-primary font-black">$12,000</p>
+</div>
+</div>
+<button class="mt-auto w-full bubbly-button bg-primary text-white font-headline font-bold py-3 rounded-full text-sm uppercase tracking-wider flex items-center justify-center gap-2">
+<span>Purchase</span>
+</button>
+</div>
+<!-- Hotel -->
+<div class="group bg-surface-container-lowest rounded-lg p-6 border-2 border-secondary/20 hover:bg-secondary/5 transition-colors cursor-pointer flex flex-col">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 rounded-full bg-secondary text-white flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">corporate_fare</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-lg">Grand Hotel</h4>
+<p class="text-secondary font-black">$35,000</p>
+</div>
+</div>
+<!-- Grayed out button if not affordable -->
+<button class="mt-auto w-full bg-surface-dim text-outline font-headline font-bold py-3 rounded-full text-sm uppercase tracking-wider flex items-center justify-center gap-2 cursor-not-allowed">
+<span class="material-symbols-outlined text-base">lock</span>
+<span>Insufficient</span>
+</button>
+</div>
+</div>
+<div class="mt-10 flex gap-4">
+<button class="flex-grow bubbly-button bg-surface-variant text-on-surface-variant font-headline font-bold py-5 rounded-full text-xl flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">close</span>
+<span>Close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell (Always Rendered for Top Level Screens) -->
+<nav class="fixed bottom-8 left-1/2 -translate-x-1/2 rounded-[3rem] px-8 py-4 w-auto z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg shadow-[0_30px_60px_rgba(0,91,193,0.15)] flex gap-10 items-center justify-center">
+<div class="flex flex-col items-center justify-center bg-blue-600 text-white rounded-full p-4 scale-110 -translate-y-2 shadow-lg shadow-blue-500/40 cursor-pointer">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-bold uppercase tracking-widest mt-1">Game</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-4 hover:text-blue-500 transition-transform cursor-pointer">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-bold uppercase tracking-widest mt-1">Assets</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-4 hover:text-blue-500 transition-transform cursor-pointer">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-bold uppercase tracking-widest mt-1">Market</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-4 hover:text-blue-500 transition-transform cursor-pointer">
+<span class="material-symbols-outlined">group</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-bold uppercase tracking-widest mt-1">Friends</span>
+</div>
+</nav>
+<!-- Contextual HUD Element -->
+<div class="fixed top-28 left-12 space-y-4">
+<div class="bg-white/80 backdrop-blur-md rounded-xl p-6 shadow-lg border border-white/50 w-64 flex items-center gap-4 asymmetric-tilt">
+<div class="w-16 h-16 rounded-full overflow-hidden border-4 border-primary">
+<img alt="current player avatar" class="w-full h-full object-cover" data-alt="cheerful illustrated avatar of a young boy with a cap and bright smile in a clean flat design style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfW89oE5svFKSoHBroA9_H82ZkI3243MASzx1Uv2Njnml94B6rDbB36NTlHQAe1lVjKoRAHu3U69_j5k5uk9HjG2j6gGBeR6SWSE-Zopy9F9SVZn-xgNzsrtj2qxNKIfGUyBQA6UInN6UR8YAqiPR-B4qEeyCn77kIJSTz-R6054b7yfcEmKhUGmP4DuIi3p2UGkxmYkE9zeOhhNrwmPn282grVlpmMEQFHqmKxKh9iexIGZu3zf-X4eC4VzqBZE62NqFpQMXxUUPs"/>
+</div>
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-tighter">Current Player</p>
+<p class="font-headline font-extrabold text-xl">Leo</p>
+</div>
+</div>
+</div>
+</body></html>

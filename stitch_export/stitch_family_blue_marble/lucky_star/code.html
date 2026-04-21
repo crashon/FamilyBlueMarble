@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Astro-Kid: Lucky Star Activation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,800&amp;family=Be_Vietnam_Pro:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#adc6ff",
+                    "tertiary": "#006e1c",
+                    "on-background": "#191c1e",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-surface": "#191c1e",
+                    "surface-bright": "#f7f9fb",
+                    "surface-variant": "#e0e3e5",
+                    "surface-dim": "#d8dadc",
+                    "surface-container": "#eceef0",
+                    "inverse-on-surface": "#eff1f3",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#94f990",
+                    "primary-container": "#d8e2ff",
+                    "on-tertiary-fixed-variant": "#005313",
+                    "on-tertiary-fixed": "#002204",
+                    "on-primary": "#ffffff",
+                    "on-primary-container": "#004493",
+                    "primary-fixed-dim": "#adc6ff",
+                    "secondary-fixed-dim": "#e9c400",
+                    "tertiary-container": "#94f990",
+                    "on-primary-fixed-variant": "#004493",
+                    "on-secondary-fixed-variant": "#544600",
+                    "inverse-surface": "#2d3133",
+                    "outline": "#687988",
+                    "on-secondary-fixed": "#221b00",
+                    "on-primary-fixed": "#001a41",
+                    "surface-tint": "#005bc1",
+                    "on-secondary-container": "#544600",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#ffe170",
+                    "primary": "#005bc1",
+                    "tertiary-fixed-dim": "#78dc77",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-container-low": "#f2f4f6",
+                    "on-secondary": "#ffffff",
+                    "surface": "#f7f9fb",
+                    "outline-variant": "#b7c9d9",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#705d00",
+                    "secondary-container": "#ffe170",
+                    "background": "#f7f9fb",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#384956",
+                    "error": "#ba1a1a",
+                    "on-tertiary-container": "#005313",
+                    "primary-fixed": "#d8e2ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be_Vietnam_Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bubbly-gradient {
+            background: linear-gradient(180deg, #005bc1 0%, #d8e2ff 100%);
+        }
+        .lucky-star-glow {
+            box-shadow: 0 0 80px rgba(233, 196, 0, 0.4);
+        }
+        .floating-star {
+            filter: drop-shadow(0 0 10px rgba(255, 225, 112, 0.8));
+        }
+    </style>
+</head>
+<body class="bg-surface-container-low font-body text-on-surface min-h-screen overflow-hidden flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl flex justify-between items-center w-full px-6 py-4 shadow-[0_4px_20px_rgba(0,91,193,0.08)] z-50 fixed top-0 left-0 right-0">
+<div class="flex items-center gap-2">
+<span class="text-2xl font-['Plus_Jakarta_Sans'] font-extrabold text-blue-700 dark:text-blue-400 italic tracking-tight">Blue Marble: Cosmic Carnival</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-blue-700 dark:text-blue-400 hover:scale-105 transition-transform active:scale-95">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</button>
+<button class="text-blue-700 dark:text-blue-400 hover:scale-105 transition-transform active:scale-95">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<!-- Main Content: Activation Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center p-6 relative">
+<!-- Background Decorative Elements -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden">
+<div class="absolute top-1/4 left-10 opacity-40 floating-star">
+<span class="material-symbols-outlined text-[80px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="absolute bottom-1/4 right-10 opacity-30 floating-star">
+<span class="material-symbols-outlined text-[100px] text-secondary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="absolute top-1/2 left-1/4 opacity-20 floating-star">
+<span class="material-symbols-outlined text-[60px] text-secondary" style="font-variation-settings: 'FILL' 1;">colors_spark</span>
+</div>
+</div>
+<!-- Character Centerpiece -->
+<div class="relative z-10 flex flex-col items-center">
+<!-- Golden Shield Backdrop -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-secondary-container/30 rounded-full blur-3xl lucky-star-glow"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 border-4 border-secondary/20 rounded-full animate-pulse"></div>
+<!-- The Astro-Kid Character -->
+<div class="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden bg-white shadow-2xl border-8 border-secondary-fixed ring-4 ring-primary-container z-20">
+<img alt="Astro-Kid Character" class="w-full h-full object-cover" data-alt="cute toddler in a sleek white and blue futuristic spacesuit with a transparent helmet smiling in a cosmic carnival setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX8Oc3wjluM7Q2qs42OTAP6gNvWi0nhCONG1Z4iyda7Y1O0FiVf3fqTRv-cSvq3mN__9pKtst3XfMm5ZM9iqXxr8-0XRuwzPWniJSfykJs2S_xHUBjwZQ-xrYnJ59xuT7dSJZKwCOfdAHm-xlZQ9NdZhNgRNzn86kIBSrB02OZbkTbySn-4Z2oi4lA3CdKSQJzi69lqu-U8KwbtvCYp9vCrfVJ5ftISiQ33fL00IbM69Z69W7ySDAyPqPTfo_JWcj7CtHrI0HjWyf2"/>
+<!-- Lucky Star Aura Overlay -->
+<div class="absolute inset-0 bg-secondary-container/20 mix-blend-overlay"></div>
+</div>
+<!-- Activation Badge -->
+<div class="mt-8 z-30 flex flex-col items-center text-center max-w-2xl px-4">
+<div class="bg-secondary-fixed text-on-secondary-fixed px-6 py-2 rounded-full font-headline font-extrabold text-sm tracking-widest uppercase mb-4 shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    ABILITY TRIGGERED
+                </div>
+<h1 class="font-headline font-extrabold text-4xl md:text-6xl text-primary mb-4 leading-tight">
+                    LUCKY STAR ACTIVATED!
+                </h1>
+<!-- Success Message Bento Card -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_20px_40px_rgba(25,28,30,0.06)] border border-outline-variant/15 flex flex-col items-center gap-4 -rotate-1 transform">
+<div class="flex items-center gap-3">
+<div class="bg-tertiary-container p-3 rounded-full">
+<span class="material-symbols-outlined text-on-tertiary-container" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+</div>
+<p class="font-body font-bold text-xl text-tertiary">Toll Waived + Cash Bonus!</p>
+</div>
+<p class="font-body text-on-surface-variant text-lg">
+<span class="font-bold text-primary">40% chance</span> to avoid toll successful! <br/>
+<span class="text-secondary font-bold text-base">+10% cash bonus secured!</span>
+</p>
+</div>
+</div>
+</div>
+<!-- Action Section -->
+<div class="mt-12 z-30 flex gap-4">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-full font-headline font-bold text-xl shadow-[0_10px_20px_rgba(0,91,193,0.3)] hover:scale-105 transition-all active:scale-95 bubbly-gradient flex items-center gap-3">
+                Continue Journey
+                <span class="material-symbols-outlined">rocket_launch</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-8 left-0 right-0 mx-auto flex justify-around items-center z-50 py-2 bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg w-[90%] max-w-lg rounded-full shadow-[0_20px_40px_rgba(25,28,30,0.12)]">
+<!-- Play Tab (Active) -->
+<div class="flex flex-col items-center justify-center bg-blue-600 dark:bg-blue-500 text-white rounded-full px-6 py-2 scale-110 shadow-lg cursor-pointer">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px]">Play</span>
+</div>
+<!-- Shop -->
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer">
+<span class="material-symbols-outlined">local_mall</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px]">Shop</span>
+</div>
+<!-- Avatars -->
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer">
+<span class="material-symbols-outlined">face_6</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px]">Avatars</span>
+</div>
+<!-- Social -->
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-4 py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer">
+<span class="material-symbols-outlined">group</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px]">Social</span>
+</div>
+</nav>
+<!-- Floating Sparkles (Contextual effects) -->
+<div class="fixed top-20 right-20 pointer-events-none opacity-60">
+<span class="material-symbols-outlined text-secondary-fixed text-4xl" style="font-variation-settings: 'FILL' 1;">grade</span>
+</div>
+<div class="fixed bottom-40 left-10 pointer-events-none opacity-40">
+<span class="material-symbols-outlined text-secondary-fixed text-6xl" style="font-variation-settings: 'FILL' 1;">grade</span>
+</div>
+</body></html>

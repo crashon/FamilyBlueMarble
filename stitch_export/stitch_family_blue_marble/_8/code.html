@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cosmic Carnival - Dice Roll</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#ffe170",
+                    "surface-container-highest": "#e0e3e5",
+                    "tertiary-fixed": "#94f990",
+                    "on-tertiary-fixed": "#002204",
+                    "secondary-container": "#ffe170",
+                    "on-primary-fixed": "#001a41",
+                    "surface-tint": "#005bc1",
+                    "secondary-fixed-dim": "#e9c400",
+                    "on-surface-variant": "#384956",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#006e1c",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#94f990",
+                    "on-primary-fixed-variant": "#004493",
+                    "inverse-primary": "#adc6ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#d8dadc",
+                    "outline": "#687988",
+                    "surface-container-high": "#e6e8ea",
+                    "primary-fixed": "#d8e2ff",
+                    "on-surface": "#191c1e",
+                    "on-secondary-fixed-variant": "#544600",
+                    "tertiary-fixed-dim": "#78dc77",
+                    "background": "#f7f9fb",
+                    "on-tertiary-container": "#005313",
+                    "on-background": "#191c1e",
+                    "outline-variant": "#b7c9d9",
+                    "on-secondary-container": "#544600",
+                    "surface-container-low": "#f2f4f6",
+                    "primary": "#005bc1",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#2d3133",
+                    "on-secondary-fixed": "#221b00",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#f7f9fb",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-container": "#eceef0",
+                    "on-primary-container": "#004493",
+                    "surface": "#f7f9fb",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-tertiary": "#ffffff",
+                    "surface-variant": "#e0e3e5",
+                    "secondary": "#705d00",
+                    "primary-container": "#d8e2ff",
+                    "on-tertiary-fixed-variant": "#005313",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .perspective-1000 { perspective: 1000px; }
+        .rotate-3d-board { transform: rotateX(45deg) rotateZ(-15deg); }
+        .glass-panel { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .bubbly-shadow { box-shadow: 0 12px 0 0 rgba(0, 68, 147, 0.3); }
+        .bubbly-shadow-active { box-shadow: 0 4px 0 0 rgba(0, 68, 147, 0.3); transform: translateY(8px); }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background overflow-hidden h-screen w-screen selection:bg-primary-container">
+<!-- Top Navigation Shell -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl font-['Plus_Jakarta_Sans'] font-bold tracking-tight no-border shadow-sm shadow-[0_10px_30px_rgba(0,176,255,0.1)] fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-4 rounded-b-[3rem]">
+<div class="flex items-center gap-4">
+<span class="text-3xl font-black text-blue-600 dark:text-blue-400 drop-shadow-sm">Cosmic Carnival</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<button class="text-blue-700 dark:text-blue-300 hover:scale-110 transition-transform active:scale-90 duration-150 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="text-slate-500 dark:text-slate-400 hover:scale-110 transition-transform active:scale-90 duration-150 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<button class="text-slate-500 dark:text-slate-400 hover:scale-110 transition-transform active:scale-90 duration-150 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+</button>
+</nav>
+</header>
+<!-- Main Game Canvas -->
+<main class="relative h-full w-full flex items-center justify-center pt-24 pb-32">
+<!-- Background Playroom Atmosphere -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-30 grayscale-[0.2]" data-alt="soft focus background of a whimsical playroom with cosmic glow neon lights and pastel furniture at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJOGa6yUo_gG7yCRPdUJ6uitJDuzO8OaAFWXxGxrTlfXc4BVzf9bKZwQWwfbelkhnM8-0cSPKCwj21f03vO8LWSZDGurr4O5-LfjWxQdthAi4ha-fU43MeQ4RHPF9XXwbijPJ-VBv52exy21EC6E0tYg3ymXVOPP5yC92k6Iv-x9F5jsltQQg_lpFSSgr3Q9yv8sE5Y7-tzAgvpyC3w-0tG7Gi-uMjAxbHSgkd8wohb8_-ANspflsSVtdIs4W_6XFoSvp-ZBZqBPIS"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background/50 via-background/10 to-background/90"></div>
+</div>
+<!-- 3D Board Simulation Container -->
+<div class="relative z-10 perspective-1000 w-full max-w-5xl flex items-center justify-center">
+<div class="rotate-3d-board relative w-[800px] h-[600px] bg-surface-container-low rounded-[4rem] shadow-[0_50px_100px_rgba(0,0,0,0.1)] border-[12px] border-surface-container-highest flex flex-wrap p-8 gap-4 overflow-hidden">
+<!-- Game Tiles Loop (Simplified representation) -->
+<div class="w-24 h-32 bg-secondary-container rounded-xl flex flex-col items-center justify-center p-2 transform -rotate-1 shadow-sm">
+<span class="material-symbols-outlined text-on-secondary-container text-4xl" data-icon="star">star</span>
+<span class="text-[10px] font-bold text-on-secondary-container mt-2">BONUS</span>
+</div>
+<div class="w-24 h-32 bg-surface-container-lowest rounded-xl flex flex-col items-start p-2 transform rotate-1 shadow-sm">
+<div class="h-4 w-full bg-primary mb-2 rounded-sm"></div>
+<span class="text-[10px] font-bold">Stardust Alley</span>
+</div>
+<div class="w-24 h-32 bg-surface-container-lowest rounded-xl flex flex-col items-start p-2 transform -rotate-1 shadow-sm border-4 border-primary">
+<div class="h-4 w-full bg-primary mb-2 rounded-sm"></div>
+<span class="text-[10px] font-bold">Nebula Park</span>
+<!-- Active Player Avatar on its tile -->
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-16 h-16 animate-bounce">
+<img class="w-full h-full object-contain drop-shadow-xl" data-alt="cute 3d stylized robot toy character with bright blue eyes and round metallic body" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcWNhCDsthLqqFzDv90nelGQ9QfDCg7Mvrb-feTt0ShnAoxI_CKRpXYFmj_OLoc2KO2H4pbCj7OloRKPiwrHQK-sLUvtLVXOJINnFRFeIjJWNDxD79rAfzg9IDiqqpmkWiArbqHUn68RUAG53xyvmbRDSZh5aTqKKCAvnfwrVuc9p3ccLU9tJVaPjJWmn0ioBj1epkqglyQ241zun6jpBmM-sUZHA-PGiPS7UPwPSz5wmu9tQ3lqBo_o4UsH9l3HmbalaFAwFWKsL0"/>
+</div>
+</div>
+<div class="w-24 h-32 bg-surface-container-lowest rounded-xl flex flex-col items-start p-2 transform rotate-2 shadow-sm">
+<div class="h-4 w-full bg-tertiary mb-2 rounded-sm"></div>
+<span class="text-[10px] font-bold">Moon Garden</span>
+<div class="absolute -inset-2 rounded-xl bg-tertiary/20 animate-pulse border-2 border-tertiary/50"></div>
+</div>
+<!-- Path Highlight -->
+<div class="absolute inset-0 pointer-events-none">
+<svg class="w-full h-full opacity-60">
+<path d="M 300 200 Q 400 150 500 250 T 700 200" fill="none" stroke="#005bc1" stroke-dasharray="16 16" stroke-width="8"></path>
+</svg>
+</div>
+<!-- Static Player 2 -->
+<div class="absolute top-[20%] left-[60%] w-12 h-12 grayscale-[0.5]">
+<img class="w-full h-full object-contain" data-alt="cute vinyl toy of a pink cosmic kitten with starry ears sitting upright" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiy4e1yM2BNMsKzgl9DJSH3xxe3PIXKIDxe2SjDeVX98bkk8lChjHf5lhJljkLsG55pEUsxxLXEm6J9edodo0n-eujkjk9ugd8-mCI4Ht2XwJyrID1AnBKQ-xHc0-vlOgayEIuK2eGLpkccStHAh69dOsEGKxv6YsjRB3mB7rHD7xUsqOkmhY1Jyz-F3DXig1mUurPXSwSloVrmc8QIszaAr3aT18CK5-Ghs9BggraTP_cOioHZFzXx2ZKI-gLnA-Qn1P_82fKmSEr"/>
+</div>
+<!-- Static Player 3 -->
+<div class="absolute bottom-[10%] left-[20%] w-12 h-12 grayscale-[0.5]">
+<img class="w-full h-full object-contain" data-alt="small wooden toy astronaut figurine with a simple painted face and round helmet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa2pk2WcPHflGn7ezfTMQePc12xKPZEkzX-_qXw5yX2rpYV-2pFf-3-Dtpk4m__rPHGnejthOLRxGrCWQay7WMd-DZLSS27xzAKaqqV7AWGDc9ltXmoDYG-VpZDgv0K6W8Y3K-YreeyRQZ3UP4spNKqQgVyMW_UGT9sm41c3J7c6iJ9aAMfxCPx9DdiIWJILCp7cfbNKZ-9CuWc69hOvFNLeFZzQmHP7_AvZkI7uj2HdHIkAt3AdFb5ifIRGTjXsad_Lqk5N0Qi7ol"/>
+</div>
+</div>
+</div>
+<!-- Floating UI Overlays -->
+<div class="absolute inset-0 pointer-events-none flex flex-col items-center justify-center z-20">
+<!-- Roll Result Notification -->
+<div class="mb-12 glass-panel bg-white/80 p-8 rounded-xl shadow-xl border-4 border-white transform -rotate-1 pointer-events-auto">
+<p class="font-headline font-extrabold text-primary text-2xl uppercase tracking-wider mb-2">Player 1's Turn</p>
+<div class="flex gap-8 items-center justify-center">
+<!-- Die 1 -->
+<div class="relative w-24 h-24 bg-primary rounded-2xl flex items-center justify-center bubbly-shadow border-4 border-white/20">
+<div class="grid grid-cols-2 gap-3">
+<div class="w-3 h-3 bg-white rounded-full"></div>
+<div class="w-3 h-3 bg-white rounded-full"></div>
+<div class="w-3 h-3 bg-white rounded-full"></div>
+<div class="w-3 h-3 bg-white rounded-full"></div>
+</div>
+</div>
+<!-- Die 2 -->
+<div class="relative w-24 h-24 bg-primary rounded-2xl flex items-center justify-center bubbly-shadow border-4 border-white/20 transform rotate-12">
+<div class="grid grid-cols-2 gap-3">
+<div class="w-3 h-3 bg-white rounded-full"></div>
+<div class="w-3 h-3 bg-white rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center">
+<p class="font-headline font-black text-6xl text-primary animate-pulse">6</p>
+<p class="font-body font-bold text-on-surface-variant uppercase tracking-widest text-sm">Total Steps</p>
+</div>
+</div>
+<!-- Main CTA -->
+<button class="pointer-events-auto group relative py-6 px-16 bg-gradient-to-b from-primary to-on-primary-fixed-variant rounded-full bubbly-shadow-active active:scale-95 transition-all duration-200">
+<span class="font-headline font-black text-4xl text-white tracking-widest uppercase flex items-center gap-4">
+                    ROLLING!
+                    <span class="material-symbols-outlined text-5xl" data-icon="casino" style="font-variation-settings: 'FILL' 1;">casino</span>
+</span>
+<div class="absolute -inset-2 bg-primary/20 rounded-full blur-xl animate-pulse"></div>
+</button>
+</div>
+<!-- Right Side Player Stats -->
+<div class="absolute right-8 top-1/2 -translate-y-1/2 space-y-6 z-30">
+<div class="glass-panel bg-white/90 p-6 rounded-xl shadow-lg border-l-8 border-primary w-64 transform rotate-1">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-container rounded-full overflow-hidden border-2 border-primary">
+<img class="w-full h-full object-cover" data-alt="avatar of blue robot character" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEFMftFe3RRC-wivMCwK34YmYxWUeGLqBK50Sj57t2M6NWVNfNsXArGQkhH5I3cdg_ybB6Ihd66AkHGLtZJUYq-VF4QdgKiPdRHUwGkw9dPLPdQ6MyV1osApiWoztHCqGaDLz5LTD2PoRcbVFmHQnw98q8mGG4x90gUDQo7DVTLDtMn6qCO26zlOGdex78Df2zjtR4ns8SzpTlxicPuRQDcRrj-GhO2tWSVowEO5aCygVfpE3uyw_99omBYhn4jkozAI1BQnsXyIqo"/>
+</div>
+<div>
+<p class="font-headline font-bold text-primary">Player 1</p>
+<p class="font-body text-sm font-bold">$12,450</p>
+</div>
+</div>
+</div>
+<div class="glass-panel bg-white/40 p-6 rounded-xl shadow-lg w-64 opacity-80 scale-95 translate-x-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="avatar of pink kitten character" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZoloATDQIHnYKrH_pyMeaYcD4iT4RxnJana3ZeiRZOoLWllYmdMnr__bQDa37a8hpPyua5KYr_uckZMU9uito7RcFbX_SQfK9G7o24XEK9bmZxzXEyCJ8ZKKBNfOi7xkp-wEpRmxB-pAKIN4khfe5-QZ5rurxJEg1dHoePVhhLOJ2oVwoWT2UVTzzHTKL4SKWMvNoCgw1jwiFrkhgQ66q_KIQ_RInLsGODWEHEaqvNmDzXxqshsHnTvIWU5c4-gx9_tixP9qAx7H2"/>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface-variant">Player 2</p>
+<p class="font-body text-sm">$8,200</p>
+</div>
+</div>
+</div>
+<div class="glass-panel bg-white/40 p-6 rounded-xl shadow-lg w-64 opacity-80 scale-95 translate-x-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="avatar of wooden astronaut character" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDif4V5dZSGskZGMDhuFK204DXvJsGkVgmP5S_LGiDLcGDQz0TSOPCxV0-zd1maKHMvmarGNzHhpTfcns05xZS5X-fVNRTEqW2NZDP-fmJX31ByQ01GGwYi6UccHzAKTwLmT4TYY_CLh4djG-St8nv-1y6fq9JyL4TLIAwdvW87HPhFgXAgmjz2ppmTaXi9oLUgDWWgv7THlfcc3f2ARykSa3u2ZrSuz4cGUe8VJLxgpTZgu06gdNa0oI36VXJUFR5MUiChEsrAF1-P"/>
+</div>
+<div>
+<p class="font-headline font-bold text-on-surface-variant">Player 3</p>
+<p class="font-body text-sm">$15,700</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<footer class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl no-border bg-gradient-to-t from-blue-50/50 to-transparent shadow-[0_-20px_40px_rgba(25,28,30,0.08)] fixed bottom-0 left-0 w-full z-50 flex justify-around items-end px-6 pb-8 pt-4 rounded-t-[3.5rem]">
+<button class="flex flex-col items-center justify-center bg-blue-600 dark:bg-blue-500 text-white rounded-full px-8 py-3 -mt-6 shadow-xl ring-8 ring-white dark:ring-slate-900 transition-transform hover:translate-y-[-4px] active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs font-extrabold uppercase tracking-widest mt-1">Board</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-blue-400 transition-transform hover:translate-y-[-4px] active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="home_work">home_work</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs font-extrabold uppercase tracking-widest mt-1">Assets</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-blue-400 transition-transform hover:translate-y-[-4px] active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs font-extrabold uppercase tracking-widest mt-1">Players</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-blue-400 transition-transform hover:translate-y-[-4px] active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="local_mall">local_mall</span>
+<span class="font-['Plus_Jakarta_Sans'] text-xs font-extrabold uppercase tracking-widest mt-1">Market</span>
+</button>
+</footer>
+</body></html>

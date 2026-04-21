@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be_Vietnam_Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#002204",
+                        "tertiary-fixed-dim": "#78dc77",
+                        "surface": "#f7f9fb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#004493",
+                        "on-tertiary-container": "#005313",
+                        "on-secondary-fixed-variant": "#544600",
+                        "tertiary": "#006e1c",
+                        "surface-container-high": "#e6e8ea",
+                        "on-secondary-fixed": "#221b00",
+                        "primary-fixed-dim": "#adc6ff",
+                        "primary-fixed": "#d8e2ff",
+                        "outline": "#687988",
+                        "secondary-container": "#ffe170",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#005bc1",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#005313",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#b7c9d9",
+                        "tertiary-container": "#94f990",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-primary-fixed-variant": "#004493",
+                        "on-primary-fixed": "#001a41",
+                        "primary": "#005bc1",
+                        "secondary-fixed-dim": "#e9c400",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-low": "#f2f4f6",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f7f9fb",
+                        "on-surface": "#191c1e",
+                        "inverse-surface": "#2d3133",
+                        "secondary": "#705d00",
+                        "on-surface-variant": "#384956",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary-container": "#544600",
+                        "surface-container-highest": "#e0e3e5",
+                        "primary-container": "#d8e2ff",
+                        "tertiary-fixed": "#94f990",
+                        "inverse-primary": "#adc6ff",
+                        "background": "#f7f9fb",
+                        "surface-container": "#eceef0",
+                        "on-background": "#191c1e",
+                        "secondary-fixed": "#ffe170"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bubbly-shadow {
+            box-shadow: 0 20px 40px rgba(25, 28, 30, 0.06);
+        }
+        .glass-panel {
+            background: rgba(247, 249, 251, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col items-center justify-center overflow-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,91,193,0.05)]">
+<div class="flex items-center gap-3">
+<span class="text-2xl font-black text-blue-600 dark:text-blue-400 italic font-headline tracking-tight">Blue Marble Cosmic</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:scale-105 transition-transform text-blue-600 dark:text-blue-400 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+</button>
+<button class="hover:scale-105 transition-transform text-blue-600 dark:text-blue-400 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+</header>
+<!-- Main Canvas: Ability Activation Screen -->
+<main class="relative w-full max-w-5xl mx-auto px-6 pt-24 pb-32 flex flex-col items-center">
+<!-- Background Aura -->
+<div class="absolute inset-0 -z-10 flex items-center justify-center opacity-30">
+<div class="w-[600px] h-[600px] bg-primary rounded-full blur-[120px] animate-pulse"></div>
+</div>
+<!-- Success Celebration Heading -->
+<div class="text-center mb-8">
+<h1 class="font-headline font-extrabold text-5xl md:text-7xl text-primary tracking-tighter mb-2">PROTECTOR ACTIVATED!</h1>
+<p class="font-body text-lg text-on-surface-variant font-medium">Your galactic guardian has answered the call.</p>
+</div>
+<!-- Bento Layout / Layered Content -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full items-center">
+<!-- Left: Character Avatar Card -->
+<div class="md:col-span-5 flex justify-center">
+<div class="relative group">
+<!-- Rotating Decorative Frame -->
+<div class="absolute inset-0 bg-primary-container rounded-xl -rotate-3 transition-transform group-hover:rotate-0 duration-500"></div>
+<div class="relative w-80 h-[480px] bg-surface-container-lowest rounded-xl bubbly-shadow overflow-hidden p-4 rotate-2 transition-transform group-hover:rotate-0 duration-500 flex flex-col">
+<div class="flex-1 bg-primary/10 rounded-lg overflow-hidden relative">
+<img alt="Stellar Knight" class="w-full h-full object-cover" data-alt="A brave knight in futuristic glowing blue space armor standing heroically against a backdrop of swirling cosmic nebulae" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLNK-rEQJY5qApFw2kIbamxmqjoFGDe1G_AQ-tiOuNDR4rpNwLLesBXcdZ8a7OujFOAchMx05_Jl9etU_ww66em2_gdXE7KfOKsWpyzf_hBVWwEVrkSc_gtv_5xn1ojtNxc0RvYPS1QkJzx4GjXfW_SioV4vcX0y_2Z3zhyynokLU0uxAlcn6iEd_X79MPOEHnUidt-BNHQsMA4UmtgATABbzckZYfUxg_a1gVVv1fF10SwTwQ_Kr7RuMTQwcS6aOKNeEO69uiI92p"/>
+<!-- Energy Shield Overlay -->
+<div class="absolute inset-0 border-[6px] border-primary/40 rounded-lg pointer-events-none"></div>
+</div>
+<div class="pt-6 text-center">
+<h2 class="font-headline font-bold text-2xl text-on-surface">Stellar Knight</h2>
+<div class="inline-flex items-center gap-2 mt-2 px-4 py-1 bg-primary-container text-on-primary-container rounded-full text-xs font-bold tracking-widest uppercase">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">shield</span>
+                            Defender Rank
+                        </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Ability Stats & Activation Info -->
+<div class="md:col-span-7 flex flex-col gap-6">
+<!-- Ability Info Card -->
+<div class="bg-surface-container-lowest rounded-xl p-8 bubbly-shadow relative overflow-hidden">
+<!-- Glowing Accent -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+<div class="flex items-start gap-6">
+<div class="w-20 h-20 bg-primary rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/30 shrink-0">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<div>
+<h3 class="font-headline font-extrabold text-3xl text-primary mb-2">PROTECTOR</h3>
+<p class="font-body text-xl text-on-surface leading-relaxed">
+                            Toll fees reduced by 30% + immune to force sale.
+                        </p>
+</div>
+</div>
+<!-- Stat Highlight -->
+<div class="mt-8 grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-6 rounded-lg text-center">
+<div class="text-on-surface-variant font-label font-semibold text-xs uppercase tracking-widest mb-1">Toll Reduction</div>
+<div class="text-tertiary font-headline font-black text-4xl">-30%</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg text-center">
+<div class="text-on-surface-variant font-label font-semibold text-xs uppercase tracking-widest mb-1">Protection</div>
+<div class="text-primary font-headline font-black text-2xl uppercase">IMMUNE</div>
+</div>
+</div>
+</div>
+<!-- Secondary Info / Flavor Text -->
+<div class="bg-primary/5 rounded-xl p-6 border-l-4 border-primary">
+<p class="font-body text-on-primary-container italic font-medium">
+                    "The stars provide our path, and the Knight's aegis ensures no hand may seize what is yours. Travel with absolute security."
+                </p>
+</div>
+<!-- Action Button -->
+<div class="flex gap-4 mt-4">
+<button class="flex-1 bg-gradient-to-b from-primary to-on-primary-container text-on-primary font-headline font-bold py-5 rounded-full text-xl bubbly-shadow hover:scale-105 active:scale-95 transition-all">
+                    Resume Exploration
+                </button>
+<button class="px-8 bg-surface-container-highest text-on-surface font-headline font-bold rounded-full bubbly-shadow hover:scale-105 active:scale-95 transition-all">
+                    Details
+                </button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-end px-4 pb-6 h-24 bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl shadow-[0_-20px_40px_rgba(25,28,30,0.06)] rounded-t-[3rem]">
+<button class="flex flex-col items-center justify-center text-slate-400 hover:text-blue-500 transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full w-16 h-16">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] font-semibold uppercase tracking-wider mt-1">Galaxy</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 hover:text-blue-500 transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full w-16 h-16">
+<span class="material-symbols-outlined" data-icon="package_2">package_2</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] font-semibold uppercase tracking-wider mt-1">Inventory</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-blue-600 text-white rounded-full p-4 shadow-lg shadow-blue-500/30 -translate-y-2 scale-110 animate-bounce duration-300">
+<span class="material-symbols-outlined" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] font-semibold uppercase tracking-wider mt-1">Quests</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 hover:text-blue-500 transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full w-16 h-16">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] font-semibold uppercase tracking-wider mt-1">Diplomacy</span>
+</button>
+</nav>
+</body></html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#78dc77",
+                    "tertiary": "#006e1c",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#221b00",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-tertiary-container": "#005313",
+                    "surface": "#f7f9fb",
+                    "on-tertiary-fixed-variant": "#005313",
+                    "on-background": "#191c1e",
+                    "surface-dim": "#d8dadc",
+                    "error": "#ba1a1a",
+                    "secondary-container": "#ffe170",
+                    "surface-tint": "#005bc1",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f7f9fb",
+                    "primary-container": "#d8e2ff",
+                    "on-surface-variant": "#384956",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-surface": "#191c1e",
+                    "primary-fixed": "#d8e2ff",
+                    "tertiary-fixed": "#94f990",
+                    "surface-bright": "#f7f9fb",
+                    "secondary": "#705d00",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-primary-fixed": "#001a41",
+                    "primary": "#005bc1",
+                    "surface-container": "#eceef0",
+                    "on-secondary-container": "#544600",
+                    "on-tertiary-fixed": "#002204",
+                    "tertiary-container": "#94f990",
+                    "outline": "#687988",
+                    "surface-container-low": "#f2f4f6",
+                    "secondary-fixed-dim": "#e9c400",
+                    "on-primary-fixed-variant": "#004493",
+                    "secondary-fixed": "#ffe170",
+                    "outline-variant": "#b7c9d9",
+                    "on-secondary-fixed-variant": "#544600",
+                    "surface-container-high": "#e6e8ea",
+                    "on-primary-container": "#004493",
+                    "error-container": "#ffdad6",
+                    "inverse-primary": "#adc6ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bouncy-feedback:active {
+            transform: scale(0.95);
+        }
+        .glass-panel {
+            background: rgba(247, 249, 251, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface overflow-hidden">
+<!-- Blurred Background Game Board -->
+<div class="fixed inset-0 z-0">
+<img class="w-full h-full object-cover blur-md brightness-75 scale-105" data-alt="Top-down view of a colorful stylized 3D board game with miniature city buildings, parks, and blue marble details, heavily blurred" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1qg38f1jN2KUpY79Y21ihQDYLHDHC7bK9ZJ7hi0dGUVg9VZ7VLF4QOmoTCyN_v-Y2__VLgWj5H0LYDWRUgi_A1qUv4i0mFMAcZKqr8QHRQTsDsj8Z6a5T3SQTQg82o1A1jubkc4-0KIK9cR3bjhyQQ_bu1XsHF29Caf0n_HdqQtrL_Nz_TR1G0fiVTHUMHDTpGRE7200dsIiBRHK1dbZ7VtPgPLY4Emt9Zb6AI1A9ZH_eYUMliBkDAlW1IVS0nouj7teWExA0eUGI"/>
+</div>
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#f7f9fb]/80 dark:bg-[#191c1e]/80 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+<div class="text-2xl font-black text-blue-700 dark:text-blue-400 font-['Plus_Jakarta_Sans']">Blue Marble</div>
+<div class="flex items-center gap-4">
+<button class="text-blue-700 dark:text-blue-300 hover:scale-105 active:scale-95 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+</button>
+<button class="text-slate-500 dark:text-slate-400 font-medium hover:scale-105 active:scale-95 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="relative z-10 min-h-screen flex items-center justify-center p-6 md:p-12">
+<!-- Celebration Modal -->
+<div class="max-w-2xl w-full glass-panel rounded-xl shadow-[0_20px_40px_rgba(25,28,30,0.06)] overflow-hidden flex flex-col md:flex-row relative">
+<!-- Confetti/Decorative Sidebar (iPad layout) -->
+<div class="w-full md:w-1/3 bg-tertiary-container flex flex-col items-center justify-center p-8 gap-4 overflow-hidden relative">
+<div class="absolute -top-10 -left-10 w-32 h-32 bg-tertiary/20 rounded-full blur-2xl"></div>
+<div class="absolute -bottom-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+<div class="relative bg-surface-container-lowest rounded-full p-6 shadow-xl transform -rotate-6">
+<span class="material-symbols-outlined text-tertiary text-7xl" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="text-center">
+<h2 class="font-headline font-extrabold text-2xl text-on-tertiary-container tracking-tight">Crisis Averted!</h2>
+<p class="text-on-tertiary-container/80 text-sm font-medium mt-1 uppercase tracking-widest">Transaction Success</p>
+</div>
+</div>
+<!-- Content Area -->
+<div class="w-full md:w-2/3 p-8 md:p-12 flex flex-col justify-center">
+<div class="space-y-8">
+<!-- Feedback Section -->
+<div>
+<h1 class="font-headline text-4xl font-bold text-on-surface leading-tight">Sale Successful!</h1>
+<p class="text-on-surface-variant text-lg mt-2 font-body">Your property assets have been liquidated to restore your liquidity. You are back in the game!</p>
+</div>
+<!-- Financial Bento Grid -->
+<div class="grid grid-cols-1 gap-4">
+<div class="bg-surface-container-low p-6 rounded-lg flex flex-col justify-between">
+<span class="text-on-surface-variant font-label text-sm font-bold uppercase tracking-widest">Total Cash Received</span>
+<div class="flex items-baseline gap-2 mt-2">
+<span class="text-tertiary text-4xl font-extrabold font-headline">$350,000</span>
+<span class="material-symbols-outlined text-tertiary text-2xl" data-icon="trending_up">trending_up</span>
+</div>
+</div>
+<div class="bg-surface-container-highest p-6 rounded-lg flex flex-col justify-between transform rotate-1">
+<span class="text-on-surface-variant font-label text-sm font-bold uppercase tracking-widest">New Current Balance</span>
+<div class="flex items-center gap-3 mt-2">
+<span class="text-on-surface text-3xl font-bold font-headline">$412,500</span>
+<div class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full">SOLVENT</div>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<div class="pt-4">
+<button class="w-full py-5 bg-primary text-on-primary rounded-full font-headline font-extrabold text-xl shadow-[0_4px_0_0_#004493] active:shadow-none active:translate-y-[4px] transition-all duration-150 flex items-center justify-center gap-3">
+                            Back to Game
+                            <span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<p class="text-center text-on-surface-variant/60 text-xs mt-6 font-medium uppercase tracking-tighter">Blue Marble Real Estate Board System v2.4</p>
+</div>
+</div>
+</div>
+<!-- Asymmetric Floating Decoration -->
+<div class="absolute -top-6 -right-6 w-24 h-24 bg-secondary-container rounded-lg transform rotate-12 shadow-lg flex items-center justify-center -z-10 opacity-50 md:opacity-100">
+<span class="material-symbols-outlined text-on-secondary-container text-4xl" data-icon="real_estate_agent">real_estate_agent</span>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell (Only visible on Top-Level Destinations, though suppressed here for focus as per mandate, kept as requested for structural alignment) -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-[2.5rem] bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.08)] hidden md:flex justify-around items-center px-4 pt-3 pb-8">
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200 rounded-[2rem] px-5 py-2 scale-110 shadow-lg transition-opacity duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-['Be_Vietnam_Pro'] text-[12px] font-bold uppercase tracking-wider mt-1">Game</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 opacity-70 hover:opacity-100 transition-opacity duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="domain">domain</span>
+<span class="font-['Be_Vietnam_Pro'] text-[12px] font-bold uppercase tracking-wider mt-1">Assets</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 opacity-70 hover:opacity-100 transition-opacity duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-['Be_Vietnam_Pro'] text-[12px] font-bold uppercase tracking-wider mt-1">Market</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 opacity-70 hover:opacity-100 transition-opacity duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+<span class="font-['Be_Vietnam_Pro'] text-[12px] font-bold uppercase tracking-wider mt-1">Rank</span>
+</a>
+</nav>
+<!-- Mobile Bottom Nav -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-white/90 backdrop-blur-2xl flex justify-around items-center px-4 py-3 rounded-t-[2rem] shadow-[0_-10px_40px_rgba(0,0,0,0.08)]">
+<div class="flex flex-col items-center text-blue-800 bg-blue-100 rounded-full px-4 py-1">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+</div>
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined" data-icon="domain">domain</span>
+</div>
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+</div>
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+</div>
+</nav>
+</body></html>

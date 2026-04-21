@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#001a41",
+                    "on-surface-variant": "#384956",
+                    "secondary-fixed": "#ffe170",
+                    "on-tertiary-container": "#005313",
+                    "surface-container": "#eceef0",
+                    "surface": "#f7f9fb",
+                    "inverse-surface": "#2d3133",
+                    "primary-container": "#d8e2ff",
+                    "on-tertiary-fixed-variant": "#005313",
+                    "on-secondary-fixed": "#221b00",
+                    "secondary-container": "#ffe170",
+                    "outline-variant": "#b7c9d9",
+                    "primary-fixed-dim": "#adc6ff",
+                    "surface-container-lowest": "#ffffff",
+                    "primary": "#005bc1",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#544600",
+                    "surface-bright": "#f7f9fb",
+                    "surface-variant": "#e0e3e5",
+                    "on-tertiary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f2f4f6",
+                    "on-primary-container": "#004493",
+                    "inverse-primary": "#adc6ff",
+                    "on-background": "#191c1e",
+                    "tertiary-fixed": "#94f990",
+                    "tertiary": "#006e1c",
+                    "surface-container-high": "#e6e8ea",
+                    "inverse-on-surface": "#eff1f3",
+                    "tertiary-container": "#94f990",
+                    "on-tertiary-fixed": "#002204",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#191c1e",
+                    "surface-container-highest": "#e0e3e5",
+                    "background": "#f7f9fb",
+                    "primary-fixed": "#d8e2ff",
+                    "on-primary-fixed-variant": "#004493",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#d8dadc",
+                    "secondary-fixed-dim": "#e9c400",
+                    "secondary": "#705d00",
+                    "on-secondary-fixed-variant": "#544600",
+                    "tertiary-fixed-dim": "#78dc77",
+                    "surface-tint": "#005bc1",
+                    "outline": "#687988",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(0, 91, 193, 0.2);
+        }
+        .bouncy-card {
+            transform: rotate(-1deg);
+        }
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full px-8 py-4 fixed top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,176,255,0.1)] rounded-b-[3rem]">
+<div class="flex items-center gap-3">
+<span class="text-2xl font-black text-blue-600 italic font-['Plus_Jakarta_Sans'] tracking-tight">Blue Marble</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-blue-700 font-bold font-['Plus_Jakarta_Sans'] hover:scale-105 transition-transform duration-200" href="#">Board</a>
+<a class="text-slate-500 hover:scale-105 transition-transform duration-200" href="#">Property</a>
+<a class="text-slate-500 hover:scale-105 transition-transform duration-200" href="#">Market</a>
+<a class="text-slate-500 hover:scale-105 transition-transform duration-200" href="#">Events</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined p-2 rounded-full bg-surface-container hover:scale-105 transition-transform" data-icon="account_balance_wallet"></button>
+<button class="material-symbols-outlined p-2 rounded-full bg-surface-container hover:scale-105 transition-transform" data-icon="settings"></button>
+<div class="w-10 h-10 rounded-full border-2 border-primary-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Stylized avatar of a happy young gamer inside a glowing blue translucent sphere or glass bubble" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwo7MlRdC2oj9-54OUTI6PiwVC4d3oVYkxNFvF7-OVchhezxK7a3Isa5EYKcTNgZ02GcAGsE02VWPbE0NMkVBSckAATRtyUOgKVHHd88v4nLteTDZUuB_oOmQGJeufIPiAJY8fo6H3QmF0tXCGKxOli0bYpTMfABavAcscENi1osSdW4qbxQd2rCG39MjxxmSNVZOS8SrAOLbpQX_lUDs13AkU7JHT9ua6IcmmmahS_AxKoms41pWfHGg2dy-dKWT51vvEyuz-5Yb1"/>
+</div>
+</div>
+</header>
+<!-- Main Celebration Canvas -->
+<main class="flex-grow pt-24 pb-32 px-6 flex flex-col items-center justify-center relative overflow-hidden">
+<!-- Background Decorative Elements (Balloons & Streamers) -->
+<div class="absolute top-20 left-10 float-animation" style="animation-delay: 0s;">
+<div class="w-16 h-20 bg-primary/20 rounded-full blur-xl absolute -z-10"></div>
+<span class="material-symbols-outlined text-6xl text-primary" data-icon="balloon">bubble</span>
+</div>
+<div class="absolute top-40 right-20 float-animation" style="animation-delay: 1s;">
+<div class="w-16 h-20 bg-secondary/20 rounded-full blur-xl absolute -z-10"></div>
+<span class="material-symbols-outlined text-7xl text-secondary" data-icon="celebration">celebration</span>
+</div>
+<div class="absolute bottom-40 left-20 float-animation" style="animation-delay: 0.5s;">
+<span class="material-symbols-outlined text-5xl text-tertiary" data-icon="star">star</span>
+</div>
+<!-- Central Payday Card (Bento/Asymmetric Layout) -->
+<div class="relative z-10 w-full max-w-4xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<!-- Left Side: Character & Cake -->
+<div class="md:col-span-6 flex flex-col items-center justify-center space-y-6">
+<div class="relative group">
+<!-- Rotating glow effect -->
+<div class="absolute inset-0 bg-secondary-container blur-[60px] opacity-40 rounded-full scale-125"></div>
+<!-- Character Dancing (Visualized as high-end 3D toy asset) -->
+<div class="relative w-64 h-64 md:w-80 md:h-80 bg-white rounded-full shadow-2xl overflow-hidden border-8 border-white p-4">
+<img class="w-full h-full object-cover rounded-full" data-alt="A joyful 3D animated child character wearing a blue marble patterned cap dancing amidst floating gold coins and confetti" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBpAarE_wT4-ScicrBaUcE3l_oRyHxlU1Sl2xCDRl16LkUhATwzjh2UU0FGui6qLURsvejbkD800CsRhFJSxc8calH8OSiiUCLh44IwJwUPDxWZ6Cvk4vGOoke-u6Tb92aNlQmJtmLXS-FadR_O1PIK8g6enqnJG32zDChLwo3bWrwI38sKzH4AD_X4gZTDAwuQj5LKehL3WM3NkNKguEl1RhUigCKeM-SjJMlNmiR45xoUa3j6Bm2BWHhRvPlq5Aj2icE5IznMkV6"/>
+</div>
+<!-- Small Floating Asset (The Cake) -->
+<div class="absolute -bottom-6 -right-6 w-32 h-32 md:w-40 md:h-40 bg-surface-container-lowest rounded-xl shadow-xl p-4 rotate-12 transform hover:rotate-0 transition-transform duration-300">
+<img class="w-full h-full object-cover rounded-lg" data-alt="A giant, colorful three-tier birthday cake with glowing candles and vibrant frosting layers on a white plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-Y9ZLU4CW1V30tYESYK4AeDAS5UiLnlJTZq6haa7eGeDleaZ_-gDNMz__Dy7i02Aouc8rOpwoQ6UCx6JlgLWc48wRwZx3RrOdFC6GwaclOpyzoj9fImJ0D5o2WNqtc26XVb6SHJHL2jfDIRxG-BgV-DWT7uGijAvUQ0GTC5cLkKHTqaAqYf71dibrDLE1CiA3oVwah66bnTSaw1dC4-JtmM6Tj75vl7JEDspX3qaYyTkgJueOYsezweqau2laInTDrgNsg-oyejO1"/>
+</div>
+</div>
+</div>
+<!-- Right Side: Payday Message -->
+<div class="md:col-span-6 space-y-8 text-center md:text-left px-4">
+<div class="space-y-2">
+<span class="inline-block px-6 py-2 bg-secondary-container text-on-secondary-container rounded-full text-sm font-black tracking-widest uppercase shadow-sm">
+                        Level Up Bonus
+                    </span>
+<h1 class="font-headline text-6xl md:text-8xl font-black text-primary leading-none tracking-tighter text-glow">
+                        PAYDAY!
+                    </h1>
+</div>
+<!-- Reward Amount with Glassmorphism -->
+<div class="bg-white/40 backdrop-blur-md border border-white/20 p-8 rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.05)] bouncy-card inline-block w-full">
+<div class="flex items-baseline justify-center md:justify-start gap-3">
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="payments" data-weight="fill" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="font-headline text-5xl font-extrabold text-on-surface">
+                            +200,000
+                        </span>
+<span class="font-body text-lg text-on-surface-variant font-semibold">Coins</span>
+</div>
+<p class="mt-4 text-on-surface-variant text-lg font-medium leading-relaxed">
+                        Fantastic job passing the Start line! Your hard work is paying off.
+                    </p>
+</div>
+<!-- Action Button -->
+<div class="pt-4 flex flex-col md:flex-row gap-4">
+<button class="group relative bg-primary text-white font-headline text-xl font-bold px-12 py-6 rounded-full shadow-[0_8px_0_#004493] hover:shadow-[0_4px_0_#004493] hover:translate-y-[4px] active:translate-y-[8px] active:shadow-none transition-all duration-150 flex items-center justify-center gap-3">
+                        CELEBRATE
+                        <span class="material-symbols-outlined group-hover:rotate-12 transition-transform" data-icon="auto_awesome" data-weight="fill" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</button>
+<button class="bg-surface-container-high text-on-surface-variant font-headline text-lg font-bold px-8 py-6 rounded-full hover:bg-surface-variant transition-colors">
+                        View Stats
+                    </button>
+</div>
+</div>
+</div>
+<!-- Decorative Floating Coins -->
+<div class="absolute bottom-20 right-1/4 opacity-20 pointer-events-none">
+<span class="material-symbols-outlined text-9xl text-secondary-fixed-dim" data-icon="monetization_on">monetization_on</span>
+</div>
+<div class="absolute top-1/4 left-1/4 opacity-10 pointer-events-none -rotate-12">
+<span class="material-symbols-outlined text-[12rem] text-primary" data-icon="account_balance">account_balance</span>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-6 bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg md:hidden h-24">
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-blue-500 transition-all rounded-full p-2" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-xs capitalize">Board</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-blue-500 transition-all rounded-full p-2" href="#">
+<span class="material-symbols-outlined" data-icon="domain">domain</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-xs capitalize">Property</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-600 text-white rounded-full p-4 scale-110 -translate-y-4 shadow-lg shadow-blue-400/50 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="celebration" data-weight="fill" style="font-variation-settings: 'FILL' 1;">celebration</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-xs capitalize">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-blue-500 transition-all rounded-full p-2" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-xs capitalize">Market</span>
+</a>
+</nav>
+</body></html>

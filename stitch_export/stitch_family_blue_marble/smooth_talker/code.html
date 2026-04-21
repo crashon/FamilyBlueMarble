@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cosmic Carnival - Ability Activated</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e0e3e5",
+                    "inverse-on-surface": "#eff1f3",
+                    "outline-variant": "#b7c9d9",
+                    "outline": "#687988",
+                    "error-container": "#ffdad6",
+                    "secondary": "#705d00",
+                    "surface-bright": "#f7f9fb",
+                    "secondary-container": "#ffe170",
+                    "inverse-surface": "#2d3133",
+                    "on-surface": "#191c1e",
+                    "tertiary-fixed-dim": "#78dc77",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "background": "#f7f9fb",
+                    "surface-variant": "#e0e3e5",
+                    "on-primary-fixed-variant": "#004493",
+                    "primary-fixed": "#d8e2ff",
+                    "tertiary-container": "#94f990",
+                    "tertiary-fixed": "#94f990",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#005313",
+                    "tertiary": "#006e1c",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#004493",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-high": "#e6e8ea",
+                    "on-tertiary-fixed": "#002204",
+                    "inverse-primary": "#adc6ff",
+                    "surface-tint": "#005bc1",
+                    "surface-container": "#eceef0",
+                    "secondary-fixed-dim": "#e9c400",
+                    "surface": "#f7f9fb",
+                    "primary-fixed-dim": "#adc6ff",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#005313",
+                    "on-error": "#ffffff",
+                    "on-secondary-container": "#544600",
+                    "surface-container-low": "#f2f4f6",
+                    "on-surface-variant": "#384956",
+                    "on-secondary-fixed": "#221b00",
+                    "primary": "#005bc1",
+                    "secondary-fixed": "#ffe170",
+                    "on-secondary-fixed-variant": "#544600",
+                    "on-error-container": "#93000a",
+                    "on-background": "#191c1e",
+                    "primary-container": "#d8e2ff",
+                    "on-primary-fixed": "#001a41"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .perspective-text {
+        text-shadow: 0 0 20px rgba(255, 225, 112, 0.6), 0 0 40px rgba(112, 93, 0, 0.4);
+      }
+      .bg-deep-space {
+        background: radial-gradient(circle at center, #1a2a44 0%, #0a1120 100%);
+      }
+      .floating-particle {
+        filter: drop-shadow(0 0 8px #ffe170);
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-hidden h-screen flex flex-col">
+<!-- Top Navigation Anchor -->
+<header class="bg-[#f7f9fb]/80 backdrop-blur-lg shadow-[0_4px_30px_rgba(0,0,0,0.03)] flex justify-between items-center w-full px-8 h-20 fixed top-0 z-50">
+<div class="text-2xl font-black text-[#005bc1] italic">Cosmic Carnival</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[#191c1e] opacity-70 hover:scale-105 transition-transform cursor-pointer" data-icon="help">help</span>
+<span class="material-symbols-outlined text-[#191c1e] opacity-70 hover:scale-105 transition-transform cursor-pointer" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 relative flex flex-col items-center justify-center bg-deep-space overflow-hidden px-6 pt-20 pb-24">
+<!-- Animated Background Texture -->
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary blur-[120px] rounded-full"></div>
+<div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary blur-[100px] rounded-full"></div>
+</div>
+<!-- Ability Announcement Header -->
+<div class="relative z-10 text-center mb-12">
+<h1 class="font-headline font-black text-5xl md:text-7xl text-secondary-container tracking-tighter perspective-text leading-tight uppercase">
+                SMOOTH TALKER<br/>ACTIVATED!
+            </h1>
+</div>
+<!-- Character Avatar with Visual Effects -->
+<div class="relative z-10 mb-12 group">
+<!-- Floating Sparkle Particles -->
+<div class="absolute -top-10 -left-10 text-secondary-container animate-bounce">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">colors_spark</span>
+</div>
+<div class="absolute top-0 -right-16 text-secondary animate-pulse">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">monetization_on</span>
+</div>
+<div class="absolute -bottom-6 -left-12 text-secondary-container">
+<span class="material-symbols-outlined text-4xl rotate-12" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<div class="absolute bottom-10 -right-12 text-secondary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">paid</span>
+</div>
+<!-- Character Circle Frame -->
+<div class="w-64 h-64 md:w-80 md:h-80 rounded-full border-[12px] border-secondary-container/30 bg-surface-container-lowest p-2 shadow-[0_0_80px_rgba(255,225,112,0.3)]">
+<div class="w-full h-full rounded-full overflow-hidden bg-surface-container-low border-4 border-secondary shadow-inner">
+<img alt="Galactic Merchant" class="w-full h-full object-cover" data-alt="charismatic intergalactic merchant character wearing shiny space suit with golden lapels smiling confidently stylized digital art bright lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi2vWGtxO_7SrUx2eAKlxWyi-Vrx08K8jAiG3jpWR4xnqu-l4o5ZPs6kD4BmkHmBo20BpsganFdk2_oYpscfe_UGW35HgVU0J2S-oRiEDm70SbTbocNUu3TItpZBS9lnxTZYUAHHlZ8mp-mhfdonOL9K4V0YNWVqIQN2C-7AnRWAM7UbVjtGzecJ9NAfNoaZdQrFl2l2-pZ1anv7Gz6gu-Iw7k_StO-UfbKPJedrGG5aBdOkyUTPb265VFtluxkg5fP3_x9UrJHx89"/>
+</div>
+</div>
+</div>
+<!-- Ability Description Card -->
+<div class="relative z-10 w-full max-w-md bg-surface-container-lowest/90 backdrop-blur-md rounded-xl p-8 shadow-[0_20px_40px_rgba(0,0,0,0.4)] border border-outline-variant/10 rotate-1">
+<div class="flex items-start gap-4">
+<div class="bg-secondary-container p-3 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+</div>
+<div>
+<h3 class="font-headline font-bold text-xl text-primary mb-1">Ability Bonus</h3>
+<p class="font-body text-lg text-on-surface/80 leading-relaxed">
+                        Tolls received from other players increased by <span class="font-bold text-secondary">20%</span><br/>
+                        + <span class="font-bold text-secondary">Escape desert island for free</span>
+</p>
+</div>
+</div>
+<!-- Contextual CTA -->
+<button class="mt-8 w-full bg-primary text-white font-headline font-bold text-lg py-4 rounded-full shadow-lg hover:scale-105 active:scale-95 transition-all flex justify-center items-center gap-2">
+                CONTINUE TRADE
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 h-24 bg-[#ffffff]/90 backdrop-blur-2xl shadow-[0_-10px_40px_rgba(25,28,30,0.08)]">
+<a class="flex flex-col items-center justify-center text-[#191c1e] p-2 hover:bg-[#f2f4f6] rounded-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px] uppercase tracking-widest mt-1">Merchant</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#191c1e] p-2 hover:bg-[#f2f4f6] rounded-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px] uppercase tracking-widest mt-1">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#005bc1] text-white rounded-full px-6 py-2 -translate-y-2 shadow-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px] uppercase tracking-widest mt-1">Abilities</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#191c1e] p-2 hover:bg-[#f2f4f6] rounded-full transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px] uppercase tracking-widest mt-1">Vault</span>
+</a>
+</nav>
+</body></html>

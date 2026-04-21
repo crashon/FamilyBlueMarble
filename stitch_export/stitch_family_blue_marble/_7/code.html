@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Toybox Tycoon - Property Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Be+Vietnam+Pro', sans-serif;
+        }
+        h1, h2, h3, .font-headline {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .bubbly-shadow {
+            box-shadow: 0 20px 40px rgba(25, 28, 30, 0.06);
+        }
+        .inner-press-shadow {
+            box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2);
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#191c1e",
+                      "on-primary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "inverse-primary": "#adc6ff",
+                      "surface-tint": "#005bc1",
+                      "on-secondary-container": "#544600",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#544600",
+                      "secondary-container": "#ffe170",
+                      "tertiary-fixed": "#94f990",
+                      "surface-bright": "#f7f9fb",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#eff1f3",
+                      "on-tertiary-container": "#005313",
+                      "secondary-fixed": "#ffe170",
+                      "error": "#ba1a1a",
+                      "surface-container-highest": "#e0e3e5",
+                      "on-surface": "#191c1e",
+                      "on-tertiary": "#ffffff",
+                      "outline": "#687988",
+                      "inverse-surface": "#2d3133",
+                      "surface-variant": "#e0e3e5",
+                      "on-tertiary-fixed": "#002204",
+                      "primary-fixed": "#d8e2ff",
+                      "primary-fixed-dim": "#adc6ff",
+                      "secondary": "#705d00",
+                      "tertiary-container": "#94f990",
+                      "surface-dim": "#d8dadc",
+                      "tertiary": "#006e1c",
+                      "outline-variant": "#b7c9d9",
+                      "on-primary-fixed": "#001a41",
+                      "surface-container": "#eceef0",
+                      "on-secondary-fixed": "#221b00",
+                      "primary-container": "#d8e2ff",
+                      "surface-container-low": "#f2f4f6",
+                      "secondary-fixed-dim": "#e9c400",
+                      "background": "#f7f9fb",
+                      "primary": "#005bc1",
+                      "surface-container-lowest": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Plus Jakarta Sans"],
+                      "body": ["Be Vietnam Pro"],
+                      "label": ["Plus Jakarta Sans"]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface-container-low text-on-surface antialiased min-h-screen">
+<!-- Top Navigation (Shell Implementation) -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(25,28,30,0.06)]">
+<div class="text-2xl font-black tracking-tight text-blue-700 dark:text-blue-300 font-headline">Toybox Tycoon</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4">
+<button class="text-blue-700 dark:text-blue-300 hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+</button>
+<button class="text-slate-500 dark:text-slate-400 hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+<img alt="Player Profile" class="w-10 h-10 rounded-full border-2 border-primary-container" data-alt="vibrant digital avatar of a young player with a friendly expression and stylish hair, cartoonish 3D style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlhygBbGufb86IGkU-2Wqe6Oz_U3DtpE-GbxWsJYV9gLGxnyaIbb-wLVeuwDdE2I0lIBennTY5l0svTkrtR6OJYWET_uWkepseTa0xRkStI_N0edAGYVrdh3mSZ0yg3gcSXJ_3potvSE3nnQMQ5vVyPFW93_fzzpK0OoPlEGEZBVYZLzPHzV7Tr7E2ZU4PWANeaR59-9Gd0w7SdY1YDiBit_tW5-TirfNoMvCS7cg-7eLIzDUV9GVlnoDeMpRkM7so4cT-nkpHKa8B"/>
+</div>
+</nav>
+<!-- Modal Backdrop -->
+<main class="fixed inset-0 z-50 flex items-center justify-center p-6 bg-on-background/30 glass-effect">
+<!-- Property Modal -->
+<div class="relative w-full max-w-2xl bg-surface-container-lowest rounded-xl bubbly-shadow overflow-hidden transform scale-100 flex flex-col">
+<!-- City Color Header -->
+<div class="h-6 bg-orange-500 w-full"></div>
+<div class="p-8 md:p-12">
+<!-- Header Section -->
+<div class="flex justify-between items-start mb-8">
+<div>
+<h1 class="text-5xl font-black text-on-surface font-headline tracking-tight mb-2 uppercase">Paris</h1>
+<div class="flex items-center gap-3 py-2 px-4 bg-surface-container-low rounded-full w-fit">
+<img alt="Aria" class="w-8 h-8 rounded-full" data-alt="chibi style profile picture of a female character with purple hair and happy expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7vex7Ep-So86xQy3D3wNv7-BeIeUCcBlXPOqo7gnqIimKibmG06YT05EDrak7mfp9gzdz6dOzRAfBFfZUJfGtP7tNo8ZQ4fdSdCRMd6TgBRysFq2aBeJeOi9NQa2NRXoFQ6z7Lek88Pugh_ew3mRM-SOP7f02xWnccZBkLKzls835a1ZkpU_4R_NZfSyWNwrxoQkXxIwtjcqSpFa7mR-OYlNRVGyO3yAKZE5chQkdXikxsGlIBX4wGHKlYNVak_gHSGHzc2E2SX20"/>
+<p class="text-on-surface-variant font-medium">Owned by <span class="text-on-surface font-bold">Aria</span></p>
+</div>
+</div>
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-outline">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<!-- Construction Bento Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+<!-- Land (Owned) -->
+<div class="p-4 bg-primary-container/30 rounded-lg flex flex-col items-center justify-center gap-2 border-2 border-primary-container/50">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="landscape" style="font-variation-settings: 'FILL' 1;">landscape</span>
+<p class="text-xs font-bold font-headline text-primary uppercase">Land</p>
+</div>
+<!-- Villa (Owned) -->
+<div class="p-4 bg-primary-container/30 rounded-lg flex flex-col items-center justify-center gap-2 border-2 border-primary-container/50">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<p class="text-xs font-bold font-headline text-primary uppercase">Villa</p>
+</div>
+<!-- Building (Owned) -->
+<div class="p-4 bg-primary-container/30 rounded-lg flex flex-col items-center justify-center gap-2 border-2 border-primary-container/50">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="apartment" style="font-variation-settings: 'FILL' 1;">apartment</span>
+<p class="text-xs font-bold font-headline text-primary uppercase">Building</p>
+</div>
+<!-- Hotel (Owned - Hot Item) -->
+<div class="p-4 bg-secondary-container rounded-lg flex flex-col items-center justify-center gap-2 border-2 border-secondary shadow-lg shadow-secondary/10 rotate-1">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="domain" style="font-variation-settings: 'FILL' 1;">domain</span>
+<p class="text-xs font-bold font-headline text-secondary uppercase">Hotel</p>
+</div>
+</div>
+<!-- Toll Fee Display -->
+<div class="bg-surface-container rounded-xl p-8 mb-8 text-center relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-24 h-24 bg-tertiary/10 rounded-full blur-2xl"></div>
+<p class="text-on-surface-variant font-headline font-bold text-sm uppercase tracking-widest mb-2">Total Toll Fee</p>
+<div class="text-6xl font-black text-on-surface font-headline mb-4 flex items-center justify-center gap-2">
+<span class="text-3xl text-outline-variant">₩</span>850,000
+                    </div>
+<p class="text-on-surface-variant italic font-body">"Watch out! Aria has built a luxury hotel here."</p>
+</div>
+<!-- Actions -->
+<div class="flex flex-col gap-4">
+<button class="w-full bg-primary text-on-primary py-6 rounded-full font-headline font-black text-xl flex items-center justify-center gap-3 inner-press-shadow active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+                        Pay Toll
+                    </button>
+<button class="w-full bg-surface-container-high text-on-surface-variant py-5 rounded-full font-headline font-bold text-lg hover:bg-surface-container-highest transition-colors active:scale-95">
+                        Close
+                    </button>
+</div>
+</div>
+<!-- Map Decorative Background -->
+<div class="absolute inset-0 -z-10 opacity-10 pointer-events-none">
+<img alt="Paris Map Decor" class="w-full h-full object-cover" data-alt="stylized architectural map of Paris with minimalist lines and soft pastel colors" data-location="Paris" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvRAgWRbyuN93EoRslbkw_CNNXxA8TWjRMYWRzaUGMj6s9WcG_iYRDbSrV5aECIEQ5vX0EmJhkoDdSFZhOsOfNSzcG0BCHccwX5O8IYuT4zSGjsAKEaXJC8QVixi2oGfQyS9chjSbvj69JK5sCRdioGJvEW7PvraONAhP18vDjC6pkxL2L0_f4fx31RMA1VjJ-OaiLWpv64HqS03URliLM8pCJ2ar6uZc169DNd1H3monF8ye_pE9d5-rfz4K8jrJe5Mjjq_IbSDLi"/>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (Shell Implementation) -->
+<div class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl rounded-t-[3rem] shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
+<button class="flex flex-col items-center justify-center text-slate-400 p-3 hover:text-blue-500 transition-colors active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px]">Board</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-blue-600 text-white rounded-full p-3 shadow-lg shadow-blue-200 active:scale-90 transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="domain" style="font-variation-settings: 'FILL' 1;">domain</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px]">Properties</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 p-3 hover:text-blue-500 transition-colors active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="swap_horiz">swap_horiz</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px]">Trades</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 p-3 hover:text-blue-500 transition-colors active:scale-90 duration-300">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px]">Social</span>
+</button>
+</div>
+</body></html>

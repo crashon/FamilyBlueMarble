@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blue Marble - Winner's Asset Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#005bc1",
+                        "on-background": "#191c1e",
+                        "primary-fixed": "#d8e2ff",
+                        "on-primary-fixed-variant": "#004493",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#94f990",
+                        "outline-variant": "#b7c9d9",
+                        "on-primary-fixed": "#001a41",
+                        "surface-container-highest": "#e0e3e5",
+                        "primary": "#005bc1",
+                        "on-secondary-fixed-variant": "#544600",
+                        "secondary": "#705d00",
+                        "primary-container": "#d8e2ff",
+                        "background": "#f7f9fb",
+                        "on-surface": "#191c1e",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#005313",
+                        "on-tertiary-fixed": "#002204",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary-container": "#ffe170",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#004493",
+                        "surface-bright": "#f7f9fb",
+                        "secondary-fixed-dim": "#e9c400",
+                        "inverse-surface": "#2d3133",
+                        "inverse-primary": "#adc6ff",
+                        "error": "#ba1a1a",
+                        "outline": "#687988",
+                        "on-secondary-fixed": "#221b00",
+                        "tertiary": "#006e1c",
+                        "on-secondary-container": "#544600",
+                        "surface-dim": "#d8dadc",
+                        "secondary-fixed": "#ffe170",
+                        "tertiary-fixed-dim": "#78dc77",
+                        "surface-container-high": "#e6e8ea",
+                        "on-tertiary-container": "#005313",
+                        "on-surface-variant": "#384956",
+                        "surface-container": "#eceef0",
+                        "primary-fixed-dim": "#adc6ff",
+                        "tertiary-fixed": "#94f990",
+                        "surface-container-low": "#f2f4f6",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f7f9fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(247, 249, 251, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .bounce-hover:hover {
+            transform: scale(1.02);
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .bubbly-shadow {
+            box-shadow: 0 20px 40px rgba(25, 28, 30, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-6 bg-[#f7f9fb]/80 backdrop-blur-xl rounded-b-[3rem] shadow-[0_20px_40px_rgba(25,28,30,0.06)]">
+<div class="flex items-center gap-4">
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container-highest hover:bg-surface-variant transition-all">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="text-2xl font-black text-[#005bc1] font-headline tracking-tight">Blue Marble</h1>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container-low rounded-full">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-headline font-bold text-on-surface">ULTIMATE TYCOON</span>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#41484d] hover:scale-105 transition-all cursor-pointer">celebration</span>
+<span class="material-symbols-outlined text-[#41484d] hover:scale-105 transition-all cursor-pointer">settings</span>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-32 px-8 max-w-7xl mx-auto">
+<!-- Hero Section: Winner Profile -->
+<section class="relative mb-12">
+<div class="flex flex-col md:flex-row items-center gap-8 bg-gradient-to-br from-primary to-surface-tint p-10 rounded-xl overflow-hidden shadow-2xl">
+<!-- Confetti Texture Background -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDbSnnWU6S9yNF6gyU-MO-AMDCmiULx6b6uUpax05RIuMSVLJATeWeQ6sGfLwjvAd802riDb2lgorT69aopakNEcfly-cRRKu8llXJQ-LEByzJef0WVAN9NJrynb5GFSG1tNA2vaYoErmnIwIsHAoUYVatY1-jOO9gt-nH4SgY40YvoOXkTpew8PiT5F4hdTmm5_uUm9oIXTffJyqRAwg8uEmxUgUzXWaz9w9XBN3UZE0uzuDY6E2p8iaGO_VXdaq9L2MJZQI_3lJ_w');"></div>
+<div class="relative">
+<div class="w-48 h-48 rounded-full p-2 bg-secondary-container shadow-xl">
+<img alt="Winner Aria" class="w-full h-full object-cover rounded-full border-4 border-white" data-alt="Close-up portrait of a cheerful young woman with bright eyes and a warm smile, stylized in a premium 3D digital art style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoHFo2vT_7EAzogXNbfz3ojgqVUgrzrA5-8f2l7ui-4yey_8SpQt0vMz8b7k7ozofftemh5X9DlAL7kkxU9Qyujpqy6mtf59B9AbhHpN8mp8fsJkZVt0V9zR0eX-20xX4Ryt0u-IZkSC-6jfaQ7DptHvHcR_Gqr21OIrnubNUfTcPQxbxiEHh-T4dlHmuNjTj_8LkIYwCZNxJn6YcUoSvTaZISmSVOUP8J9AxnDDwpZC9za-MHt9HqQ60IRRYO-mBFKQiWspKRuxuC"/>
+</div>
+<div class="absolute -bottom-4 right-0 bg-secondary-fixed text-on-secondary-fixed font-headline font-black px-6 py-2 rounded-full border-4 border-white shadow-lg transform rotate-3">
+                        #1 ARIA
+                    </div>
+</div>
+<div class="flex-1 text-center md:text-left z-10">
+<span class="text-primary-fixed font-headline font-bold tracking-widest uppercase text-sm mb-2 block">Victory Celebration</span>
+<h2 class="text-white text-5xl md:text-6xl font-headline font-extrabold mb-4 leading-tight">ULTIMATE TYCOON</h2>
+<p class="text-primary-fixed text-lg max-w-xl">Dominating the board with strategic investments and a touch of cosmic luck. The world is yours!</p>
+</div>
+<div class="flex gap-4 flex-wrap justify-center">
+<div class="bg-white/10 backdrop-blur-md p-4 rounded-lg flex flex-col items-center border border-white/20">
+<span class="material-symbols-outlined text-secondary-container mb-1" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+<span class="text-white font-headline font-bold text-xs uppercase tracking-tighter">Most Cities</span>
+</div>
+<div class="bg-white/10 backdrop-blur-md p-4 rounded-lg flex flex-col items-center border border-white/20">
+<span class="material-symbols-outlined text-tertiary-container mb-1" style="font-variation-settings: 'FILL' 1;">apartment</span>
+<span class="text-white font-headline font-bold text-xs uppercase tracking-tighter">Hotel King</span>
+</div>
+<div class="bg-white/10 backdrop-blur-md p-4 rounded-lg flex flex-col items-center border border-white/20">
+<span class="material-symbols-outlined text-primary-fixed mb-1" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="text-white font-headline font-bold text-xs uppercase tracking-tighter">Luckiest</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Financial Summary Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+<!-- Net Worth Card -->
+<div class="bg-surface-container-lowest p-8 rounded-xl bubbly-shadow relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
+<div class="flex items-center justify-between mb-6">
+<div class="w-14 h-14 bg-secondary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl">account_balance</span>
+</div>
+<span class="text-tertiary font-headline font-bold flex items-center gap-1">
+<span class="material-symbols-outlined">trending_up</span> +24% vs Last Match
+                    </span>
+</div>
+<h3 class="text-on-surface-variant font-headline font-bold text-lg mb-1">Total Net Worth</h3>
+<div class="text-5xl font-headline font-black text-on-surface tracking-tighter">$5,420,000</div>
+<div class="mt-6 flex gap-2">
+<div class="h-2 flex-1 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-4/5"></div>
+</div>
+</div>
+</div>
+<!-- Cash Card -->
+<div class="bg-surface-container-lowest p-8 rounded-xl bubbly-shadow relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
+<div class="flex items-center justify-between mb-6">
+<div class="w-14 h-14 bg-primary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container text-3xl">payments</span>
+</div>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Liquid Assets</span>
+</div>
+<h3 class="text-on-surface-variant font-headline font-bold text-lg mb-1">Cash on Hand</h3>
+<div class="text-5xl font-headline font-black text-on-surface tracking-tighter">$1,200,000</div>
+<div class="mt-6">
+<button class="w-full py-4 bg-primary text-white font-headline font-extrabold rounded-full bounce-hover shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                        INVEST CAPITAL <span class="material-symbols-outlined">rocket_launch</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Portfolio Headline -->
+<div class="flex items-end justify-between mb-8 px-2">
+<div>
+<h2 class="text-3xl font-headline font-extrabold text-on-surface">Property Portfolio</h2>
+<p class="text-on-surface-variant">24 Global Assets Secured</p>
+</div>
+<div class="flex gap-2">
+<button class="px-6 py-2 bg-surface-container-high rounded-full font-headline font-bold text-sm text-on-surface-variant hover:bg-surface-variant">Filter by Region</button>
+<button class="px-6 py-2 bg-surface-container-high rounded-full font-headline font-bold text-sm text-on-surface-variant hover:bg-surface-variant">Sort by Value</button>
+</div>
+</div>
+<!-- Property Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Seoul Card (Group 1 - Blue) -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden bubbly-shadow group hover:-translate-y-2 transition-transform duration-300 transform rotate-1">
+<div class="h-6 bg-primary"></div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="text-2xl font-headline font-extrabold text-on-surface">Seoul</h4>
+<p class="text-xs text-on-surface-variant font-bold uppercase tracking-widest">South Korea</p>
+</div>
+<div class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-[10px] font-black uppercase">Prime District</div>
+</div>
+<div class="space-y-3 mb-6">
+<div class="flex justify-between items-center p-2 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">domain</span>
+<span class="text-sm font-bold">Hotels</span>
+</div>
+<span class="font-headline font-black text-on-surface">02</span>
+</div>
+<div class="flex justify-between items-center p-2 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">apartment</span>
+<span class="text-sm font-bold">Buildings</span>
+</div>
+<span class="font-headline font-black text-on-surface">03</span>
+</div>
+</div>
+<div class="pt-4 border-t-2 border-dashed border-surface-container flex justify-between items-center">
+<span class="text-on-surface-variant font-bold text-xs uppercase">Current Value</span>
+<span class="text-xl font-headline font-black text-on-surface">$850,000</span>
+</div>
+</div>
+</div>
+<!-- Paris Card (Group 2 - Magenta-ish/Red) -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden bubbly-shadow group hover:-translate-y-2 transition-transform duration-300 transform -rotate-1">
+<div class="h-6 bg-error"></div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="text-2xl font-headline font-extrabold text-on-surface">Paris</h4>
+<p class="text-xs text-on-surface-variant font-bold uppercase tracking-widest">France</p>
+</div>
+<div class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-black uppercase">Cultural Hub</div>
+</div>
+<div class="space-y-3 mb-6">
+<div class="flex justify-between items-center p-2 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-lg" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-sm font-bold">Villas</span>
+</div>
+<span class="font-headline font-black text-on-surface">01</span>
+</div>
+<div class="flex justify-between items-center p-2 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-lg" style="font-variation-settings: 'FILL' 1;">apartment</span>
+<span class="text-sm font-bold">Buildings</span>
+</div>
+<span class="font-headline font-black text-on-surface">02</span>
+</div>
+</div>
+<div class="pt-4 border-t-2 border-dashed border-surface-container flex justify-between items-center">
+<span class="text-on-surface-variant font-bold text-xs uppercase">Current Value</span>
+<span class="text-xl font-headline font-black text-on-surface">$620,000</span>
+</div>
+</div>
+</div>
+<!-- New York Card (Group 3 - Green) -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden bubbly-shadow group hover:-translate-y-2 transition-transform duration-300">
+<div class="h-6 bg-tertiary"></div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="text-2xl font-headline font-extrabold text-on-surface">New York</h4>
+<p class="text-xs text-on-surface-variant font-bold uppercase tracking-widest">USA</p>
+</div>
+<div class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-[10px] font-black uppercase">Financial Core</div>
+</div>
+<div class="space-y-3 mb-6">
+<div class="flex justify-between items-center p-2 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings: 'FILL' 1;">domain</span>
+<span class="text-sm font-bold">Hotels</span>
+</div>
+<span class="font-headline font-black text-on-surface">03</span>
+</div>
+<div class="flex justify-between items-center p-2 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings: 'FILL' 1;">apartment</span>
+<span class="text-sm font-bold">Buildings</span>
+</div>
+<span class="font-headline font-black text-on-surface">04</span>
+</div>
+</div>
+<div class="pt-4 border-t-2 border-dashed border-surface-container flex justify-between items-center">
+<span class="text-on-surface-variant font-bold text-xs uppercase">Current Value</span>
+<span class="text-xl font-headline font-black text-on-surface">$1,450,000</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Decorative Map Background Element -->
+<div class="mt-20 relative h-[400px] w-full rounded-xl overflow-hidden bubbly-shadow">
+<img alt="Global Game Map" class="w-full h-full object-cover" data-alt="A stylized vibrant world map for a board game featuring 3D rendered cities, neon flight paths, and a playful cosmic atmosphere" data-location="Global" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQQgoGUpnh_NVVirtUTcEacRwp3tjWxd465Y7QCEg9DcwoiM_rxuCX_-Uh9C_6ecioJtoddRrQ7M1WiSTEAfwv1Q4MlR4_f1zaAMcCZiF0H7oRJH-Zk3nN3Hp7MRFKKkcQkH2cbv-XQ8dT-Rx-1JML76fINY8BjXqcEUAc35tQtUB5_spH_qrSIagCz5vy22Gzxnnv1oFnFm5gghkaQNtTxrrKgHa5Sz6VVfigm_XrtUcDtUhvacnLDenGwId1_2vOU9MBwHc9UZp6"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-12">
+<div class="text-white">
+<h3 class="text-4xl font-headline font-black mb-2">Dominating the Globe</h3>
+<p class="text-lg opacity-90 max-w-md font-body">Your empire spans 4 continents and 12 countries. You have established yourself as the world's leading real estate mogul.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-end pb-8 px-4 bg-[#f7f9fb]/90 backdrop-blur-2xl rounded-t-[3rem] shadow-[0_-10px_30px_rgba(0,91,193,0.08)]">
+<a class="flex flex-col items-center justify-center text-[#41484d] opacity-70 hover:opacity-100 hover:translate-y-[-2px] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-['Be_Vietnam_Pro'] text-[12px] font-bold uppercase tracking-widest mt-1">Board</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-b from-[#005bc1] to-[#004a9b] text-white rounded-full px-8 py-3 -mt-6 shadow-lg shadow-blue-500/40 transform scale-110" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-['Be_Vietnam_Pro'] text-[12px] font-bold uppercase tracking-widest mt-1">Assets</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#41484d] opacity-70 hover:opacity-100 hover:translate-y-[-2px] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="swap_horiz">swap_horiz</span>
+<span class="font-['Be_Vietnam_Pro'] text-[12px] font-bold uppercase tracking-widest mt-1">Trade</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#41484d] opacity-70 hover:opacity-100 hover:translate-y-[-2px] transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-['Be_Vietnam_Pro'] text-[12px] font-bold uppercase tracking-widest mt-1">Bank</span>
+</a>
+</nav>
+</body></html>

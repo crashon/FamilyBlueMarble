@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#b7c9d9",
+                    "on-primary-fixed-variant": "#004493",
+                    "tertiary-fixed-dim": "#78dc77",
+                    "surface": "#f7f9fb",
+                    "tertiary-fixed": "#94f990",
+                    "on-secondary-fixed": "#221b00",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-container": "#eceef0",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "primary-container": "#d8e2ff",
+                    "primary-fixed-dim": "#adc6ff",
+                    "surface-tint": "#005bc1",
+                    "secondary-fixed-dim": "#e9c400",
+                    "on-tertiary-fixed-variant": "#005313",
+                    "secondary": "#705d00",
+                    "on-primary-container": "#004493",
+                    "background": "#f7f9fb",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#006e1c",
+                    "on-tertiary-container": "#005313",
+                    "secondary-container": "#ffe170",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface-bright": "#f7f9fb",
+                    "surface-container-low": "#f2f4f6",
+                    "primary": "#005bc1",
+                    "secondary-fixed": "#ffe170",
+                    "inverse-surface": "#2d3133",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-primary-fixed": "#001a41",
+                    "surface-variant": "#e0e3e5",
+                    "surface-dim": "#d8dadc",
+                    "inverse-primary": "#adc6ff",
+                    "on-secondary-container": "#544600",
+                    "on-surface": "#191c1e",
+                    "on-tertiary-fixed": "#002204",
+                    "on-surface-variant": "#384956",
+                    "tertiary-container": "#94f990",
+                    "primary-fixed": "#d8e2ff",
+                    "outline": "#687988",
+                    "on-primary": "#ffffff",
+                    "on-background": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#544600"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        .font-plus-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .cosmic-gradient {
+            background: radial-gradient(circle at top right, #001a41 0%, #191c1e 70%, #000000 100%);
+        }
+        .nebula-glow {
+            background: radial-gradient(60% 60% at 50% 50%, rgba(0, 91, 193, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+    </style>
+</head>
+<body class="bg-black text-white min-h-screen selection:bg-primary-container selection:text-on-primary-container overflow-hidden">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center w-full sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl px-6 py-4 shadow-[0_10px_30px_rgba(0,91,193,0.05)]">
+<div class="flex items-center gap-4">
+<h1 class="text-2xl font-black text-blue-600 dark:text-blue-400 italic font-plus-jakarta">Tactile Toybox</h1>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-slate-400 dark:text-slate-500 font-medium font-plus-jakarta hover:scale-110 transition-transform duration-200" href="#">Galaxy</a>
+<a class="text-slate-400 dark:text-slate-500 font-medium font-plus-jakarta hover:scale-110 transition-transform duration-200" href="#">Inventory</a>
+<a class="text-blue-700 dark:text-blue-300 font-extrabold font-plus-jakarta hover:scale-110 transition-transform duration-200" href="#">Events</a>
+<a class="text-slate-400 dark:text-slate-500 font-medium font-plus-jakarta hover:scale-110 transition-transform duration-200" href="#">Logs</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="material-symbols-outlined text-blue-600 dark:text-blue-400 hover:scale-110 transition-transform duration-200" data-icon="help">help</button>
+<button class="material-symbols-outlined text-blue-600 dark:text-blue-400 hover:scale-110 transition-transform duration-200" data-icon="settings">settings</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="a stylized astronaut character profile picture in a high-tech white suit with blue neon accents against a dark space background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEWjrxanTUc0mYpkRrFpEz9xqxJyNH1Uh-K21B4ZAUd4vTq4_bwZHCQXzAQhjSAmlPbMgXl-jb-UkX_W4RqvVxCxNRHZukC8LuWgxCxIvn621XAXmZ3BEiGnabRVU39FV6U9QxxXnIzALyxqSNY5KeiKtCMBuw6SegTWbtuG2rbWQLSCSyRE4f74qox2fxxiAyMGQJACgM8kQsxVi90TKF2BF-pWoeQnEgEmaoM2lmj65daB6BGqJAVKRWIqnTnIvk9mNhQqGh15N-"/>
+</div>
+</div>
+</header>
+<!-- Main Entry Canvas -->
+<main class="relative w-full h-[calc(100vh-80px)] flex items-center justify-center cosmic-gradient overflow-hidden">
+<!-- Background Cosmic Maze/Nebula -->
+<div class="absolute inset-0 z-0 opacity-40">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] rotate-12">
+<img alt="Cosmic Maze Nebula" class="w-full h-full object-cover mix-blend-screen" data-alt="vibrant dark blue and purple deep space nebula with intricate labyrinthine dust lanes and glowing golden star clusters" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcrGEJjBpO6atCkXEKlyTTf4luRq6MUEPU1X13sxfnaRfEB6nWwdIJdkCiAYKYSo4Jhk424Tm_cBTsF2qrX6BsS1dLOAS-TqRlL1aucNdF0hdkpxnKdcrQwKcr9-Jr1aczdlzG7nSyE-Mexb-eNMTW22Cd8BqXnvDZRJLAOu5nJqz-PqiMGDzRSEk_go5VG45BBmDf6JjasJmeZyZTLuqFuVIuXADUTpQcldN1icO3ounFqyczPZ4xZ4bshcEanZawm48Jj5Nnfbe-"/>
+</div>
+<div class="absolute inset-0 nebula-glow"></div>
+</div>
+<!-- The "Lost!" Central Modal -->
+<div class="relative z-10 w-full max-w-lg px-6">
+<div class="bg-surface-container-lowest/10 backdrop-blur-3xl rounded-xl p-1 shadow-[0_40px_100px_rgba(0,0,0,0.6)] border border-white/10 -rotate-1 transform">
+<div class="bg-surface-container-lowest rounded-[2.5rem] p-8 md:p-12 text-center flex flex-col items-center gap-8">
+<!-- Property-style Header Accent -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-3 bg-blue-600 rounded-b-full"></div>
+<!-- Icon Container -->
+<div class="w-32 h-32 rounded-full bg-secondary-container/30 flex items-center justify-center relative">
+<div class="absolute inset-0 bg-secondary-container blur-2xl opacity-20 animate-pulse"></div>
+<span class="material-symbols-outlined text-7xl text-on-secondary-container" data-icon="rocket_launch" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+</div>
+<div class="space-y-4">
+<h2 class="text-6xl font-black text-on-surface font-plus-jakarta tracking-tighter uppercase italic">Lost!</h2>
+<div class="h-1 w-24 bg-primary mx-auto rounded-full opacity-20"></div>
+<p class="text-xl font-medium text-on-surface-variant font-body leading-relaxed max-w-xs mx-auto">
+                            You've drifted into the <span class="text-primary font-bold">Cosmic Labyrinth</span>.
+                        </p>
+</div>
+<!-- Game Choice Panel -->
+<div class="w-full bg-surface-container-low rounded-lg p-6 space-y-4 border border-outline-variant/10">
+<div class="flex items-center gap-4 text-left">
+<div class="w-12 h-12 rounded-lg bg-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="timer">timer</span>
+</div>
+<p class="text-on-surface-variant text-sm font-semibold leading-tight">
+                                Wait 3 turns for an automatic navigation recalibration.
+                            </p>
+</div>
+<div class="flex items-center gap-4 text-left">
+<div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="diamond">diamond</span>
+</div>
+<p class="text-on-surface-variant text-sm font-semibold leading-tight">
+                                Pay <span class="text-secondary font-bold">500 Credits</span> for immediate rescue.
+                            </p>
+</div>
+</div>
+<!-- Button Action -->
+<button class="group relative w-full py-5 bg-primary text-white rounded-full font-plus-jakarta font-extrabold text-xl tracking-wide shadow-[0_10px_25px_rgba(0,91,193,0.3)] transition-all active:scale-95 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="relative z-10">ACCEPT FATE</span>
+<!-- 4px "bottom-heavy" physical shadow simulation -->
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-on-primary-container/30"></div>
+</button>
+</div>
+</div>
+<!-- Asymmetric Floating Decoration -->
+<div class="absolute -top-12 -right-8 w-24 h-24 bg-secondary-container/50 blur-3xl rounded-full z-0"></div>
+<div class="absolute -bottom-10 -left-10 w-32 h-32 bg-primary-container/40 blur-3xl rounded-full z-0"></div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-end bg-transparent md:hidden pb-8 pt-4 px-6">
+<div class="absolute inset-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl rounded-t-[3rem] shadow-[0_-15px_40px_rgba(0,0,0,0.08)] -z-10"></div>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-blue-500 dark:hover:text-blue-300 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+<span class="font-plus-jakarta text-[12px] font-bold uppercase tracking-wider mt-1">Galaxy</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-blue-500 dark:hover:text-blue-300 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="package_2">package_2</span>
+<span class="font-plus-jakarta text-[12px] font-bold uppercase tracking-wider mt-1">Inventory</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-600 text-white rounded-full p-4 scale-110 -translate-y-4 shadow-lg shadow-blue-500/40" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-plus-jakarta text-[10px] font-bold uppercase tracking-wider mt-1">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-blue-500 dark:hover:text-blue-300 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-plus-jakarta text-[12px] font-bold uppercase tracking-wider mt-1">Logs</span>
+</a>
+</nav>
+</body></html>

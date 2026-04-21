@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blue Marble: Cosmic Carnival - Character Selection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Be+Vietnam+Pro:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#d8e2ff",
+                        "inverse-primary": "#adc6ff",
+                        "on-secondary-fixed": "#221b00",
+                        "on-tertiary-fixed-variant": "#005313",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface": "#f7f9fb",
+                        "tertiary-fixed-dim": "#78dc77",
+                        "on-primary-fixed-variant": "#004493",
+                        "on-primary-fixed": "#001a41",
+                        "background": "#f7f9fb",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#006e1c",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "primary": "#005bc1",
+                        "inverse-on-surface": "#eff1f3",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#e9c400",
+                        "secondary": "#705d00",
+                        "on-tertiary-fixed": "#002204",
+                        "on-secondary-container": "#544600",
+                        "on-surface-variant": "#384956",
+                        "surface-container-high": "#e6e8ea",
+                        "surface-bright": "#f7f9fb",
+                        "primary-fixed-dim": "#adc6ff",
+                        "surface-dim": "#d8dadc",
+                        "primary-fixed": "#d8e2ff",
+                        "inverse-surface": "#2d3133",
+                        "tertiary-fixed": "#94f990",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#005313",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#004493",
+                        "outline-variant": "#b7c9d9",
+                        "on-secondary-fixed-variant": "#544600",
+                        "outline": "#687988",
+                        "tertiary-container": "#94f990",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "on-background": "#191c1e",
+                        "surface-container-low": "#f2f4f6",
+                        "secondary-container": "#ffe170",
+                        "secondary-fixed": "#ffe170",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#005bc1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .bouncy-shadow {
+            box-shadow: 0 20px 40px rgba(25, 28, 30, 0.08);
+        }
+        .inner-press {
+            box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased overflow-hidden">
+<!-- Game Lobby Background (Blurred Context) -->
+<main class="fixed inset-0 z-0">
+<div class="relative w-full h-full">
+<img class="absolute inset-0 w-full h-full object-cover blur-md brightness-75" data-alt="Blurred cosmic game lobby with neon planetary boards, floating holographic interfaces, and vibrant blue and purple space nebula background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnhrWtEZ2zrRWfV2F0eaP3e-9nLrMg2miiE7KT5Sehhpjee_LUkSBXkYnZ1xfG01qqKPGau-i0fWPC9-5EeUKlSNIyVzsb9qB66muzO-A2AhB4prsdM1wu-Q8cSq5HRMe1jWeuevVJVDntVBwXoFbPPHWjnzlFUSesO2YP_CicOMfIX4dAhP2oOhymq7NDAYAbZSMFgVj3WpgJ7zUrfJsSVHNyuL_yhlHyOMZNpCoCBn6iZR7XZM8eI8jWp5mSJ3Hnsi6cp2P0b5_G"/>
+<!-- Mock Background Content (TopAppBar Replica for Context) -->
+<header class="bg-white/80 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,91,193,0.08)] flex justify-between items-center w-full px-6 py-4 fixed top-0 z-10">
+<div class="text-2xl font-extrabold text-blue-700 italic font-headline tracking-tight">Blue Marble: Cosmic Carnival</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-blue-700">account_balance_wallet</span>
+<span class="material-symbols-outlined text-blue-700">settings</span>
+</div>
+</header>
+</div>
+</main>
+<!-- Modal Overlay -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 bg-on-surface/40 backdrop-blur-sm">
+<!-- Character Selection Popup -->
+<section class="bg-surface-container-lowest w-full max-w-5xl max-h-[921px] rounded-xl bouncy-shadow overflow-hidden flex flex-col relative">
+<!-- Header -->
+<header class="p-8 pb-4 flex justify-between items-start">
+<div>
+<h1 class="text-4xl font-headline font-extrabold text-primary tracking-tight leading-tight">Choose Your Explorer</h1>
+<p class="text-on-surface-variant font-body text-lg mt-1">Select your champion for the cosmic race.</p>
+</div>
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined text-3xl text-outline">close</span>
+</button>
+</header>
+<!-- Character Grid -->
+<div class="flex-1 overflow-y-auto px-8 py-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Character Card 1: Selected -->
+<article class="relative group cursor-pointer ring-4 ring-primary rounded-lg p-4 bg-primary-container/30 flex flex-col items-center text-center transition-all hover:scale-[1.02]">
+<div class="absolute top-3 right-3 bg-primary text-white rounded-full p-1 shadow-lg">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="w-full aspect-square rounded-lg overflow-hidden bg-white mb-4 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="3D stylized avatar of a Space Captain with a polished chrome helmet and vibrant blue suit, cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXb2SwnreALWhXKQURP3r7Md07ZUtqceNymPwh7K6dTU2N8NZQIRV2HTKuJchwWS3qwuLUY9hhu_i5sDNM3IGZyF_hbaK_asmCJbXRoeoYTwwI_To-jKB2REhtxUQURMUPl6BXAjcBbxJlwxFlyPm8it05emHrTN9XOdPTFXorAVCrx3SUarFjw8Wj8178QrA-wZzFroAJ8u9VR8G6V2r33uHqFeuUnBjaNfIvXPRvqkJJmB6N1gGnhwKkYegQ2sNDj145C0bcKZts"/>
+</div>
+<h3 class="font-headline font-bold text-xl text-on-primary-container">Space Captain</h3>
+<div class="mt-2 bg-white/60 px-3 py-2 rounded-lg"><p class="text-xs font-bold text-primary uppercase tracking-wider mb-1">Ability: Master Navigator</p><p class="text-sm text-on-surface-variant leading-tight">Select one of two dice values once per game</p></div>
+</article>
+<!-- Character Card 2 -->
+<article class="group cursor-pointer rounded-lg p-4 bg-surface-container-low flex flex-col items-center text-center transition-all hover:scale-[1.02] hover:bg-surface-container-high">
+<div class="w-full aspect-square rounded-lg overflow-hidden bg-white mb-4 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Whimsical 3D robot mechanic character with glowing green eyes and tool-filled belt, soft toy-like textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1kFwJraW7bPGtRk3Y77UakL6y1p3mXL-gXoOF-AnAphb4wn4ebdsDhAJgmtkdXabeFXEufot8TRaknxJcwK_IAc447DnFGTXwQqxTSzjG347ofskbVOSb8NmZTr8MAP6MEzD8n8DBE34i6el5LS9jo301_JLLWBPudwr7J_hUgEB2o_OLt1kPUhq1Ys9DazEOo1Hi0E6bucRTr2GXYj3ampaaJ-GltdogmTTuIsdDAt4ANo3dyrZ4h2qcK7vIf9m0lnDd9zuxKfjw"/>
+</div>
+<h3 class="font-headline font-bold text-xl text-on-surface">Robot Mechanic</h3>
+<div class="mt-2 bg-white px-3 py-2 rounded-lg"><p class="text-xs font-bold text-tertiary uppercase tracking-wider mb-1">Ability: Efficiency Expert</p><p class="text-sm text-on-surface-variant leading-tight">Building costs are reduced by 10%</p></div>
+</article>
+<!-- Character Card 3 -->
+<article class="group cursor-pointer rounded-lg p-4 bg-surface-container-low flex flex-col items-center text-center transition-all hover:scale-[1.02] hover:bg-surface-container-high">
+<div class="w-full aspect-square rounded-lg overflow-hidden bg-white mb-4 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="3D character of a Galactic Merchant in a shimmering gold robe holding a holographic ledger" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvEw7C_a0Dk0uXcsOibf5gFgXSTd3628hyWciDseGQSES_rcE4hmOKn7ec8akP_14JqTot72sK1rGp0QLkoVkXpRl4rfUNEs1Qxs5AcZG9vxq7fAossVgll54tOQS2iHvLF4GU9WW-1p4L7nUuPx1_DiEEJ82goMx1ENm0Y1sH1-so7PQ63ZmQQiR5wa_rvXJkez0uwAn73psswOlTTgp1EB61GUOwmVB5SJVT8HDXALAegcEllXl2ycFD68V3w9frkLS5bEnLR1Y2"/>
+</div>
+<h3 class="font-headline font-bold text-xl text-on-surface">Galactic Merchant</h3>
+<div class="mt-2 bg-white px-3 py-2 rounded-lg"><p class="text-xs font-bold text-secondary uppercase tracking-wider mb-1">Ability: Smooth Talker</p><p class="text-sm text-on-surface-variant leading-tight">Tolls received from others increased by 5%</p></div>
+</article>
+<!-- Character Card 4 -->
+<article class="group cursor-pointer rounded-lg p-4 bg-surface-container-low flex flex-col items-center text-center transition-all hover:scale-[1.02] hover:bg-surface-container-high">
+<div class="w-full aspect-square rounded-lg overflow-hidden bg-white mb-4 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Friendly 3D Astro-Kid character in a puffy white space suit with a giant lollipop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCild690BQa1snTL73jiz4weVFkfAYzYWCyARULADQ01ibGaeHbTYicg19tphg3kJTqsDU_gKVHuLJ9QuedPvAXsm3fJX8Mim3-P22jnUI9TKqPqIH-9Q8Vfx7bfDfuXbWV_6_XyqaW6-U8RAWyT10NsiCvGnJqyZEDzFLL3Uz9INmDusPI7qAs_3Oz-_KfLDofSJNbuWMBstgFDb83OvIHv0mI6e4s5UTq-9P8WhF9QfkvuP_G98ymNpv6H-6JYPovlx6rdj5v-TEj"/>
+</div>
+<h3 class="font-headline font-bold text-xl text-on-surface">Astro-Kid</h3>
+<div class="mt-2 bg-white px-3 py-2 rounded-lg"><p class="text-xs font-bold text-primary uppercase tracking-wider mb-1">Ability: Lucky Star</p><p class="text-sm text-on-surface-variant leading-tight">20% chance to avoid paying a toll</p></div>
+</article>
+<!-- Character Card 5 -->
+<article class="group cursor-pointer rounded-lg p-4 bg-surface-container-low flex flex-col items-center text-center transition-all hover:scale-[1.02] hover:bg-surface-container-high">
+<div class="w-full aspect-square rounded-lg overflow-hidden bg-white mb-4 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Mysterious 3D Starry Explorer character with a cloak made of moving stars and nebula patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9pSrfB70tZPjklZmfyMnsuv_8DIkqVBZkYDGM6ClkB8EXJd_i5o8FUrZVt9PgyeDFYQxhWWTZNGYjmte25T3WyyPQFqz424U-c6ZBOwjAvCLe4H3Lozf2l0MQqt51Nd_ve48br41UVzISz2V4itQliOmPnsVAaMaSDFedyr0iAb2CZOR48AJrE_d2Cs3aZfepUvTDGCE-fs_5YYaB_PimciDztpx8DmD56LaYIv5xDXKd5cDGqiOu0AA40fSUkFKF5nMKPaa_NV6h"/>
+</div>
+<h3 class="font-headline font-bold text-xl text-on-surface">Starry Explorer</h3>
+<div class="mt-2 bg-white px-3 py-2 rounded-lg"><p class="text-xs font-bold text-tertiary uppercase tracking-wider mb-1">Ability: Void Walker</p><p class="text-sm text-on-surface-variant leading-tight">Can teleport to any 'Chance' space once</p></div>
+</article>
+<!-- Character Card 6 -->
+<article class="group cursor-pointer rounded-lg p-4 bg-surface-container-low flex flex-col items-center text-center transition-all hover:scale-[1.02] hover:bg-surface-container-high">
+<div class="w-full aspect-square rounded-lg overflow-hidden bg-white mb-4 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Dapper 3D Alien Diplomat with four arms and a purple tuxedo, polished high-end textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQscwLf_GKOYXKxObo7-ZThLcJCP_1p8wQahZYqhHW3u2gw2zS-nUTVpwlyQdiH4ZhbaQyLM6DAa4_uQZslm13oIAkwvJiCV3mRzEJC8_2QL6GVGTJQZWZ7R5OC0y3hP8OQIIHLr7Zmp3G2N_GnQ9JrekWzCpNIE_BsPEcJGuHXFJnJYEw_ppkJlZyJ1AK-ZmeY_-Z00UNjVzh9H2J4Z21JLJNzXehcQDTNssrkH1OxLbH6Q1Awp7iMNalDPHD3TN5isKdBIoMw6m5"/>
+</div>
+<h3 class="font-headline font-bold text-xl text-on-surface">Alien Diplomat</h3>
+<div class="mt-2 bg-white px-3 py-2 rounded-lg"><p class="text-xs font-bold text-secondary uppercase tracking-wider mb-1">Ability: Peace Keeper</p><p class="text-sm text-on-surface-variant leading-tight">Immune to 'Bankruptcy' once (resets to $10,000)</p></div>
+</article>
+<!-- Character Card 7 -->
+<article class="group cursor-pointer rounded-lg p-4 bg-surface-container-low flex flex-col items-center text-center transition-all hover:scale-[1.02] hover:bg-surface-container-high">
+<div class="w-full aspect-square rounded-lg overflow-hidden bg-white mb-4 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Cybernetic space-cat with robotic goggles and a tiny rocket pack, cute 3D character" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnEB5I22crkMQbImbKbjS-AaUWKfwBnC1Q7VPHLPQQlmkmafmpEq-MTAIOTYlnfb7Seo67AjCBY_n3uEjIfNcYI8YD27PeVRgK6_EJY2eoDAhl2bae33JliYO0ARUXUh4aR4nCHEI5JxbqEY9AfPkoN8SI-CRKEtFPbVBWLXd5kClGR79H0b35qphUW6W8fLQqNLRv1u6vqRflwtIm0s0q0gc_KZUal7Ke-JfijE5njCmYcCwc_7DGzLZvGCTIlTgj520F9IV1qGhX"/>
+</div>
+<h3 class="font-headline font-bold text-xl text-on-surface">Nova Cat</h3>
+<div class="mt-2 bg-white px-3 py-2 rounded-lg"><p class="text-xs font-bold text-primary uppercase tracking-wider mb-1">Ability: Agile Paws</p><p class="text-sm text-on-surface-variant leading-tight">Can move 1 extra space after any roll</p></div>
+</article>
+<!-- Character Card 8 -->
+<article class="group cursor-pointer rounded-lg p-4 bg-surface-container-low flex flex-col items-center text-center transition-all hover:scale-[1.02] hover:bg-surface-container-high opacity-60">
+<div class="w-full aspect-square rounded-lg overflow-hidden bg-white mb-4 shadow-sm relative">
+<div class="absolute inset-0 bg-on-surface/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-on-surface">lock</span>
+</div>
+<img class="w-full h-full object-cover grayscale" data-alt="Locked character silhouette with glowing neon edges" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfpUO4USbupIzL4il_1qVUStiNpBNbEkIKds7LfWPaxhGC9Ic74raekAcnjjDpYiWVr6-tLNdchElNlsqywVi9k-zHgf7mb6s5i8BvBF5_KzkTnCB_7uXl2Kv2yGLsL0MKQ88abdoVpr8sZZqjNmm5H53OC8Lt_hRGTaZjuO1aEFEkPTsyPW4D6G5jbUmuAyg1-u35eEDe-4NZYrs1lUZV4mjLnJH2tojvcx_zrVXidXVaO3fMFgzlwUhGn2xSOPDkAsE2kqCisnHS"/>
+</div>
+<h3 class="font-headline font-bold text-xl text-on-surface">Stellar Knight</h3>
+<div class="mt-2 bg-white px-3 py-2 rounded-lg"><p class="text-xs font-bold text-outline uppercase tracking-wider mb-1">Ability: Protector</p><p class="text-sm text-on-surface-variant leading-tight">Tolls paid are reduced by 15%</p></div>
+</article>
+</div>
+</div>
+<!-- Footer Action -->
+<footer class="p-8 pt-4 flex flex-col items-center gap-4">
+<button class="w-full max-w-md bg-primary text-white font-headline font-extrabold text-xl py-5 rounded-full bouncy-shadow inner-press transition-all hover:scale-[1.03] active:scale-95 uppercase tracking-widest flex items-center justify-center gap-3">
+                    SELECT CHARACTER
+                    <span class="material-symbols-outlined text-2xl">rocket_launch</span>
+</button>
+<div class="flex items-center gap-2">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-blue-400"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-tertiary"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-secondary"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center text-[10px] font-bold text-on-surface-variant">+1</div>
+</div>
+<p class="text-sm font-medium text-on-surface-variant">3/4 Players Ready</p>
+</div>
+</footer>
+</section>
+</div>
+<!-- Background Navigation Shell (Suppressed items based on task requirements but included for identity) -->
+<nav class="fixed bottom-8 left-0 right-0 mx-auto flex justify-around items-center z-50 py-2 bg-white/90 backdrop-blur-lg w-[90%] max-w-lg rounded-full shadow-[0_20px_40px_rgba(25,28,30,0.12)] blur-[2px] opacity-40 pointer-events-none">
+<div class="flex flex-col items-center justify-center text-slate-500 px-4 py-2">
+<span class="material-symbols-outlined">rocket_launch</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px]">Play</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-4 py-2">
+<span class="material-symbols-outlined">local_mall</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px]">Shop</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-blue-600 text-white rounded-full px-6 py-2 scale-110 shadow-lg">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">face_6</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px]">Avatars</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 px-4 py-2">
+<span class="material-symbols-outlined">group</span>
+<span class="font-['Be_Vietnam_Pro'] font-semibold text-[11px]">Social</span>
+</div>
+</nav>
+</body></html>

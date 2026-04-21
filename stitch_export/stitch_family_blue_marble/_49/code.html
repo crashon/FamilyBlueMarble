@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Be_Vietnam_Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#94f990",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#002204",
+                    "inverse-primary": "#adc6ff",
+                    "surface-tint": "#005bc1",
+                    "secondary-container": "#ffe170",
+                    "outline": "#687988",
+                    "surface-container": "#eceef0",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#ffe170",
+                    "on-surface-variant": "#384956",
+                    "primary-fixed-dim": "#adc6ff",
+                    "surface-container-low": "#f2f4f6",
+                    "on-secondary-container": "#544600",
+                    "surface-container-high": "#e6e8ea",
+                    "on-background": "#191c1e",
+                    "outline-variant": "#b7c9d9",
+                    "on-tertiary-fixed-variant": "#005313",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#e9c400",
+                    "primary-container": "#d8e2ff",
+                    "surface-variant": "#e0e3e5",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface": "#f7f9fb",
+                    "surface-bright": "#f7f9fb",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#005313",
+                    "error": "#ba1a1a",
+                    "tertiary": "#006e1c",
+                    "on-surface": "#191c1e",
+                    "surface-container-highest": "#e0e3e5",
+                    "primary": "#005bc1",
+                    "surface-dim": "#d8dadc",
+                    "on-secondary-fixed-variant": "#544600",
+                    "tertiary-fixed-dim": "#78dc77",
+                    "inverse-surface": "#2d3133",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#221b00",
+                    "secondary": "#705d00",
+                    "tertiary-container": "#94f990",
+                    "background": "#f7f9fb",
+                    "on-primary-fixed-variant": "#004493",
+                    "on-primary-fixed": "#001a41",
+                    "primary-fixed": "#d8e2ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#004493"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bubbly-text {
+            text-shadow: 0 8px 0 rgba(0, 91, 193, 0.2), 0 15px 30px rgba(0, 0, 0, 0.1);
+            animation: popIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+        .glass-panel {
+            background: rgba(247, 249, 251, 0.85);
+            backdrop-filter: blur(24px);
+            animation: slideUpFade 0.4s ease-out forwards;
+        }
+        .floating-reward {
+            transform: rotate(-2deg);
+        }
+        .particle-heart { color: #ba1a1a; position: absolute; opacity: 0.6; animation: floatParticle 2s infinite ease-in-out; }
+        .particle-star { color: #705d00; position: absolute; opacity: 0.8; animation: floatParticle 2.5s infinite ease-in-out; }
+
+        @keyframes popIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes slideUpFade {
+            from { transform: translateY(20px) rotate(-2deg); opacity: 0; }
+            to { transform: translateY(0) rotate(-2deg); opacity: 1; }
+        }
+
+        @keyframes floatParticle {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-15px) scale(1.1); }
+        }
+
+        .hero-image-container {
+            animation: bounceIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        @keyframes bounceIn {
+            from { transform: scale(0) rotate(-10deg); }
+            to { transform: scale(1) rotate(0deg); }
+        }
+    </style>
+</head>
+<body class="bg-surface-container-low font-body text-on-surface overflow-hidden">
+<!-- Cosmic Board Game Background (Blurred) -->
+<div class="fixed inset-0 z-0">
+<img class="w-full h-full object-cover blur-md scale-105 opacity-40" data-alt="vibrant cosmic board game landscape with glowing nebula paths, stylized planets, and soft purple and blue ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA8QMld5MN1F3JOGmBbwEB7QTK5CdgWkSiSCqGHOTbAS68ssCD0FNWbatc-6ZIRq4ph__nw-tzaPfJrywrQHUHPaJZ_OgbqGQbhPYZxDTveF0-08cHtQ0ZSI9bORs153Wq3KD5oq4ko-vKChAhbHdOjwR1WSwX1E-mcMG5Mqi9lWJKN_jzpRsqE5ALf17IXwkbXE8ZEj07Ev88WrDUvnYo6kmTan9S-moCKMmcxC_m4mU8u6fzaVLBjZW8kBzzKilekqnskwfpBpua"/>
+</div>
+<!-- Celebration Overlay Container -->
+<main class="relative z-10 min-h-screen flex flex-col items-center justify-center p-6 text-center">
+<!-- Particle Effects Layer -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden">
+<span class="material-symbols-outlined particle-heart text-4xl top-[15%] left-[20%]" style="font-variation-settings: 'FILL' 1; animation-delay: 0.1s;">favorite</span>
+<span class="material-symbols-outlined particle-star text-3xl top-[25%] right-[15%]" style="font-variation-settings: 'FILL' 1; animation-delay: 0.3s;">stars</span>
+<span class="material-symbols-outlined particle-heart text-2xl bottom-[30%] left-[10%]" style="font-variation-settings: 'FILL' 1; animation-delay: 0.5s;">favorite</span>
+<span class="material-symbols-outlined particle-star text-5xl bottom-[20%] right-[25%]" style="font-variation-settings: 'FILL' 1; animation-delay: 0.2s;">stars</span>
+<span class="material-symbols-outlined particle-heart text-3xl top-[40%] right-[30%]" style="font-variation-settings: 'FILL' 1; animation-delay: 0.4s;">favorite</span>
+<span class="material-symbols-outlined particle-star text-2xl top-[10%] left-[45%]" style="font-variation-settings: 'FILL' 1; animation-delay: 0.6s;">stars</span>
+</div>
+<!-- Central Character Action -->
+<div class="relative mb-8 hero-image-container">
+<!-- Confetti/Burst Backdrop -->
+<div class="absolute inset-0 -m-20 bg-gradient-to-t from-primary-container/0 via-secondary-container/30 to-primary-container/0 rounded-full blur-3xl"></div>
+<div class="relative z-20 w-64 h-64 md:w-80 md:h-80 rounded-full bg-surface-container-lowest shadow-[0_30px_60px_rgba(0,91,193,0.15)] overflow-hidden p-2">
+<img class="w-full h-full object-cover rounded-full" data-alt="heroic astronaut character Star Lord style in high-tech suit floating joyfully surrounded by golden particles and soft glowing hearts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQhR6VIv5zIU9oluzSaPRGz2QDHY2vWiMF1Mv-ZKdATubDvGWGAH7hXci1UG6meShoGSqaafZ1wbO-_DkKtKEy52D5oXY6LezRbEaAYc-25gA5OVFmQX94WsVlUaUm_h1TBI5dg7XG22ro0IKGCBpBbN_B2FvL6U1DsT7_N2u7P4ZQpk9Y1Y_3DRmKVeJbVxGZetsjzSy1w-5Pqr681HQK0USmdKDFovrjRH4YjkqiBCcCCJm4EEjFujuK164ZXeB6Ycw7EoKgtpG1"/>
+</div>
+<!-- Floating Accessory Icons -->
+<div class="absolute -top-4 -right-4 bg-secondary-container p-4 rounded-full shadow-lg animate-bounce" style="animation-duration: 1.5s;">
+<span class="material-symbols-outlined text-on-secondary-container text-4xl" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+</div>
+<!-- Hero Typography -->
+<div class="mb-8 space-y-2">
+<h1 class="font-headline font-black text-5xl md:text-7xl lg:text-8xl text-primary bubbly-text tracking-tighter">
+            HEROIC ASSIST!
+        </h1>
+<p class="font-headline text-xl md:text-2xl font-bold text-secondary-fixed-dim uppercase tracking-widest opacity-0" style="animation: popIn 0.3s ease-out 0.2s forwards;">
+            YOU'RE A LIFESAVER!
+        </p>
+</div>
+<!-- Reward Display Card -->
+<div class="floating-reward mb-12 transform hover:rotate-0 transition-transform duration-300">
+<div class="glass-panel p-8 md:p-10 rounded-xl shadow-[0_20px_40px_rgba(25,28,30,0.1)] flex flex-col md:flex-row gap-8 items-center border border-white/50" style="animation-delay: 0.3s;">
+<!-- Credit Reward -->
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+</div>
+<div class="text-left">
+<p class="text-sm font-bold text-outline uppercase tracking-wider">Credits Earned</p>
+<p class="text-3xl font-black text-on-surface font-headline">+200</p>
+</div>
+</div>
+<!-- Vertical Divider (Visual Only) -->
+<div class="hidden md:block w-px h-12 bg-outline-variant/30"></div>
+<!-- Harmony Reward -->
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-container text-3xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div class="text-left">
+<p class="text-sm font-bold text-outline uppercase tracking-wider">Harmony Points</p>
+<p class="text-3xl font-black text-on-surface font-headline">+150</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Call to Action -->
+<div class="group opacity-0" style="animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s forwards;">
+<button class="bg-primary hover:bg-surface-tint text-on-primary font-headline font-extrabold text-xl md:text-2xl px-12 py-6 rounded-full shadow-[0_10px_0_#004493,0_20px_40px_rgba(0,91,193,0.3)] group-active:translate-y-2 group-active:shadow-none transition-all duration-100 flex items-center gap-3">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+            YOU'RE WELCOME!
+        </button>
+</div>
+</main>
+<!-- Shell Components -->
+<!-- Top Bar -->
+<nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center max-w-7xl mx-auto rounded-full mt-4 mx-4 px-6 py-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(25,28,30,0.06)] transition-all duration-200">
+<div class="text-2xl font-black text-blue-700 dark:text-blue-400 tracking-tighter font-['Plus_Jakarta_Sans']">Blue Marble</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 bg-secondary-container px-4 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-bold text-on-secondary-container">1,250</span>
+</div>
+<button class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary">
+<img alt="Player Avatar" data-alt="close up headshot profile of a smiling gamer with neon lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn9onfvrvOM27BSHGxoLusU-1lFgP6No67hQu4ItL9L3nOWjdquLVR6B7y9AwSsUgVvv0EOE2XDwsSS-nXnLyd34zE87cc2OBFFtfqBk1kVO75GBgl9EXsH8H3u8_i6O8_CIdeX1g2ah6SYUvnGCh79PCPvtwC1OhUW9cLCAH6-NyvAMKSJ53PaujexBo_jIe7CC_SBb3nnRIDJLj-UGzRmL-AFnuIReejmvTviFNI424-0K0DdF6KpZgeIClGadPWYegJ3QYNgSbF"/>
+</button>
+</div>
+</nav>
+<!-- Bottom Nav -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white dark:bg-slate-900 rounded-t-[3rem] shadow-[0_-10px_30px_rgba(0,0,0,0.04)]">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-6 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-['Be_Vietnam_Pro'] text-[12px] font-bold">Board</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-6 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="swap_horiz">swap_horiz</span>
+<span class="font-['Be_Vietnam_Pro'] text-[12px] font-bold">Trade</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-200 rounded-[2rem] px-6 py-2 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="groups" style="font-variation-settings: 'FILL' 1;">groups</span>
+<span class="font-['Be_Vietnam_Pro'] text-[12px] font-bold">Social</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-6 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="local_mall">local_mall</span>
+<span class="font-['Be_Vietnam_Pro'] text-[12px] font-bold">Shop</span>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be_Vietnam_Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "on-secondary-fixed-variant": "#544600",
+                  "on-surface": "#191c1e",
+                  "surface-variant": "#e0e3e5",
+                  "surface-container-low": "#f2f4f6",
+                  "secondary": "#705d00",
+                  "surface-dim": "#d8dadc",
+                  "surface": "#f7f9fb",
+                  "on-background": "#191c1e",
+                  "on-tertiary-container": "#005313",
+                  "primary-container": "#d8e2ff",
+                  "inverse-surface": "#2d3133",
+                  "surface-tint": "#005bc1",
+                  "inverse-on-surface": "#eff1f3",
+                  "on-primary-fixed": "#001a41",
+                  "on-primary": "#ffffff",
+                  "background": "#f7f9fb",
+                  "error": "#ba1a1a",
+                  "on-tertiary-fixed-variant": "#005313",
+                  "tertiary-container": "#94f990",
+                  "on-primary-fixed-variant": "#004493",
+                  "outline": "#687988",
+                  "tertiary-fixed-dim": "#78dc77",
+                  "secondary-fixed-dim": "#e9c400",
+                  "surface-container-lowest": "#ffffff",
+                  "on-error-container": "#93000a",
+                  "on-secondary-container": "#544600",
+                  "primary-fixed": "#d8e2ff",
+                  "on-secondary": "#ffffff",
+                  "surface-container-highest": "#e0e3e5",
+                  "primary-fixed-dim": "#adc6ff",
+                  "on-secondary-fixed": "#221b00",
+                  "on-primary-container": "#004493",
+                  "error-container": "#ffdad6",
+                  "surface-bright": "#f7f9fb",
+                  "tertiary": "#006e1c",
+                  "primary": "#005bc1",
+                  "outline-variant": "#b7c9d9",
+                  "surface-container-high": "#e6e8ea",
+                  "on-tertiary-fixed": "#002204",
+                  "secondary-container": "#ffe170",
+                  "surface-container": "#eceef0",
+                  "on-surface-variant": "#384956",
+                  "on-error": "#ffffff",
+                  "tertiary-fixed": "#94f990",
+                  "on-tertiary": "#ffffff",
+                  "inverse-primary": "#adc6ff",
+                  "secondary-fixed": "#ffe170"
+          },
+          "borderRadius": {
+                  "DEFAULT": "1rem",
+                  "lg": "2rem",
+                  "xl": "3rem",
+                  "full": "9999px"
+          },
+          "fontFamily": {
+                  "headline": ["Plus Jakarta Sans"],
+                  "body": ["Be Vietnam Pro"],
+                  "label": ["Plus Jakarta Sans"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+    }
+    .bouncy-card { transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    .bouncy-card:hover { transform: scale(1.02) rotate(-1deg); }
+    .podium-gradient { background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,91,193,0.05) 100%); }
+    .confetti-overlay { background-image: radial-gradient(#ffe170 10%, transparent 10%), radial-gradient(#adc6ff 10%, transparent 10%); background-size: 40px 40px; background-position: 0 0, 20px 20px; opacity: 0.1; }
+  </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container overflow-x-hidden min-h-screen">
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(25,28,30,0.06)] fixed top-0 full-width z-50 flex justify-between items-center w-full px-12 py-6">
+<div class="text-3xl font-black text-blue-700 dark:text-blue-400 tracking-tighter font-['Plus_Jakarta_Sans']">The Tactile Toybox</div>
+<div class="flex gap-4">
+<button class="hover:scale-105 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all active:scale-95 duration-200 cursor-pointer p-2 rounded-full">
+<span class="material-symbols-outlined text-slate-500">settings</span>
+</button>
+<button class="hover:scale-105 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all active:scale-95 duration-200 cursor-pointer p-2 rounded-full">
+<span class="material-symbols-outlined text-slate-500">help</span>
+</button>
+<button class="hover:scale-105 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all active:scale-95 duration-200 cursor-pointer p-2 rounded-full">
+<span class="material-symbols-outlined text-blue-700">account_circle</span>
+</button>
+</div>
+</header>
+<main class="pt-32 pb-40 px-6 max-w-7xl mx-auto relative min-h-screen">
+<div class="confetti-overlay absolute inset-0 pointer-events-none"></div>
+<section class="text-center mb-16 relative z-10">
+<h1 class="font-headline text-6xl md:text-8xl font-black text-primary tracking-tight mb-4 drop-shadow-sm">Winner!</h1>
+<p class="font-headline text-xl font-bold text-secondary-fixed-dim uppercase tracking-widest">Victory Celebration</p>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-24 relative z-10">
+<div class="lg:col-span-3 order-3 lg:order-1 h-full flex flex-col justify-end">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40px_rgba(25,28,30,0.06)] bouncy-card flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-tertiary-container rounded-full mb-4 flex items-center justify-center overflow-hidden border-4 border-white shadow-md">
+<img alt="Avatar of Leo" class="w-full h-full object-cover" data-alt="vibrant 3d cartoon character avatar of a young boy with glasses and a green cap in a clean playful style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTqOOSL4qowxYHVa83naOwE2i0tcu0k5GsdWv1YRifeDQZLxs0KBZPNCk2j3zkzYhowxxhT4cV-0549sv9oOu2-iA9PLhv_g_bVH_mzB-tkICLupdcgFh560wPKPBfWh-3HEQprJMPsxUk1kKZMWfraGz6nkSwbdSTkRYAxzv1xHQ-cP8v3-HFbUZC94SfErTDKzUTJjJk7LpdfhepWFW0Zg6b5KEz_NSxr-5N17yOYgCqeykfScGkm2BD47M5Hhwv_D1uAsofXH9z"/>
+</div>
+<span class="font-headline font-extrabold text-2xl text-on-surface mb-1">Leo</span>
+<span class="font-label text-sm text-outline font-semibold mb-4">3RD PLACE</span>
+<div class="w-full h-40 podium-gradient rounded-t-lg flex items-center justify-center border-b-8 border-tertiary/20">
+<span class="text-5xl font-black text-tertiary opacity-30">3</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 order-1 lg:order-2 h-full flex flex-col justify-end relative">
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 z-20">
+<span class="material-symbols-outlined text-secondary text-6xl" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<div class="bg-surface-container-lowest p-10 rounded-xl shadow-[0_30px_60px_rgba(0,91,193,0.15)] bouncy-card flex flex-col items-center text-center border-4 border-primary/10">
+<div class="w-32 h-32 bg-primary-container rounded-full mb-6 flex items-center justify-center overflow-hidden border-8 border-white shadow-lg">
+<img alt="Avatar of Sarah" class="w-full h-full object-cover" data-alt="cheerful 3d cartoon character avatar of a young girl with braids and a bright yellow sweater on a blue background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3RDiq2gd4MTMbWytqERik6bW-NBArzO9PSmkMHDxPQInJrzOLZYF48r2cDmxHJ3N2ARUkQfoXqaHxgqp_1-9zmB4Z2afhqKjMUCFLOqVfLSoM0bX7zQABKi_t3yqsuD22CAJrPY13sEUpUHLPlxGBD5iipg34O4axPDPJz5dP3sTgX2xuZIVaiw2rcs0zllzVExATwEYlmQG9f5U_xztFm0Y7wVjPNoMgIVHo5o4JMa_49zK2adf3hO83pEos8f_kes59lpdRKy7h"/>
+</div>
+<span class="font-headline font-black text-4xl text-primary mb-2">Sarah</span>
+<span class="font-label text-lg text-primary font-extrabold mb-6">CHAMPION</span>
+<div class="w-full h-64 podium-gradient rounded-t-xl flex flex-col items-center justify-center border-b-8 border-primary/20">
+<span class="text-8xl font-black text-primary opacity-40">1</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-3 order-2 lg:order-3 h-full flex flex-col justify-end">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_20px_40_rgba(25,28,30,0.06)] bouncy-card flex flex-col items-center text-center">
+<div class="w-24 h-24 bg-secondary-container rounded-full mb-4 flex items-center justify-center overflow-hidden border-4 border-white shadow-md">
+<img alt="Avatar of Marco" class="w-full h-full object-cover" data-alt="friendly 3d cartoon character avatar of a teenage boy with curly hair and a red hoodie in a bright animation style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5ely9DWNrfC3Fr5hOc71HBzM7Y0z4lQpJg0LzeYuXrtNZkCy0PoE2tNxHIDviZVz1VtJTk0BP5zl4dafUWTNfGGIzeB8hGgb0x4ErW0brKOrDtKgEqxNAbmmtCtZ6OzlzyMaiCjy0g_zdGzge7ggBkV8MLe0sr4aovOXC8Ta4CnGfWpvCYS45sclK8dDM58FifsU-G4JjjVOIDZRqTfpQXFylVLHE1mdINEoh5fm6OODI8uFCVwUNMlokAe__rplh_qLmYzG8RKt-"/>
+</div>
+<span class="font-headline font-extrabold text-2xl text-on-surface mb-1">Marco</span>
+<span class="font-label text-sm text-outline font-semibold mb-4">2ND PLACE</span>
+<div class="w-full h-52 podium-gradient rounded-t-lg flex items-center justify-center border-b-8 border-secondary/20">
+<span class="text-6xl font-black text-secondary opacity-30">2</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-2 order-4 h-full flex flex-col justify-end">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_10px_20px_rgba(25,28,30,0.04)] bouncy-card flex flex-col items-center text-center opacity-80">
+<div class="w-16 h-16 bg-surface-container-highest rounded-full mb-3 flex items-center justify-center overflow-hidden border-2 border-white shadow-sm">
+<img alt="Avatar of Alex" class="w-full h-full object-cover" data-alt="stylized 3d cartoon character avatar of a child with short hair and a blue shirt in a soft playful render" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKySM8LvlfBa7M54bywIgYD9PNq3sUCg5jEZARUH9YeUv3PpPlfTWlpjFrCwR4wlW6AFwWGJtlyazrfdtqyHF6mZ4OlqGWZ9wfIL6r_h_-v_Xq3ZyvZLD8GX4vt5aQ94k9T3yzn5elrsRHk6EIcSpM3G4BaTgkkKKUjIzzl6c_8TeyaneqxMLRy9RTnVIw7z2haSPnIVpDgkFe2MLgClflGzrXhM7C9GJsov3yglqvyazUkPxiWpjnJDy31B3eZNoquE0xGk-T6G8N"/>
+</div>
+<span class="font-headline font-bold text-xl text-on-surface-variant mb-1">Alex</span>
+<span class="font-label text-xs text-outline font-medium mb-3">4TH PLACE</span>
+<div class="w-full h-24 podium-gradient rounded-t-lg flex items-center justify-center border-b-8 border-surface-variant">
+<span class="text-3xl font-black text-surface-variant opacity-60">4</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 relative z-10">
+<div class="bg-surface-container-low p-6 rounded-lg relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-2 bg-primary"></div>
+<div class="flex items-center gap-4 mb-4">
+<img alt="Sarah mini" class="w-12 h-12 rounded-full border-2 border-white shadow-sm" data-alt="close-up avatar of a cheerful young girl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXPmwJ7dmWGfuA2YPaHDdl4wIn8KECq_V4IDVnCe5fYs4Vli47cbs_nKRreV4eg090_QDhut2UNWI15T7cX5SJzqPVIey8GWv70fJ2m5qEcMhuvfZPyAhnjHDv9E-RJ9F8ealGF7UDs7Rmg28LZuQ6c25saCflOWy7DSuHgPKEG58BaYeEoHInnNSLejIJ3HrNYTJ4C1WS6gSV9u-lMdGRgT2Aa-jrgtQCDAqbVtXCvRi80U16pudSjRfohAjRE8uMzeG8PWe20uSt"/>
+<div>
+<h3 class="font-headline font-bold text-on-surface">Sarah</h3>
+<p class="text-xs text-primary font-bold uppercase tracking-wider">Champion</p>
+</div>
+</div>
+<div class="space-y-3 font-body">
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Cash</span>
+<span class="font-bold text-tertiary">₩4,250,000</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Property Value</span>
+<span class="font-bold text-primary">₩12,800,000</span>
+</div>
+<div class="pt-3 border-t border-outline-variant/20 flex justify-between items-center">
+<span class="font-headline font-extrabold text-on-surface">Total Assets</span>
+<span class="font-headline font-black text-xl text-primary">₩17,050,000</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-2 bg-secondary"></div>
+<div class="flex items-center gap-4 mb-4">
+<img alt="Marco mini" class="w-12 h-12 rounded-full border-2 border-white shadow-sm" data-alt="close-up avatar of a teenage boy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvCVaoadlm4dLCwRLnaMeUfAw85rQR0NGbvTLF1p69yT8INcR_J1U2jbPN5czHB-lmYMRM56RdhAlazgmjqoL_ZMtmXBV4989eo32OqMsNVzawcJRvgr_uOJhZm-Y8htaNf27YvhL-BjK3Y7OnGWVaBPRixKFD9JKEa8GBxPSx3BRpOCKPAUkXTSGwZm0f_GbqIqrMLASZ0Uyiz3sVOU6ynZSinKXbo6H7Er6xqQVzGG-Zd1moMDz23WGBbOnCHAUTA-wgFMVy6zJI"/>
+<div>
+<h3 class="font-headline font-bold text-on-surface">Marco</h3>
+<p class="text-xs text-secondary font-bold uppercase tracking-wider">Runner Up</p>
+</div>
+</div>
+<div class="space-y-3 font-body">
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Cash</span>
+<span class="font-bold text-tertiary">₩1,100,000</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Property Value</span>
+<span class="font-bold text-primary">₩9,400,000</span>
+</div>
+<div class="pt-3 border-t border-outline-variant/20 flex justify-between items-center">
+<span class="font-headline font-extrabold text-on-surface">Total Assets</span>
+<span class="font-headline font-black text-xl text-on-surface">₩10,500,000</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-2 bg-tertiary"></div>
+<div class="flex items-center gap-4 mb-4">
+<img alt="Leo mini" class="w-12 h-12 rounded-full border-2 border-white shadow-sm" data-alt="close-up avatar of a young boy with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlohSDZd9fauKr1YFCFlM3fSz9lTb5j0ZRbHo0R7fDfc6Xst21cGrHc3_qiI72XUNDfs7zpYcTrF3OwjsZHiEDBqtK2XHzGs5QKDEZG-9vXDcluglcgR_2rAeooBIgUit6KdsxbYiNWNt4KdPeTlfdvNZE75-_t3rF2RZ2H9Kl-hVAJnStMYCsBQr1T1re7cmEZAI15qnjMRYfBKdpMKeTdPxgoisxBXmmH4mKefbyVteXfaO-X0TjhkqjTUjsHL70ZLD0JkfLK9rX"/>
+<div>
+<h3 class="font-headline font-bold text-on-surface">Leo</h3>
+<p class="text-xs text-tertiary font-bold uppercase tracking-wider">Honorable</p>
+</div>
+</div>
+<div class="space-y-3 font-body">
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Cash</span>
+<span class="font-bold text-tertiary">₩850,000</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Property Value</span>
+<span class="font-bold text-primary">₩6,200,000</span>
+</div>
+<div class="pt-3 border-t border-outline-variant/20 flex justify-between items-center">
+<span class="font-headline font-extrabold text-on-surface">Total Assets</span>
+<span class="font-headline font-black text-xl text-on-surface">₩7,050,000</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-2 bg-outline-variant"></div>
+<div class="flex items-center gap-4 mb-4">
+<img alt="Alex mini" class="w-12 h-12 rounded-full border-2 border-white shadow-sm" data-alt="close-up avatar of a child with short hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUjuq7exFynRP0h_7rL0kL2A3cXr68yB9kFZPWO-xVVU3biMWhKteI8LsKgJZ8rEdUTw8D7ayyesqwveRA4nmIBm_E19Y1vk4gzGkZ_5UwIs5yUZu_N7BBOWYueqxJgx2xXvQKa-v8Aw3K2z8tI3HlExOI4J7zVuBp-PGoGtIAmh-okxjupGNAmTGY-qKMTmJRqmVnONyXWkDF73C3cbWtcR-5EioxCsX_z694bVvDTOnz_ngqTcw3Ox3qh4PGjinnZUq31ps9W-Mj"/>
+<div>
+<h3 class="font-headline font-bold text-on-surface">Alex</h3>
+<p class="text-xs text-outline font-bold uppercase tracking-wider">Great Effort</p>
+</div>
+</div>
+<div class="space-y-3 font-body">
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Cash</span>
+<span class="font-bold text-tertiary">₩200,000</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Property Value</span>
+<span class="font-bold text-primary">₩3,500,000</span>
+</div>
+<div class="pt-3 border-t border-outline-variant/20 flex justify-between items-center">
+<span class="font-headline font-extrabold text-on-surface">Total Assets</span>
+<span class="font-headline font-black text-xl text-on-surface">₩3,700,000</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6 relative z-10 pb-20">
+<button class="w-full md:w-auto px-12 py-6 bg-primary text-white rounded-full font-headline font-black text-xl flex items-center justify-center gap-3 shadow-[0_15px_30px_rgba(0,91,193,0.3)] hover:scale-105 active:scale-95 transition-all group">
+<span class="material-symbols-outlined text-2xl group-hover:rotate-180 transition-transform duration-500">replay</span>
+        Rematch
+      </button>
+<button class="w-full md:w-auto px-12 py-6 bg-white text-on-surface border-4 border-surface-container-highest rounded-full font-headline font-bold text-xl flex items-center justify-center gap-3 hover:bg-surface-container-low transition-all active:scale-95">
+<span class="material-symbols-outlined text-2xl">home</span>
+        Back to Menu
+      </button>
+</div>
+</main>
+<nav class="fixed bottom-8 left-1/2 -translate-x-1/2 rounded-[3rem] px-8 py-4 w-auto bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg shadow-[0_30px_60px_rgba(0,91,193,0.15)] flex gap-10 items-center justify-center z-50">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-4 hover:text-blue-500 transition-transform">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-semibold uppercase tracking-widest mt-1">Game</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-4 hover:text-blue-500 transition-transform">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-semibold uppercase tracking-widest mt-1">Assets</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-4 hover:text-blue-500 transition-transform">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-semibold uppercase tracking-widest mt-1">Market</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-blue-600 text-white rounded-full p-4 scale-110 -translate-y-2 shadow-lg shadow-blue-500/40">
+<span class="material-symbols-outlined">group</span>
+<span class="font-['Be_Vietnam_Pro'] text-[10px] font-semibold uppercase tracking-widest mt-1">Friends</span>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blue Marble Cosmic - Ability Activation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be_Vietnam_Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#002204",
+                    "tertiary-fixed-dim": "#78dc77",
+                    "surface": "#f7f9fb",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#004493",
+                    "on-tertiary-container": "#005313",
+                    "on-secondary-fixed-variant": "#544600",
+                    "tertiary": "#006e1c",
+                    "surface-container-high": "#e6e8ea",
+                    "on-secondary-fixed": "#221b00",
+                    "primary-fixed-dim": "#adc6ff",
+                    "primary-fixed": "#d8e2ff",
+                    "outline": "#687988",
+                    "secondary-container": "#ffe170",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#005bc1",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#005313",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#b7c9d9",
+                    "tertiary-container": "#94f990",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-primary-fixed-variant": "#004493",
+                    "on-primary-fixed": "#001a41",
+                    "primary": "#005bc1",
+                    "secondary-fixed-dim": "#e9c400",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-low": "#f2f4f6",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f7f9fb",
+                    "on-surface": "#191c1e",
+                    "inverse-surface": "#2d3133",
+                    "secondary": "#705d00",
+                    "on-surface-variant": "#384956",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#d8dadc",
+                    "on-secondary-container": "#544600",
+                    "surface-container-highest": "#e0e3e5",
+                    "primary-container": "#d8e2ff",
+                    "tertiary-fixed": "#94f990",
+                    "inverse-primary": "#adc6ff",
+                    "background": "#f7f9fb",
+                    "surface-container": "#eceef0",
+                    "on-background": "#191c1e",
+                    "secondary-fixed": "#ffe170"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .star-trail {
+        background: linear-gradient(90deg, transparent, #ffe170, #e9c400);
+        height: 4px;
+        border-radius: 999px;
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased overflow-hidden min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center w-full px-6 py-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,91,193,0.05)]">
+<div class="text-2xl font-black text-blue-600 dark:text-blue-400 italic font-['Plus_Jakarta_Sans'] tracking-tight">
+            Blue Marble Cosmic
+        </div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-blue-600 dark:text-blue-400 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</button>
+<button class="p-2 text-blue-600 dark:text-blue-400 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<main class="relative flex items-center justify-center min-h-screen px-6 pt-20 pb-32 overflow-hidden">
+<!-- Animated Background Elements (Conceptualized as CSS/SVG) -->
+<div class="absolute inset-0 pointer-events-none">
+<div class="absolute top-1/4 -left-10 w-64 h-1 star-trail rotate-[15deg] opacity-40"></div>
+<div class="absolute top-1/3 -right-20 w-96 h-2 star-trail -rotate-[10deg] opacity-60"></div>
+<div class="absolute bottom-1/4 left-1/4 w-48 h-1 star-trail rotate-[45deg] opacity-30"></div>
+<div class="absolute top-1/2 right-1/4 w-72 h-1.5 star-trail -rotate-[20deg] opacity-50"></div>
+<!-- Large Soft Glows -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary-container/20 rounded-full blur-[120px]"></div>
+</div>
+<!-- Main Activation Canvas -->
+<div class="relative z-10 w-full max-w-2xl">
+<!-- Asymmetric Layout: Character and Card Overlay -->
+<div class="relative flex flex-col items-center">
+<!-- Hero Avatar Section -->
+<div class="relative mb-[-60px] z-20 transition-transform hover:scale-105 duration-500">
+<div class="w-64 h-64 md:w-80 md:h-80 rounded-full p-4 bg-gradient-to-tr from-secondary-fixed to-secondary-container shadow-2xl overflow-hidden flex items-center justify-center">
+<img alt="Nova Cat Avatar" class="w-full h-full object-cover" data-alt="A cute orange and white space cat wearing a small silver helmet with tiny glowing blue stars inside its visor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmV96QxYelslxMptQPCsUyDqhdRnn7Q6XinqROMElYKXn8fsPLKKKmGobB96pSzR2aSJH5voi656WJYUuXOA623qZW-A-1X-_U9Yzg4AwgUTM5TGGsmVpo_fHA_jkDa-6wVIC43GOjgWvRuUF0LRy_Yhlk0qK_r6Yld04_GStBPNCwIqB8VAI2yrsElFUIG2IGrVfLVkGlDGwCOtax51KejKF7Cf9QglZm65nY8Cz1pKd_-f93wFw_BIh2ylO7vnkJuSnYCmzZvrFN"/>
+</div>
+<!-- Status Badge -->
+<div class="absolute -bottom-4 right-4 bg-primary text-white px-6 py-3 rounded-full shadow-lg border-4 border-white font-headline font-extrabold text-lg uppercase tracking-wider animate-bounce">
+                        READY!
+                    </div>
+</div>
+<!-- Ability Card: Glassmorphism and Tactile Feel -->
+<div class="glass-card w-full rounded-xl p-8 md:p-12 shadow-[0_20px_40px_rgba(25,28,30,0.06)] border border-white/50 text-center">
+<div class="space-y-6">
+<!-- Typography: Display tokens from Jakarta Sans -->
+<div class="space-y-1">
+<span class="text-secondary font-headline font-bold text-sm tracking-[0.2em] uppercase">Ability Activation</span>
+<h1 class="text-on-surface font-headline font-black text-4xl md:text-6xl tracking-tight leading-tight">
+                                AGILE PAWS <br/>
+<span class="text-primary">ACTIVATED!</span>
+</h1>
+</div>
+<!-- Content Canvas -->
+<div class="bg-surface-container-low rounded-lg p-6 flex flex-col items-center gap-4 rotate-[-1deg]">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+</div>
+<p class="text-on-surface-variant font-body font-semibold text-lg">
+                                    Pouncing forward one extra step!
+                                </p>
+</div>
+<div class="h-px w-full bg-outline-variant/15"></div>
+<div class="flex gap-4 items-center">
+<div class="text-center">
+<span class="block text-xs font-headline font-bold text-slate-400 uppercase tracking-widest">Base Move</span>
+<span class="text-2xl font-headline font-black text-on-surface">DICE ROLL</span>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl">add</span>
+<div class="text-center bg-tertiary-container px-4 py-2 rounded-lg">
+<span class="block text-xs font-headline font-bold text-on-tertiary-container uppercase tracking-widest">Bonus</span>
+<span class="text-2xl font-headline font-black text-on-tertiary-container">+1 SPACE</span>
+</div>
+</div>
+</div>
+<!-- CTA Section: Tactile Buttons -->
+<div class="pt-4 flex flex-col md:flex-row gap-4 justify-center">
+<button class="group relative px-10 py-5 bg-primary text-white rounded-full font-headline font-extrabold text-xl shadow-[0_8px_0_rgb(0,68,147)] active:shadow-none active:translate-y-2 transition-all overflow-hidden">
+<span class="relative z-10">CONTINUE JOURNEY</span>
+<div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</button>
+<button class="px-8 py-5 text-on-surface-variant font-headline font-bold hover:bg-surface-variant/50 rounded-full transition-colors">
+                                VIEW LOGS
+                            </button>
+</div>
+</div>
+</div>
+<!-- Floating Ornaments -->
+<div class="absolute -top-10 -right-4 w-24 h-24 bg-tertiary-container/40 rounded-full blur-2xl -z-10"></div>
+<div class="absolute bottom-20 -left-10 w-32 h-32 bg-secondary-container/30 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-end px-4 pb-6 h-24 bg-white/90 dark:bg-slate-900/90 backdrop-blur-2xl shadow-[0_-20px_40px_rgba(25,28,30,0.06)] rounded-t-[3rem]">
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-blue-500 transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full p-2" href="#">
+<span class="material-symbols-outlined">rocket_launch</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] font-semibold uppercase tracking-wider">Galaxy</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-blue-500 transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full p-2" href="#">
+<span class="material-symbols-outlined">package_2</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] font-semibold uppercase tracking-wider">Inventory</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-600 text-white rounded-full p-4 shadow-lg shadow-blue-500/30 -translate-y-2 scale-110" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] font-semibold uppercase tracking-wider">Quests</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-blue-500 transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full p-2" href="#">
+<span class="material-symbols-outlined">handshake</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] font-semibold uppercase tracking-wider">Diplomacy</span>
+</a>
+</nav>
+</body></html>
